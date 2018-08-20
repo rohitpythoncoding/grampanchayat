@@ -2,10 +2,15 @@ from django.shortcuts import render
 
 
 def welcome(request):
-    return render(request, 'grampanchayatSaravali/index.html')
+    request.session['lang'] = 'lem'
+    a = u'\u0905'
+    # print(request.session['name'], " is here")
+    return render(request, 'grampanchayatSaravali/index.html', {'a': a})
 
 
 def home(request):
+    if request.session['name'] == 'Superman':
+        print(request.session['name'], 'is awesome!!!!!!!')
     return render(request, 'grampanchayatSaravali/index.html')
 
 
