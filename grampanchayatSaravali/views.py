@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def welcome(request):
     request.session['lang'] = 'marathi'
-    return render(request, 'grampanchayatSaravali/index.html', {'a': a})
+    return render(request, 'grampanchayatSaravali/index.html')
 
 
 def home(request):

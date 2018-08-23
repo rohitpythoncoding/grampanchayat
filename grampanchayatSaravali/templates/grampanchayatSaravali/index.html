@@ -40,7 +40,7 @@
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 							<!--<div class="top_bar_item">Saravali Grampanchayat</a></div>-->
 							<!--<div class="top_bar_item"><a href="#">Request an Appointment</a></div>-->
-							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">For Emergencies: +02525607080</div>
+							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div>
 						</div>
 
 					</div>
@@ -58,52 +58,52 @@
 								<ul>
 									<li>
 										<a href="{% url 'home' %}">
-											{% if request.session.lang == "en" %}Home{% else %}होम{% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'aboutVillage' %}">
-											{% if request.session.lang == "en" %}About Village{% else %}गावा बद्दल{% endif %}
+											{% if request.session.lang == "en" %}About Village {% else %}गावाची माहिती {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'schemes' %}">
-											{% if request.session.lang == "en" %}Schemes{% else %}योजना{% endif %}
+											{% if request.session.lang == "en" %}Schemes {% else %}योजना {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'electedMember' %}">
-											{% if request.session.lang == "en" %}Elected Members{% else %}निवडून आलेले सदस्य{% endif %}
+											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'services' %}">
-											{% if request.session.lang == "en" %}Services{% else %}सेवा {% endif %}
+											{% if request.session.lang == "en" %}Services {% else %}सेवा {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'contact' %}">
-											{% if request.session.lang == "en" %}Contact{% else %}संपर्क{% endif %}
+											{% if request.session.lang == "en" %}Contact {% else %}संपर्क {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'photoGallery' %}">
-											{% if request.session.lang == "en" %}Photo Gallery{% else %}फोटो गॅलरी{% endif %}
+											{% if request.session.lang == "en" %}Photo Gallery {% else %}फोटो गॅलरी {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'map' %}">
-											{% if request.session.lang == "en" %}Map{% else %}नकाशा{% endif %}
+											{% if request.session.lang == "en" %}Map {% else %}नकाशा {% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'faq' %}">
-											{% if request.session.lang == "en" %}FAQ{% else %}नेहमी विचारले जाणारे{% endif %}
+											{% if request.session.lang == "en" %}FAQ {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
 										</a>
 									</li>
 									<li>
 										<a href="{% url 'missionVision' %}">
-											{% if request.session.lang == "en" %}Mission&Vision{% else %}मिशन आणि दृष्टीकोन{% endif %}
+											{% if request.session.lang == "en" %}Mission&Vision {% else %}मिशन आणि दृष्टीकोन {% endif %}
 										</a>
 									</li>
 								</ul>
@@ -264,19 +264,27 @@
 				<div class="col-lg-4 box_col">
 					<div class="box working_hours">
 						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width:29px; height:29px;"><img src="{%static 'images/alarm-clock.svg'%}" alt=""></div></div>
-						<div class="box_title">Working Hours</div>
+						<div class="box_title">
+							{% if request.session.lang == "en" %}Working Hours {% else %}कामाचे वेळ {% endif %}
+						</div>
 						<div class="working_hours_list">
 							<ul>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Monday – Friday</div>
+									<div>
+										{% if request.session.lang == "en" %}Monday – Friday {% else %}सोमवार-शुक्रवार {% endif %}
+									</div>
 									<div class="ml-auto">8.00 – 19.00</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Saturday</div>
+									<div>
+										{% if request.session.lang == "en" %}Saturday {% else %}शनिवार {% endif %}
+									</div>
 									<div class="ml-auto">9.30 – 17.00</div>
 								</li>
 								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>Sunday</div>
+									<div>
+										{% if request.session.lang == "en" %}Sunday {% else %}रविवार {% endif %}
+									</div>
 									<div class="ml-auto">9.30 – 15.00</div>
 								</li>
 							</ul>
@@ -297,9 +305,9 @@
 				<div class="col-lg-4 box_col">
 					<div class="box box_emergency">
 						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 37px; height:37px; margin-left:-4px;"><img src="{%static 'images/bell.svg'%}" alt=""></div></div>
-						<div class="box_title">Emergency Numbers</div>
-						<div class="box_phone">+9278655434</div>
-						<div class="box_emergency_text">Contact above number for emergency</div>
+						<div class="box_title">{% if request.session.lang == "en" %}Emergency Numbers {% else %}तात्काळ क्रमांक {% endif %}</div>
+						<div class="box_phone">+91 9278655434</div>
+						<div class="box_emergency_text">{% if request.session.lang == "en" %}Contact above number for emergency {% else %}वरील तात्काळ नंबर वर संपर्क करा{% endif %}</div>
 					</div>
 				</div>
 
@@ -316,7 +324,8 @@
 				<!-- About Content -->
 				<div class="col-lg-7">
 					<div class="about_content">
-						<div class="section_title"><h2>About Saravali!</h2></div>
+						<div class="section_title">
+							<h2>{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
 						<div class="about_text">
 							<p>Saravali village is located in Palghar Tehsil of Thane district in Maharashtra, India. It is situated 25km away from sub-district headquarter Palghar and 70km away from district headquarter Thane.The total geographical area of village is 256.16 hectares. Saravali has a total population of 673 peoples. There are about 163 houses in Saravali village. Palghar is nearest town to Saravali which is approximately 25km away.</p>
 						</div>
@@ -525,12 +534,14 @@
 								</a>
 							</div>-->
 							<div class="footer_about_text">
-								<p>Some Info About Village</p>
+								<p>{% if request.session.lang == "en" %}Some Info About Village{% else %}गावा बद्दल काही माहिती{% endif %}</p>
 							</div>
 							<ul class="footer_about_list">
 								<li><div class="footer_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>+91 977 675 5432</span></li>
 								<li><div class="footer_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>office@template.com</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div><span>Address</span></li>
+								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div>
+									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -538,18 +549,18 @@
 					<!-- Footer - Links -->
 					<div class="col-lg-4 footer_col">
 						<div class="footer_links footer_column">
-							<div class="footer_title">Useful Links</div>
+							<div class="footer_title">{% if request.session.lang == "en" %}Useful Links{% else %}उपयुक्त लिंक्स{% endif %}</div>
 							<ul>
-								<li><a href="#">History</a></li>
-								<li><a href="#">FAQ</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}History{% else %}इतिहास{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}FAQ{% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}</a></li>
 								<!--<li><a href="#">Apply for a Job</a></li>-->
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Our Members</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Terms & Conditions{% else %}अटी व शर्ती{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Our Members{% else %}आमच्या सदस्य{% endif %}</a></li>
 
-								<li><a href="#">Free services</a></li>
-								<li><a href="#">About us</a></li>
-								<li><a href="#">News</a></li>
-								<li><a href="#">Contact</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Free services{% else %}मोफत सेवा{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}About us{% else %}आमच्या बद्दल{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}News{% else %}बातम्या{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Contact{% else %}संपर्क{% endif %}</a></li>
 
 
 							</ul>
