@@ -56,16 +56,56 @@
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
 								<ul>
-									<li><a href="{% url 'home' %}">Home</a></li>
-									<li><a href="{% url 'aboutVillage' %}">About Village</a></li>
-									<li><a href="{% url 'schemes' %}">Schemes</a></li>
-									<li><a href="{% url 'electedMember' %}">Elected Members</a></li>
-									<li><a href="{% url 'services' %}">Services</a></li>
-									<li><a href="{% url 'contact' %}">Contact</a></li>
-									<li><a href="{% url 'photoGallery' %}">Photo Gallery</a></li>
-									<li><a href="{% url 'map' %}">Map</a></li>
-									<li><a href="{% url 'faq' %}">FAQ</a></li>
-									<li><a href="{% url 'missionVision' %}">Mission&Vision</a></li>
+									<li>
+										<a href="{% url 'home' %}">
+											{% if request.session.lang == "en" %}Home{% else %}होम{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'aboutVillage' %}">
+											{% if request.session.lang == "en" %}About Village{% else %}गावा बद्दल{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'schemes' %}">
+											{% if request.session.lang == "en" %}Schemes{% else %}योजना{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'electedMember' %}">
+											{% if request.session.lang == "en" %}Elected Members{% else %}निवडून आलेले सदस्य{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'services' %}">
+											{% if request.session.lang == "en" %}Services{% else %}सेवा {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'contact' %}">
+											{% if request.session.lang == "en" %}Contact{% else %}संपर्क{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'photoGallery' %}">
+											{% if request.session.lang == "en" %}Photo Gallery{% else %}फोटो गॅलरी{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'map' %}">
+											{% if request.session.lang == "en" %}Map{% else %}नकाशा{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'faq' %}">
+											{% if request.session.lang == "en" %}FAQ{% else %}नेहमी विचारले जाणारे{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'missionVision' %}">
+											{% if request.session.lang == "en" %}Mission&Vision{% else %}मिशन आणि दृष्टीकोन{% endif %}
+										</a>
+									</li>
 								</ul>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -143,7 +183,13 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_content_inner">
-										<div class="home_title"><h1>Aapli Saravali Sundar Saravali!</h1></div>
+										<div class="home_title"><h1>
+											{% if request.session.lang == "en" %}
+        										Aapli Saravali Sundar Saravali!
+											{% else %}
+												आपली सारवली सुंदर सारवली !
+											{% endif %}
+										</h1></div>
 										<!--<div class="home_text">
 											&lt;!&ndash;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>&ndash;&gt;
 										</div>-->
