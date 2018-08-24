@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def welcome(request):
-    request.session['lang'] = 'marathi'
+    request.session['lang'] = 'Marathi'
     return render(request, 'grampanchayatSaravali/index.html')
 
 
