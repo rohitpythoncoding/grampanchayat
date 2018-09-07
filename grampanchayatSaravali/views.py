@@ -7,8 +7,8 @@ def welcome(request):
 
 
 def home(request):
-    if request.session['name'] == 'Superman':
-        print(request.session['name'], 'is awesome!!!!!!!')
+    # if request.session['name'] == 'Superman':
+    #     print(request.session['name'], 'is awesome!!!!!!!')
     return render(request, 'grampanchayatSaravali/index.html')
 
 
