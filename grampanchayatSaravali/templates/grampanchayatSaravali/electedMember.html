@@ -5,7 +5,7 @@
 <title>Elected Members</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="CareMed demo project">
+<meta name="description" content="Elected Member">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'%}">
 <link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
@@ -73,7 +73,7 @@
 									</li>
 									<li>
 										<a href="{% url 'services' %}">
-											{% if request.session.lang == "en" %}Services {% else %}सेवा {% endif %}
+											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
 										</a>
 									</li>
 									<li>
@@ -151,7 +151,7 @@
 					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
 					<li class="menu_item menu_mm"><a href="about.html">About us</a></li>
 					<li class="menu_item menu_mm"><a href="services.html">Services</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
+					<li class="menu_item menu_mm"><a href="electedMember.html">News</a></li>
 					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
 				</ul>
 			</div>
@@ -174,7 +174,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title"><h2><span>Elected Members of Saravali Grampanchayat</span></h2></div>
+							<div class="home_title"><h1><span>Elected Members of Saravali Grampanchayat</span></h1></div>
 							<!--<div class="breadcrumbs">-->
 								<!--<ul>-->
 									<!--<li><a href="#">Home</a></li>-->
@@ -287,78 +287,97 @@
 							<tr>
 								<th>Elected Candidates</th>
 								<th>Position</th>
+								<th>Ward</th>
 							</tr>
 							<tr>
 								<td>Chandane Laxmi Janardan</td>
 								<td>Sarpanch</td>
+								<td>Sarpanch</td>
 							</tr>
 							<tr>
 								<td>Raut Smita Rupesh</td>
-								<td>Upp-Sarpanch</td>
+								<td>Deputy Sarpanch</td>
+								<td>4D</td>
 							</tr>
 							<tr>
 								<td>Gharat Praful Vaman</td>
 								<td>Member</td>
+								<td>1A</td>
 							</tr>
 							<tr>
 								<td>Machhi Prema Bhupendra</td>
 								<td>Member</td>
+								<td>1A</td>
 							</tr>
 							<tr>
 								<td>Yadav Milind Mahadev</td>
 								<td>Member</td>
+								<td>2B</td>
 							</tr>
 							<tr>
 								<td>Gharat Mukesh Jaywant</td>
 								<td>Member</td>
+								<td>2B</td>
 							</tr>
 							<tr>
 								<td>Thakur Urmila Ganesh</td>
 								<td>Member</td>
+								<td>2B</td>
 							</tr>
 							<tr>
 								<td>Raut Vijay Bhaskar</td>
 								<td>Member</td>
+								<td>3C</td>
 							</tr>
 							<tr>
 								<td>Raut Dipa Dattatray</td>
 								<td>Member</td>
+								<td>3C</td>
 							</tr>
 							<tr>
 								<td>Sahani Kanchan Suresh</td>
 								<td>Member</td>
+								<td>3C</td>
 							</tr>
 							<tr>
 								<td>Patil Sachin Vilas</td>
 								<td>Member</td>
+								<td>4D</td>
 							</tr>
 							<tr>
 								<td>Salunke Ashok Baliram</td>
-								<td>Member</td>
+								<td>Member
+								<td>4D</td>
 							</tr>
 							<tr>
 								<td>Pathan Himmat Ishakkhan</td>
 								<td>Member</td>
+								<td>5E</td>
 							</tr>
 							<tr>
 								<td>Dhodi Nilkamal Navin</td>
 								<td>Member</td>
+								<td>5E</td>
 							</tr>
 							<tr>
 								<td>Nishad Nimla Surendra</td>
 								<td>Member</td>
+								<td>5E</td>
 							</tr>
 							<tr>
 								<td>Sankhe Dinesh Gopinath</td>
 								<td>Member</td>
+								<td>6F</td>
 							</tr>
 							<tr>
 								<td>Gharat Manisha Mandesh</td>
 								<td>Member</td>
+								<td>6F</td>
 							</tr>
 							<tr>
 								<td>Gharat Nishita Nitesh</td>
 								<td>Member</td>
+								<td>6F</td>
 							</tr>
 						</table>
 					</div>
@@ -501,15 +520,15 @@
 							<div class="footer_title">Useful Links</div>
 							<ul>
 								<li>
-									<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a></div>
+									<div class="footer_news_title"><a href="electedMember.html">Aliquam ac eleifend metus</a></div>
 									<div class="footer_news_date">March 10, 2018</div>
 								</li>
 								<li>
-									<div class="footer_news_title"><a href="news.html">Donec in libero sit amet mi vulputate</a></div>
+									<div class="footer_news_title"><a href="electedMember.html">Donec in libero sit amet mi vulputate</a></div>
 									<div class="footer_news_date">March 10, 2018</div>
 								</li>
 								<li>
-									<div class="footer_news_title"><a href="news.html">Aliquam ac eleifend metus</a></div>
+									<div class="footer_news_title"><a href="electedMember.html">Aliquam ac eleifend metus</a></div>
 									<div class="footer_news_date">March 10, 2018</div>
 								</li>
 							</ul>

@@ -29,7 +29,7 @@ def services(request):
 
 
 def electedMember(request):
-    return render(request, 'grampanchayatSaravali/news.html')
+    return render(request, 'grampanchayatSaravali/electedMember.html')
 
 
 def missionVision(request):
