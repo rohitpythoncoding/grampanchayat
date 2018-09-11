@@ -16,8 +16,8 @@ def aboutVillage(request):
     return render(request, 'grampanchayatSaravali/about.html')
 
 
-def contact(request):
-    return render(request, 'grampanchayatSaravali/contact.html')
+def workers(request):
+    return render(request, 'grampanchayatSaravali/workers.html')
 
 
 def map(request):
