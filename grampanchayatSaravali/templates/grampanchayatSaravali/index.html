@@ -619,26 +619,27 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 </div>
 <script type="text/javascript">
+
 function ChangeLanguage(){
 	var var1= document.getElementById("language").value;
 	var language;
-	console.log(var1)
-	if (var1 == "View in Marathi")
-		language = "marathi"
-
-	else
-		language = "en"
-	if (var1 == "View in Marathi")
-		do_something()
+	if (var1 == "View in Marathi"){
 		document.getElementById("language").value = "View in English"
-	else
+		language = "marathi"
+		}
+	else{
 		document.getElementById("language").value = "View in Marathi"
+		language = "en"
+		}
+	console.log(language)
+	update_language(language)
 }
-function do_something(){
+
+function update_language(language){
 	$.ajax({
 			type: "GET",
 			url: "/",
-			data: {"language": "en"}
+			data: {"language": language},
 			success: function (response) {
 				console.log("SUCCESS..............!");
 			},
@@ -646,19 +647,7 @@ function do_something(){
 				console.log("ERROR : ", e);
 			}
 		});
-	console.log(language)
-
 }
-/*function change( el )
-{
-	var language = 0;
-    if ( el.value === "View in Marathi" )
-        el.value = "View in English";
-
-    else
-        el.value = "View in Marathi";
-	console.log("making an ajax call now")
-}*/
 </script>
 <script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
 <script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
