@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def welcome(request):
-    request.session['lang'] = 'Marathi'
+    request.session['lang'] = 'en'
     return render(request, 'grampanchayatSaravali/index.html')
 
 
@@ -10,10 +10,6 @@ def home(request):
     # if request.session['name'] == 'Superman':
     #     print(request.session['name'], 'is awesome!!!!!!!')
     return render(request, 'grampanchayatSaravali/index.html')
-
-
-def aboutVillage(request):
-    return render(request, 'grampanchayatSaravali/about.html')
 
 
 def workers(request):
@@ -32,9 +28,6 @@ def electedMember(request):
     return render(request, 'grampanchayatSaravali/electedMember.html')
 
 
-def missionVision(request):
-    return render(request, 'grampanchayatSaravali/index.html')
-
 
 def schemes(request):
     return render(request, 'grampanchayatSaravali/index.html')
@@ -46,3 +39,7 @@ def photoGallery(request):
 
 def faq(request):
     return render(request, 'grampanchayatSaravali/index.html')
+
+
+def developmentPlan(request):
+    return render(request, 'grampanchayatSaravali/vikasArakhada.html')
