@@ -38,7 +38,7 @@ def photoGallery(request):
 
 
 def faq(request):
-    return render(request, 'grampanchayatSaravali/index.html')
+    return render(request, 'grampanchayatSaravali/contact.html')
 
 
 def developmentPlan(request):
