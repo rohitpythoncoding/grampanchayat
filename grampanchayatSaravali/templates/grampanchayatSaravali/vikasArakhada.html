@@ -14,9 +14,8 @@
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
-	<style>
-
-	</style>
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
 </head>
 <body>
 
@@ -147,7 +146,7 @@
 				<ul class="menu_list menu_mm">
 					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
 					<li class="menu_item menu_mm"><a href="about.html">About us</a></li>
-					<li class="menu_item menu_mm"><a href="services.html">Services</a></li>
+					<li class="menu_item menu_mm"><a href="vikasArakhada.html">Services</a></li>
 					<li class="menu_item menu_mm"><a href="electedMember.html">News</a></li>
 					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
 				</ul>
@@ -185,24 +184,55 @@
 		</div>
 	</div>
 
-	<!-- News -->
+	<!-- Services -->
 
-	<div class="news">
+	<div class="services">
 		<div class="container">
-			<div class="row">
-                <!--<object data="{%static 'pdf/icard.jpg'%}" type="application/pdf" width="300" height="200">-->
-                <div><h3>
-                    <ul style="list-style-type:disc">
-                        <li><a href="/static/pdf/activityPlan.pdf">Panchayat Activity Plan Report: 2017-2018</a></li>
-                        <li><a href="#">Vikas Arakhada 2</a></li>
-                        <li><a href="#">Vikas Arakhada 3</a></li>
-                        <li><a href="#">Vikas Arakhada 4</a></li>
-                        <li><a href="#">Vikas Arakhada 5</a></li>
-                        <li><a href="#">Vikas Arakhada 6</a></li>
-                    </ul></h3>
-                </div>
+			<!--<div class="row">
+				<div class="col">
+					<div class="section_title"><h2>Our Featured Services</h2></div>
+				</div>
+			</div>-->
+			<div class="row services_row">
 
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/viksArakhada201819.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2018-2019</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2018-19 </p>
+							</div>
+						</div>
+					</a>
+				</div>
 
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/viksArakhada201819.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2017-2018</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2017-18 </p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/viksArakhada201819.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2016-2017</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2016-17 </p>
+							</div>
+						</div>
+					</a>
+				</div>
 
 
 			</div>
@@ -321,5 +351,6 @@
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{%static 'js/news.js'%}"></script>
+<script src="{%static 'js/services.js'%}"></script>
 </body>
 </html>

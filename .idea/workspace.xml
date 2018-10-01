@@ -4,9 +4,12 @@
     <list default="true" id="80a03730-6245-4350-ba7f-161d47d7c8a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/static/pdf/activityPlan.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/services.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html" beforeDir="false" afterPath="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html" afterDir="false" />
     </list>
@@ -19,29 +22,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grampanchayatProject/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="102" selection-start-line="102" selection-end-line="102" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="366" column="18" lean-forward="true" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+            <state relative-caret-position="3543">
+              <caret line="344" column="35" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="748">
+              <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -49,8 +43,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -61,8 +55,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="615" column="13" lean-forward="true" selection-start-line="514" selection-start-column="4" selection-end-line="615" selection-end-column="13" />
+            <state relative-caret-position="6341">
+              <caret line="538" column="30" lean-forward="true" selection-start-line="538" selection-start-column="30" selection-end-line="538" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,29 +67,8 @@
       <file leaf-file-name="main_styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5474">
-              <caret line="322" column="16" selection-start-line="322" selection-start-column="16" selection-end-line="322" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workers.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="755" column="13" selection-start-line="755" selection-start-column="13" selection-end-line="755" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="news.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/news.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11475">
-              <caret line="675" column="12" selection-start-line="675" selection-start-column="12" selection-end-line="675" selection-end-column="12" />
+            <state relative-caret-position="374">
+              <caret line="347" column="23" selection-start-line="347" selection-start-column="23" selection-end-line="347" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -100,8 +76,8 @@
       <file leaf-file-name="vikasArakhada.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="314" column="13" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
+            <state relative-caret-position="135">
+              <caret line="188" column="4" selection-start-line="188" selection-start-column="4" selection-end-line="188" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -109,8 +85,8 @@
       <file leaf-file-name="electedMember.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="557" column="26" lean-forward="true" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
+            <state relative-caret-position="9469">
+              <caret line="557" column="26" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -153,14 +129,15 @@
         <option value="$PROJECT_DIR$/grampanchayatSaravali/static/styles/bootstrap4/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/news.html" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/urls.py" />
-        <option value="$PROJECT_DIR$/grampanchayatSaravali/views.py" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/static/styles/news.css" />
+        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html" />
+        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html" />
+        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html" />
+        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/services.html" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html" />
-        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html" />
-        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html" />
-        <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html" />
         <option value="$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html" />
+        <option value="$PROJECT_DIR$/grampanchayatSaravali/views.py" />
       </list>
     </option>
   </component>
@@ -190,6 +167,12 @@
               <item name="grampanchayatProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="grampanchayatProject" type="462c0819:PsiDirectoryNode" />
               <item name="grampanchayatSaravali" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grampanchayatProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grampanchayatProject" type="462c0819:PsiDirectoryNode" />
+              <item name="grampanchayatSaravali" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,14 +194,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../DupontSBS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali\templates\grampanchayatSaravali" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali\static\pdf" />
       <recent name="D:\RohitPython\grampanchayat\grampanchayatSaravali\static\pdf" />
       <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali\templates\grampanchayatSaravali" />
       <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali\static" />
       <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\AllPython\grampanchayatProject\grampanchayatSaravali\templates\grampanchayatSaravali" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,9 +234,10 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14055637" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20863836" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
@@ -267,13 +252,43 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/news.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11475">
+          <caret line="675" column="12" selection-start-line="675" selection-start-column="12" selection-end-line="675" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5338">
+          <caret line="314" column="13" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9469">
+          <caret line="557" column="26" lean-forward="true" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6222">
+          <caret line="366" column="18" lean-forward="true" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -480,27 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatProject/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/elements.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -537,23 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/news.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11475">
@@ -561,24 +538,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5474">
-          <caret line="322" column="16" selection-start-line="322" selection-start-column="16" selection-end-line="322" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="615" column="13" lean-forward="true" selection-start-line="514" selection-start-column="4" selection-end-line="615" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/workers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="12835">
           <caret line="755" column="13" selection-start-line="755" selection-start-column="13" selection-end-line="755" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9469">
+          <caret line="557" column="26" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -587,25 +560,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="314" column="13" selection-start-line="314" selection-start-column="13" selection-end-line="314" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="187" column="17" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/electedMember.html">
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/styles/main_styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="557" column="26" lean-forward="true" selection-start-line="557" selection-start-column="26" selection-end-line="557" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="374">
+          <caret line="347" column="23" selection-start-line="347" selection-start-column="23" selection-end-line="347" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/js/contact.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2295" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/vikasArakhada.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="188" column="4" selection-start-line="188" selection-start-column="4" selection-end-line="188" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/static/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="366" column="18" lean-forward="true" selection-start-line="366" selection-start-column="18" selection-end-line="366" selection-end-column="18" />
+        <state relative-caret-position="3543">
+          <caret line="344" column="35" selection-start-line="344" selection-start-column="35" selection-end-line="344" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/templates/grampanchayatSaravali/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6341">
+          <caret line="538" column="30" lean-forward="true" selection-start-line="538" selection-start-column="30" selection-end-line="538" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grampanchayatSaravali/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="63" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
         </state>
       </provider>
     </entry>

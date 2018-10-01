@@ -316,7 +316,7 @@ section
 .top_bar
 {
 	width: 100%;
-	background: #283290;
+	background: #6e6f73;
 }
 .top_bar_content
 {
@@ -345,7 +345,7 @@ section
 .emergencies
 {
 	height: 100%;
-	background: #ff0030;
+	background: #e2153c;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 700;
@@ -695,7 +695,7 @@ section
 {
 	font-size: 69.24px;
 	font-weight: 900;
-	color: #272727;
+	color: #0baf27;
 	line-height: 1.0398;
 }
 .home_text
@@ -1136,7 +1136,7 @@ section
 .footer_container
 {
 	width: 100%;
-	background: #060b3a;
+	background: #6e6f73;
 	padding-bottom: 77px;
 }
 .footer_logo_container
