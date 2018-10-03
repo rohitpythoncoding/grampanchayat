@@ -313,7 +313,8 @@ section
 .top_bar
 {
 	width: 100%;
-	background: #283290;
+	background: #3a578e;
+	height: 75px;
 }
 .top_bar_content
 {
@@ -341,8 +342,8 @@ section
 }
 .emergencies
 {
-	height: 100%;
-	background: #ff0030;
+	height: 101px;
+	background: #d2d3d6;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 700;
@@ -707,7 +708,7 @@ section
 .news
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #dbe2ef;
 	padding-top: 94px;
 	padding-bottom: 91px;
 }
@@ -1293,12 +1294,22 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    border: 2px solid black;
 }
 
-td, th {
-    border: 1px solid #dddddd;
+td {
+
     text-align: left;
     padding: 8px;
+    border: 2px solid black;
+}
+
+th {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    color: #441c1c;
 }
 
 tr:nth-child(even) {

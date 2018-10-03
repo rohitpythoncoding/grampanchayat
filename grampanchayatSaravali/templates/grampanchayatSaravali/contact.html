@@ -29,9 +29,10 @@
 				<div class="row">
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-							<!--<div class="top_bar_item">Saravali Grampanchayat</a></div>-->
-							<!--<div class="top_bar_item"><a href="#">Request an Appointment</a></div>-->
-							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div>
+
+							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ;">SARAVALI  GRAMPANCHAYAT</div>
+
+							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
 						</div>
 
 					</div>
@@ -40,13 +41,13 @@
 		</div>
 
 		<!-- Header Content -->
-		<div class="header_container">
+		<div class="header_container" style="height: 65px;">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
-								<ul>
+								<ul style="height: 55px;">
 									<li>
 										<a href="{% url 'home' %}">
 											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
@@ -103,59 +104,21 @@
 			</div>
 		</div>
 
-		<!-- Logo -->
-		<!--<div class="logo_container_outer">
+
+		<div class="logo_container_outer">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container">
-							&lt;!&ndash;<a href="#">
-								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
-									<div class="logo_line"></div>
-									<div class="logo d-flex flex-row align-items-center justify-content-center">
-										<div class="logo_text">Care<span>Med</span></div>
-										<div class="logo_box">+</div>
-									</div>
-									<div class="logo_sub">Health Care Center</div>
-								</div>
-							</a>&ndash;&gt;
+						<div class="logo_container" style="height: 180px; width: 175px; background-image:url({%static 'images/logo.jpg'%});">
+
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>-->
+		</div>
 
 	</header>
 
-	<!-- Menu -->
-
-	<!--<div class="menu_container menu_mm">
-
-		&lt;!&ndash; Menu Close Button &ndash;&gt;
-		<div class="menu_close_container">
-			<div class="menu_close"></div>
-		</div>
-
-		&lt;!&ndash; Menu Items &ndash;&gt;
-		<div class="menu_inner menu_mm">
-			<div class="menu menu_mm">
-				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
-					<li class="menu_item menu_mm"><a href="about.html">About us</a></li>
-					<li class="menu_item menu_mm"><a href="vikasArakhada.html">Services</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-			<div class="menu_extra">
-				<div class="menu_appointment"><a href="#">Request an Appointment</a></div>
-				<div class="menu_emergencies">For Emergencies: +563 47558 623</div>
-			</div>
-
-		</div>
-
-	</div>-->
-	
 	<!-- Home -->
 
 	<div class="home">
@@ -165,13 +128,8 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span>Saravali Grampanchayat</span> FAQ/Queries</div>
-							<!--<div class="breadcrumbs">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li>FAQ</li>
-								</ul>
-							</div>-->
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> FAQ/Queries</div>
+
 						</div>
 					</div>
 				</div>
@@ -217,44 +175,6 @@
 					</div>
 				</div>
 			</div>
-			<!--<div class="row map_row">
-				<div class="col">
-
-					&lt;!&ndash; Contact Map &ndash;&gt;
-
-					<div class="contact_map">
-
-						&lt;!&ndash; Google Map &ndash;&gt;
-						
-						<div class="map">
-							<div id="google_map" class="google_map">
-								<div class="map_container">
-									<div id="map"></div>
-								</div>
-							</div>
-						</div>-->
-
-						<!-- Working Hours -->
-						<!--<div class="box working_hours">
-							<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width:29px; height:29px;"><img src="images/alarm-clock.svg" alt=""></div></div>
-							<div class="box_title">Working Hours</div>
-							<div class="working_hours_list">
-								<ul>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Monday – Friday</div>
-										<div class="ml-auto">8.00 – 19.00</div>
-									</li>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Saturday</div>
-										<div class="ml-auto">9.30 – 17.00</div>
-									</li>
-									<li class="d-flex flex-row align-items-center justify-content-start">
-										<div>Sunday</div>
-										<div class="ml-auto">9.30 – 15.00</div>
-									</li>
-								</ul>
-							</div>
-						</div>-->
 
 					</div>
 
@@ -266,101 +186,14 @@
 	<!-- Footer -->
 
 	<footer class="footer">
-		<div class="footer_container">
-			<div class="container">
-				<div class="row">
 
-					<!-- Footer - About
-					<div class="col-lg-4 footer_col">
-						<div class="footer_about">
-							&lt;!&ndash;<div class="footer_logo_container">
-								<a href="#" class="d-flex flex-column align-items-center justify-content-center">
-									<div class="logo_content">
-										<div class="logo d-flex flex-row align-items-center justify-content-center">
-											<div class="logo_text">Care<span>Med</span></div>
-											<div class="logo_box">+</div>
-										</div>
-										<div class="logo_sub">Health Care Center</div>
-									</div>
-								</a>
-							</div>&ndash;&gt;
-							<div class="footer_about_text">
-								<p>{% if request.session.lang == "en" %}Some Info About Village{% else %}गावा बद्दल काही माहिती{% endif %}</p>
-							</div>
-							<ul class="footer_about_list">
-								<li><div class="footer_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>+91 977 675 5432</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>office@template.com</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div>
-									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
-								</li>
-							</ul>
-						</div>
-					</div>
--->
-					<!-- Footer - Links -->
-					<div class="col-lg-4 footer_col">
-						<div class="footer_links footer_column">
-							<div class="footer_title">{% if request.session.lang == "en" %}Useful Links{% else %}उपयुक्त लिंक्स{% endif %}</div>
-							<ul>
-
-								<li><a href="#">{% if request.session.lang == "en" %}FAQ{% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}</a></li>
-								<!--<li><a href="#">Apply for a Job</a></li>-->
-
-								<li><a href="#">{% if request.session.lang == "en" %}Our Members{% else %}आमच्या सदस्य{% endif %}</a></li>
-
-
-								<li><a href="#">{% if request.session.lang == "en" %}About us{% else %}आमच्या बद्दल{% endif %}</a></li>
-
-								<li><a href="#">{% if request.session.lang == "en" %}Contact us{% else %}संपर्क{% endif %}</a></li>
-
-
-							</ul>
-						</div>
-					</div>
-
-					<!-- Footer - News -->
-					<!--<div class="col-lg-4 footer_col">
-						<div class="footer_news footer_column">
-							<div class="footer_title">Useful Links</div>
-							<ul>
-								<li>
-									<div class="footer_news_title"><a href="electedMember.html">Aliquam ac eleifend metus</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-								<li>
-									<div class="footer_news_title"><a href="electedMember.html">Donec in libero sit amet mi vulputate</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-								<li>
-									<div class="footer_news_title"><a href="electedMember.html">Aliquam ac eleifend metus</a></div>
-									<div class="footer_news_date">March 10, 2018</div>
-								</li>
-							</ul>
-						</div>
-					</div>-->
-				</div>
-			</div>
-		</div>
 		<div class="copyright">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
 							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
-							<!--<div>-->
-								<!--<a href="#">{% if request.session.lang == "en" %}About us{% else %}आमच्या बद्दल{% endif %}</a>-->
-								<!--<a href="#">{% if request.session.lang == "en" %}Contact us{% else %}संपर्क{% endif %}</a>-->
-							<!--</div>-->
-							<!--<div class="footer_social ml-lg-auto">
-								<ul>
-									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>-->
+
 						</div>
 					</div>
 				</div>
