@@ -41,7 +41,7 @@
 
 							<!--<div class="top_bar_item">Saravali Grampanchayat</a></div>-->
 							<!--<div class="top_bar_item"><a href="#">Request an Appointment</a></div>-->
-							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div>
+							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
 						</div>
 
 					</div>
@@ -50,13 +50,13 @@
 		</div>
 
 		<!-- Header Content -->
-		<div class="header_container">
+		<div class="header_container" style="height: 65px;">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
-								<ul>
+								<ul style="height: 55px;">
 									<li>
 										<a href="{% url 'home' %}">
 											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
@@ -113,13 +113,13 @@
 			</div>
 		</div>
 
-		<!-- Logo -->
-		<!--<div class="logo_container_outer">
+
+		<div class="logo_container_outer">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container">
-							&lt;!&ndash;<a href="#">
+						<div class="logo_container" style="height: 180px; width: 175px; background-image:url({%static 'images/logo.jpg'%});">
+							<!--<a href="#">
 								<div class="logo_content d-flex flex-column align-items-start justify-content-center">
 									<div class="logo_line"></div>
 									<div class="logo d-flex flex-row align-items-center justify-content-center">
@@ -128,15 +128,15 @@
 									</div>
 									<div class="logo_sub">Health Care Center</div>
 								</div>
-							</a>&ndash;&gt;
+							</a>-->
 						</div>
 					</div>
 				</div>
 			</div>	
-		</div>-->
+		</div>
 
 	</header>
--->
+
 	<!-- Menu -->
 
 	<!--<div class="menu_container menu_mm">
@@ -181,13 +181,13 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_content_inner">
-										<div class="home_title"><h1>
+										<!--<div class="home_title"><h1>
 											{% if request.session.lang == "en" %}
         										Aapli Saravali Sundar Saravali!
 											{% else %}
 												आपली सरावली सुंदर सरावली !
 											{% endif %}
-										</h1></div>
+										</h1></div>-->
 										<!--<div class="home_text">
 											&lt;!&ndash;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Integer accumsan sodales odio, id tempus velit ullamcorper id. Quisque at erat eu.</p>&ndash;&gt;
 										</div>-->
@@ -315,7 +315,7 @@
 
 	<!-- About -->
 
-	<div class="about">
+	<div class="about" style="padding-bottom: 48px;">
 		<div class="container">
 			<div class="row row-lg-eq-height">
 
@@ -325,7 +325,11 @@
 						<div class="section_title">
 							<h2>{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
 						<div class="about_text">
-							<p>Saravali village is located in Palghar Tehsil of Thane district in Maharashtra, India. It is situated 25km away from sub-district headquarter Palghar and 70km away from district headquarter Thane.The total geographical area of village is 256.16 hectares. Saravali has a total population of 673 peoples. There are about 163 houses in Saravali village. Palghar is nearest town to Saravali which is approximately 25km away.</p>
+							<p style="text-align:justify">Saravali is a Census Town city in district of Thane, Maharashtra. The Saravali Census Town has population of 8,710 of which 5,008 are males while 3,702 are females as per report released by Census India 2011.
+
+								Population of Children with age of 0-6 is 1124 which is 12.90 % of total population of Saravali (CT). In Saravali Census Town, Female Sex Ratio is of 739 against state average of 929. Moreover Child Sex Ratio in Saravali is around 834 compared to Maharashtra state average of 894. Literacy rate of Saravali city is 92.79 % higher than state average of 82.34 %. In Saravali, Male literacy is around 94.84 % while female literacy rate is 89.97 %.
+
+								Saravali Census Town has total administration over 2,209 houses to which it supplies basic amenities like water and sewerage. It is also authorize to build roads within Saravali Census Town limits and impose taxes on properties coming under its jurisdiction. </p>
 						</div>
 						<!--<div class="button about_button">
 							<a href="#">read more</a>
@@ -335,7 +339,7 @@
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src="{%static 'images/bal.jpg'%}" alt=""></div>
+					<div class="about_image"><img src="{%static 'images/bal.jpg'%}" style="height: 290px;"></div>
 				</div>
 			</div>
 		</div>

@@ -47,7 +47,7 @@ body
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	font-weight: 500;
-	background: #FFFFFF;
+	background: #dbe2ef;
 	color: #696969;
 }
 div
@@ -281,7 +281,7 @@ section
 	left: 1px;
 	top: 0;
 	width: 54px;
-	height: 3px;
+
 	background: #20d34a;
 	content: '';
 }
@@ -316,7 +316,8 @@ section
 .top_bar
 {
 	width: 100%;
-	background: #6e6f73;
+	background: #3a578e;
+	height: 75px;
 }
 .top_bar_content
 {
@@ -344,8 +345,9 @@ section
 }
 .emergencies
 {
-	height: 100%;
-	background: #e2153c;
+
+	height: 101px;
+	background: #d2d3d6;
 	color: #FFFFFF;
 	font-size: 14px;
 	font-weight: 700;
@@ -693,8 +695,8 @@ section
 }
 .home_title h1
 {
-	font-size: 69.24px;
-	font-weight: 900;
+	font-size: 60.24px;
+	font-weight: 500;
 	color: #0baf27;
 	line-height: 1.0398;
 }
@@ -744,6 +746,7 @@ section
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+
 }
 .box::after
 {
@@ -834,7 +837,7 @@ section
 .about
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #dbe2ef;
 	padding-top: 92px;
 	padding-bottom: 92px;
 }
