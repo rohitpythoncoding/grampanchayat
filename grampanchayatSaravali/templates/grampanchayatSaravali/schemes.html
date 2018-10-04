@@ -1,28 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
 <head>
-{%load staticfiles%}
-<title>
-	{% if request.session.lang == "en" %}
-        Grampanchayat
-     {% else %}
-		Saravali {{a}}
-     {% endif %}
-</title>
+	{%load staticfiles%}
+<title>Development Plan</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="CareMed demo project">
+<meta name="description" content="Elected Member">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'%}">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
 </head>
 <body>
 
@@ -119,121 +112,80 @@
 				<div class="row">
 					<div class="col">
 						<div class="logo_container" style="height: 180px; width: 175px; background-image:url({%static 'images/logo.jpg'%});">
-
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 
 	</header>
 
-	<!--Home-->
+
+	<!-- Home -->
 
 	<div class="home">
-		<div class="home_slider_container">
-			<!-- Home Slider -->
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slider Item -->
-				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url({%static 'images/home_backgroundIMG20180930164505.jpg'%})"></div>
-					<div class="home_content">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_content_inner">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/devPlan.jpg'%}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Development Plan</div>
 
-									</div>
-								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Services -->
+
+	<div class="services">
+		<div class="container">
+
+			<div class="row services_row">
+
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/viksArakhada201819.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2018-2019</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2018-19 </p>
 							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
-			</div>
-
-		</div>
-	</div>
-
-	<!-- 3 Boxes -->
-
-	<div class="boxes">
-		<div class="container">
-			<div class="row">
-
-				<!-- Box -->
-				<div class="col-lg-4 box_col">
-					<div class="box working_hours">
-						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width:29px; height:29px;"><img src="{%static 'images/alarm-clock.svg'%}" alt=""></div></div>
-						<div class="box_title">
-							{% if request.session.lang == "en" %}Working Hours {% else %}कामाचे वेळ {% endif %}
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/vikasArakhada201718.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2017-2018</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2017-18 </p>
+							</div>
 						</div>
-						<div class="working_hours_list">
-							<ul>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>
-										{% if request.session.lang == "en" %}Monday – Friday {% else %}सोमवार-शुक्रवार {% endif %}
-									</div>
-									<div class="ml-auto">8.00 – 19.00</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>
-										{% if request.session.lang == "en" %}Saturday {% else %}शनिवार {% endif %}
-									</div>
-									<div class="ml-auto">9.30 – 17.00</div>
-								</li>
-								<li class="d-flex flex-row align-items-center justify-content-start">
-									<div>
-										{% if request.session.lang == "en" %}Sunday {% else %}रविवार {% endif %}
-									</div>
-									<div class="ml-auto">9.30 – 15.00</div>
-								</li>
-							</ul>
+					</a>
+				</div>
+
+				<!-- Service -->
+				<div class="col-lg-4 col-md-6 service_col">
+					<a href="/static/pdf/vikasArakhada201617.pdf">
+						<div class="service text-center trans_200">
+							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
+							<div class="service_title trans_200">Panchayat Activity Plan Report 2016-2017</div>
+							<div class="service_text">
+								<p>Development Plan of Saravali Grampanchayat for year 2016-17 </p>
+							</div>
 						</div>
-					</div>
+					</a>
 				</div>
 
-				<!-- Box -->
-				<div class="col-lg-4 box_col">
-					<div class="box box_emergency">
-						<div class="box_icon d-flex flex-column align-items-start justify-content-center"><div style="width: 37px; height:37px; margin-left:-4px;"><img src="{%static 'images/bell.svg'%}" alt=""></div></div>
-						<div class="box_title">{% if request.session.lang == "en" %}Emergency Numbers {% else %}तात्काळ क्रमांक {% endif %}</div>
-						<div class="box_phone">+91 9278655434</div>
-						<div class="box_emergency_text">{% if request.session.lang == "en" %}Contact above number for emergency {% else %}वरील तात्काळ नंबर वर संपर्क करा{% endif %}</div>
-					</div>
-				</div>
 
-			</div>
-		</div>
-	</div>
-
-	<!-- About -->
-
-	<div class="about" style="padding-bottom: 48px;">
-		<div class="container">
-			<div class="row row-lg-eq-height">
-
-				<!-- About Content -->
-				<div class="col-lg-7">
-					<div class="about_content">
-						<div class="section_title">
-							<h2>{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
-						<div class="about_text">
-							<p style="text-align:justify">Saravali is a Census Town city in district of Thane, Maharashtra. The Saravali Census Town has population of 8,710 of which 5,008 are males while 3,702 are females as per report released by Census India 2011.
-
-								Population of Children with age of 0-6 is 1124 which is 12.90 % of total population of Saravali (CT). In Saravali Census Town, Female Sex Ratio is of 739 against state average of 929. Moreover Child Sex Ratio in Saravali is around 834 compared to Maharashtra state average of 894. Literacy rate of Saravali city is 92.79 % higher than state average of 82.34 %. In Saravali, Male literacy is around 94.84 % while female literacy rate is 89.97 %.
-
-								Saravali Census Town has total administration over 2,209 houses to which it supplies basic amenities like water and sewerage. It is also authorize to build roads within Saravali Census Town limits and impose taxes on properties coming under its jurisdiction. </p>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- About Image -->
-				<div class="col-lg-5">
-					<div class="about_image"><img src="{%static 'images/bal.jpg'%}" style="height: 290px;"></div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -260,9 +212,9 @@
 <script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
 <script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
 <script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
-<script src="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-<script src="{%static 'js/custom.js'%}"></script>
+<script src="{%static 'js/news.js'%}"></script>
+<script src="{%static 'js/services.js'%}"></script>
 </body>
 </html>

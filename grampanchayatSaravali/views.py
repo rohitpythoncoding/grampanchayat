@@ -28,9 +28,8 @@ def electedMember(request):
     return render(request, 'grampanchayatSaravali/electedMember.html')
 
 
-
 def schemes(request):
-    return render(request, 'grampanchayatSaravali/index.html')
+    return render(request, 'grampanchayatSaravali/schemes.html')
 
 
 def photoGallery(request):
