@@ -16,6 +16,10 @@ def workers(request):
     return render(request, 'grampanchayatSaravali/workers.html')
 
 
+def certificates(request):
+    return render(request, 'grampanchayatSaravali/certificates.html')
+
+
 def map(request):
     return render(request, 'grampanchayatSaravali/index.html')
 

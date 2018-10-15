@@ -8,6 +8,7 @@ urlpatterns = [
     path('map/', views.map, name='map'),
     path('workers/', views.workers, name='workers'),
     path('electedMember/', views.electedMember, name='electedMember'),
+    path('certificates/', views.certificates, name='certificates'),
     path('schemes/', views.schemes, name='schemes'),
     path('photoGallery/', views.photoGallery, name='photoGallery'),
     path('faq/', views.faq, name='faq'),
