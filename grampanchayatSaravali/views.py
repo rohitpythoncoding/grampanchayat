@@ -46,3 +46,9 @@ def faq(request):
 
 def developmentPlan(request):
     return render(request, 'grampanchayatSaravali/vikasArakhada.html')
+
+def other(request):
+    return render(request, 'grampanchayatSaravali/other.html')
+
+def committees(request):
+    return render(request, 'grampanchayatSaravali/committees.html')
