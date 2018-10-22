@@ -45,7 +45,7 @@ body
 	font-size: 15px;
 	font-weight: 500;
 	background: #FFFFFF;
-	color: #696969;
+	color: #00000;
 }
 div
 {
@@ -877,7 +877,7 @@ section
 .sidebar
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #dbe2ef;
 }
 .search_input
 {
@@ -1289,29 +1289,4 @@ section
 .footer_social ul li a i:hover
 {
 	color: #FFFFFF;
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 2px solid black;
-}
-
-td {
-
-    text-align: left;
-    padding: 8px;
-    border: 2px solid black;
-}
-
-th {
-
-    text-align: left;
-    padding: 8px;
-    border: 2px solid black;
-    color: #441c1c;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
 }

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{%load staticfiles%}
+<title>Committees</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Elected Member">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'%}">
+<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+
+<style>
+
+.pricingdiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.pricingdiv ul.theplan{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  background: #7c3ac9;
+  position: relative;
+  width: 250px; /* width of each table */
+  margin-right: 10px; /* spacing between tables */
+  margin-bottom: 1em;
+  transition: all .5s;
+}
+
+.pricingdiv ul.theplan:hover{ /* when mouse hover over pricing table */
+  transform: scale(1.05);
+  transition: all .5s;
+  z-index: 100;
+  box-shadow: 0 0 10px gray;
+}
+
+.pricingdiv ul.theplan li{
+  margin: 10px 20px;
+  position: relative;
+}
+
+.pricingdiv ul.theplan li.title{
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+}
+
+.pricingdiv ul.theplan:nth-of-type(2){
+  background: #e53499;
+}
+
+.pricingdiv ul.theplan:nth-of-type(3){
+  background: #2a2cc8;
+}
+
+.pricingdiv ul.theplan:last-of-type{ /* remove right margin in very last table */
+  margin-right: 0;
+}
+
+/*very last LI within each pricing UL */
+.pricingdiv ul.theplan li:last-of-type{
+  text-align: center;
+  margin-top: auto; /*align last LI (price botton li) to the very bottom of UL */
+}
+
+.pricingdiv a.pricebutton{
+  background: white;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 5px;
+  color: navy;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 500px) {
+  .pricingdiv ul.theplan{
+    border-radius: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pricingdiv ul.theplan:hover{
+    transform: none;
+    box-shadow: none;
+  }
+
+  .pricingdiv a.pricebutton{
+    display: block;
+  }
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+}
+
+td {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid #9c7676;
+}
+
+th {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    color: #441c1c;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.dropbtn {
+
+
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+</style>
+</head>
+<body style="background: #dbe2ef;">
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header trans_200">
+
+		<!-- Top Bar -->
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
+
+							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ;">SARAVALI  GRAMPANCHAYAT</div>
+
+							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header Content -->
+		<div class="header_container" style="height: 65px;">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<nav class="main_nav ml-auto">
+								<ul style="height: 55px;">
+									<li>
+										<a href="{% url 'home' %}">
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'certificates' %}">
+											{% if request.session.lang == "en" %}Certificates {% else %}दाखले {% endif %}
+										</a>
+									</li>
+									<li>
+										<div class="dropdown">
+											<div class="dropbtn">Members</div>
+											<div class="dropdown-content">
+												<a href="{% url 'electedMember' %}">
+											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'workers' %}">
+											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'committees' %}">
+											{% if request.session.lang == "en" %}Committees {% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
+									</li>
+
+
+									<li>
+										<a href="{% url 'schemes' %}">
+											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'developmentPlan' %}">
+											{% if request.session.lang == "en" %}Development Plan{% else %}विकास आराखडा {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'photoGallery' %}">
+											{% if request.session.lang == "en" %}Photo Gallery {% else %}फोटो गॅलरी {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'other' %}">
+											{% if request.session.lang == "en" %}Other {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'map' %}">
+											{% if request.session.lang == "en" %}Map {% else %}नकाशा {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'faq' %}">
+											{% if request.session.lang == "en" %}FAQ {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
+										</a>
+									</li>
+
+								</ul>
+							</nav>
+							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="logo_container_outer">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="logo_container" style="height: 75px; width: 75px; background-image:url({%static 'images/logo.jpg'%});">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/news_nature.jpg'%}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content">
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Committees</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- News -->
+
+	<div class="news">
+		<div class="container">
+			<div class="row">
+
+				<!-- News Posts -->
+				<div class="col-lg-8">
+
+
+					<!--<div>
+						<h3>Health and Sanitary Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Ashok Baliram Salunkhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Dinesh Gopinath Sankhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Vijay Bhaskar Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Himmat Ishakkhan Pathan</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Praful Vaman Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Mukesh Jaywant Gharat</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3>Construction Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Ashok Baliram Salunkhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Dinesh Gopinath Sankhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Vijay Bhaskar Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Himmat Ishakkhan Pathan</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Praful Vaman Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Sachin Vilas Patil</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3>Water Supply Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Ashok Baliram Salunkhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Dinesh Gopinath Sankhe</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Vijay Bhaskar Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Smita Rupesh Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Manisha Mandesh Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Kanchan Suresh Sahani</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3>Women and Child Development Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Nitisha Nitesh Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Deepa Dattatray Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Shimala Surendra Nishad</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Manisha Mandesh Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Kanchan Suresh Sahani</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3>Education Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Praful Vaman Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Prema Bhupendra Machhi</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Vijay Bhaskar Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Smita Rupesh Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Nilkamal Navin Dhodi</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Sachin Vilas Patil</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3>Aadivashi Development Committee</h3>
+						<table>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Chair Person</td>
+							</tr>
+							<tr>
+								<td>Praful Vaman Gharat</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Milind Mahadeo Yadav</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Vijay Bhaskar Raut</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Urmila Ganesh Thakur</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Nilkamal Navin Dhodi</td>
+								<td>Member</td>
+							</tr>
+							<tr>
+								<td>Sachin Vilas Patil</td>
+								<td>Member</td>
+							</tr>
+						</table>
+					</div>-->
+				</div>
+
+
+				 <!--Sidebar-->
+				<!--<div class="col-lg-4">
+					<div class="sidebar">
+						<img src="{%static 'images/img1.jpg'%}">
+
+
+						<div class="sidebar_categories sidebar_section">
+							<img src="{%static 'images/img2.jpg'%}">
+						</div>
+
+
+
+						<div class="sidebar_categories sidebar_section">
+							<img src="{%static 'images/img1.jpg'%}">
+						</div>
+
+
+
+						</div>
+					</div>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pricingdiv" style="background:#dbe2ef">
+		<ul class="theplan" >
+			<li class="title"><b>Health and Sanitary Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Dinesh Gopinath Sankhe</li>
+			<li>Ashok Baliram Salunkhe</li>
+			<li>Vijay Bhaskar Raut</li>
+			<li>Himmat Ishakkhan Pathan</li>
+			<li>Praful Vaman Gharat</li>
+			<li style="margin-top:10px; margin-left:0px; margin-right:60px;">Mukesh Jaywant Gharat</li>
+		</ul>
+		<ul class="theplan" style="margin-right:50px; margin-left:50px">
+			<li class="title"><b>Construction Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Dinesh Gopinath Sankhe</li>
+			<li>Ashok Baliram Salunkhe</li>
+			<li>Vijay Bhaskar Raut</li>
+			<li>Himmat Ishakkhan Pathan</li>
+			<li>Praful Vaman Gharat</li>
+			<li style="height:50px; margin-left:0px; margin-right:100px;">Sachin Vilas Patil</li>
+		</ul>
+		<ul class="theplan">
+			<li class="title"><b>Water Supply Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Dinesh Gopinath Sankhe</li>
+			<li>Ashok Baliram Salunkhe</li>
+			<li>Vijay Bhaskar Raut</li>
+			<li>Kanchan Suresh Sahani</li>
+			<li>Smita Rupesh Raut</li>
+			<li style="margin-top:10px; margin-left:0px; margin-right:60px;">Manisha Mandesh Gharat</li>
+		</ul>
+	</div>
+
+	<div class="pricingdiv" style="background:#dbe2ef; margin-top:25px; margin-bottom:25px">
+		<ul class="theplan">
+			<li class="title"><b>Women and Child Development Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Manisha Mandesh Gharat</li>
+			<li>Nitisha Nitesh Gharat</li>
+			<li>Deepa Dattatray Raut</li>
+			<li>Kanchan Suresh Sahani</li>
+			<li style="margin-top:10px; margin-left:0px; margin-right:60px;">Shimala Surendra Nishad</li>
+		</ul>
+		<ul class="theplan" style="margin-right:50px; margin-left:50px">
+			<li class="title"><b>Education Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Smita Rupesh Raut</li>
+			<li>Nilkamal Navin Dhodi</li>
+			<li>Vijay Bhaskar Raut</li>
+			<li>Prema Bhupendra Macchi</li>
+			<li>Praful Vaman Gharat</li>
+			<li style="margin-top:10px; margin-right:120px;">Sachin Vilas Patil</li>
+		</ul>
+		<ul class="theplan">
+			<li class="title"><b>Aadivashi Development Committee</b></li>
+			<li>Laxmi Janardan Chandane</li>
+			<li>Milind Mahadeo Yadav</li>
+			<li>Vijay Bhaskar Raut</li>
+			<li>Urmila Ganesh Thakur</li>
+			<li>Nilkamal Navin Dhodi</li>
+			<li>Sachin Vilas Patil</li>
+			<li style="margin-right:100px;">Praful Vaman Gharat</li>
+		</ul>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
+							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
+<script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
+<script src="{%static 'plugins/easing/easing.js'%}"></script>
+<script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="{%static 'js/news.js'%}"></script>
+</body>
+</html>

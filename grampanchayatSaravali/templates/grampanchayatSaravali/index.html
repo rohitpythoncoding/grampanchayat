@@ -23,6 +23,68 @@
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/main_styles.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/responsive.css'%}">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+}
+
+td {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+th {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    color: #441c1c;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.dropbtn {
+
+
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
+</style>
 </head>
 <body>
 
@@ -68,16 +130,24 @@
 										</a>
 									</li>
 									<li>
-										<a href="{% url 'electedMember' %}">
-											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
-										</a>
+										<div class="dropdown">
+											<div class="dropbtn">Members</div>
+											<div class="dropdown-content">
+												<a href="{% url 'electedMember' %}">
+											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'workers' %}">
+											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'committees' %}">
+											{% if request.session.lang == "en" %}Committees {% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
 									</li>
 
-									<li>
-										<a href="{% url 'workers' %}">
-											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
-										</a>
-									</li>
+
 									<li>
 										<a href="{% url 'schemes' %}">
 											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
@@ -91,6 +161,11 @@
 									<li>
 										<a href="{% url 'photoGallery' %}">
 											{% if request.session.lang == "en" %}Photo Gallery {% else %}फोटो गॅलरी {% endif %}
+										</a>
+									</li>
+									<li>
+										<a href="{% url 'other' %}">
+											{% if request.session.lang == "en" %}Other {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
 										</a>
 									</li>
 									<li>
@@ -118,12 +193,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container" style="height: 180px; width: 175px; background-image:url({%static 'images/logo.jpg'%});">
+						<div class="logo_container" style="height: 75px; width: 75px; background-image:url({%static 'images/logo.jpg'%});">
 
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</div>
 
 	</header>
@@ -232,11 +307,29 @@
 
 				<!-- About Image -->
 				<div class="col-lg-5">
-					<div class="about_image"><img src="{%static 'images/bal.jpg'%}" style="height: 290px;"></div>
+					<div class="about_image"><img src="{%static 'images/deputysarpanch.jpg'%}"  alt='missing' style="height: 290px; width: 555px; padding-left: 265px;"></div>
+					<div class="about_image"><img src="{%static 'images/sarpanch.jpg'%}" style="height: 290px; padding-right: 245px;"></div>
+
 				</div>
+
 			</div>
 		</div>
 	</div>
+	<div class="news">
+		<div class="container">
+			<div class="row">
+
+				<!-- News Posts -->
+
+
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
 
 	<!-- Footer -->
 

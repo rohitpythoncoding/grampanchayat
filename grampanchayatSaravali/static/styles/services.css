@@ -47,7 +47,7 @@ body
 	font-size: 15px;
 	font-weight: 500;
 	background: #FFFFFF;
-	color: #696969;
+
 }
 div
 {
@@ -711,8 +711,8 @@ section
 {
 	width: 100%;
 	background: #dbe2ef;
-	padding-top: 95px;
-	padding-bottom: 65px;
+	padding-top: 1px;
+	padding-bottom: 45px;
 }
 .services_row
 {
