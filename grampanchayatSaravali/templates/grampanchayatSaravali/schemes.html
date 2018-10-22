@@ -35,37 +35,6 @@
     display: table;
     clear: both;
 }
-.dropbtn {
-
-
-    font-size: 16px;
-    background-color: #FFFFFF;
-}
-
-.dropdown {
-    position: relative;
-
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
-
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-
-
-.dropdown:hover .dropdown-content {display: block;}
 </style>
 </head>
 <body>
@@ -112,24 +81,16 @@
 										</a>
 									</li>
 									<li>
-										<div class="dropdown">
-											<div class="dropbtn">Members</div>
-											<div class="dropdown-content">
-												<a href="{% url 'electedMember' %}">
-											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
-												</a>
-												<a href="{% url 'workers' %}">
-											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
-												</a>
-
-												<a href="{% url 'committees' %}">
-											{% if request.session.lang == "en" %}Committees {% else %}कामगार {% endif %}
-												</a>
-											</div>
-										</div>
+										<a href="{% url 'electedMember' %}">
+											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
+										</a>
 									</li>
 
-
+									<li>
+										<a href="{% url 'workers' %}">
+											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
+										</a>
+									</li>
 									<li>
 										<a href="{% url 'schemes' %}">
 											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
@@ -143,11 +104,6 @@
 									<li>
 										<a href="{% url 'photoGallery' %}">
 											{% if request.session.lang == "en" %}Photo Gallery {% else %}फोटो गॅलरी {% endif %}
-										</a>
-									</li>
-									<li>
-										<a href="{% url 'other' %}">
-											{% if request.session.lang == "en" %}Other {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
 										</a>
 									</li>
 									<li>
@@ -176,7 +132,6 @@
 				<div class="row">
 					<div class="col">
 						<div class="logo_container" style="height: 75px; width: 75px; background-image:url({%static 'images/logo.jpg'%});">
-
 						</div>
 					</div>
 				</div>
@@ -524,6 +479,56 @@
 					<li>Death Certificate if parents are dead</li>
                     <li>Income Certificate</li>
                     <li>Bank account Passbook</li>
+				</span>
+			</ul>
+			<br>
+            <h2 style="text-align: center;">
+				<span style="color: #000000;">
+					<strong>Term Loan Scheme</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">Eligibility</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						<b>Point to be written</b>.
+					</li>
+					<li>Age between 18 to 50.</li>
+					<li>Applicant should not have money due in any of the bank or corporation.</li>
+					<li>Applicant should have annual income less than Rs. 98000 whereas Applicant from Urban area
+						should have annual income less than Rs. 120000.</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">Benifits</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>Loan on project of less than Rs. 300000 (Three lakh) with 6 % per annum</li>
+                </span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">Documents Required</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+          <li>Income Certificate</li>
+          <li>Caste Certificate, Copy of Ration card, Passport size Photograph</li>
+					<li>Rent receipt of porject place, agreement, 7/12 utara</li>
+					<li>Academeic Qualification / Birth Certificate</li>
+					<li>Two guarantor certificate</li>
+          <li>No Objection certificate for starting business from local swaraj sanstha</li>
+					<li>Required proof / licence to start a Technical business</li>
 				</span>
 			</ul>
 			</div>
