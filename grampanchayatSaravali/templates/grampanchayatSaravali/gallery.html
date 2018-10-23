@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Elected Members</title>
+<title>Photo Gallery</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
@@ -14,36 +14,10 @@
 <link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
-
-<style>
-
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 2px solid #9c7676;
-}
-
-td {
-
-    text-align: left;
-    padding: 8px;
-    border: 2px solid #9c7676;
-}
-
-th {
-
-    text-align: left;
-    padding: 8px;
-    border: 2px solid #9c7676;
-    color: #441c1c;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-.dropbtn {
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
+	<style>
+		.dropbtn {
 
 
     font-size: 16px;
@@ -74,14 +48,12 @@ tr:nth-child(even) {
 
 
 .dropdown:hover .dropdown-content {display: block;}
-
-
-</style>
+	</style>
 </head>
-<body style="background: #dbe2ef;">
+<body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
 
 	<header class="header trans_200">
@@ -195,16 +167,17 @@ tr:nth-child(even) {
 
 	</header>
 
+
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/news_nature.jpg'%}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/devPlan.jpg'%}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Elected Members</div>
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Photo Gallery</div>
 
 						</div>
 					</div>
@@ -213,142 +186,50 @@ tr:nth-child(even) {
 		</div>
 	</div>
 
-	<!-- News -->
+	<!-- Services -->
 
-	<div class="news">
+	<div class="services">
 		<div class="container">
-			<div class="row">
 
-				<!-- News Posts -->
-				<div class="col-lg-8">
+			<div class="row services_row">
 
-					<div>
-						<h4 style="font-family: Arial Black">Elected Members of Saravali Grampanchayat :</h4>
-						<table style="margin-bottom:30px; margin-top:40px;">
-							<tr>
-								<th>Elected Candidates</th>
-								<th>Position</th>
-								<th>Ward</th>
-							</tr>
-							<tr>
-								<td>Laxmi Janardan Chandane</td>
-								<td>Sarpanch</td>
-								<td>Sarpanch</td>
-							</tr>
-							<tr>
-								<td>Smita Rupesh Raut</td>
-								<td>Deputy Sarpanch</td>
-								<td>4D</td>
-							</tr>
-							<tr>
-								<td>Praful Vaman Gharat</td>
-								<td>Member</td>
-								<td>1A</td>
-							</tr>
-							<tr>
-								<td>Prema BhupendraMachhi</td>
-								<td>Member</td>
-								<td>1A</td>
-							</tr>
-							<tr>
-								<td>Milind Mahadev Yadav</td>
-								<td>Member</td>
-								<td>2B</td>
-							</tr>
-							<tr>
-								<td>Mukesh Jaywant Gharat</td>
-								<td>Member</td>
-								<td>2B</td>
-							</tr>
-							<tr>
-								<td>Urmila Ganesh Thakur</td>
-								<td>Member</td>
-								<td>2B</td>
-							</tr>
-							<tr>
-								<td>Vijay Bhaskar Raut</td>
-								<td>Member</td>
-								<td>3C</td>
-							</tr>
-							<tr>
-								<td>Dipa Dattatray Raut</td>
-								<td>Member</td>
-								<td>3C</td>
-							</tr>
-							<tr>
-								<td>Kanchan Suresh Sahani</td>
-								<td>Member</td>
-								<td>3C</td>
-							</tr>
-							<tr>
-								<td>Sachin Vilas Patil</td>
-								<td>Member</td>
-								<td>4D</td>
-							</tr>
-							<tr>
-								<td>Ashok Baliram Salunke</td>
-								<td>Member
-								<td>4D</td>
-							</tr>
-							<tr>
-								<td>Himmat Ishakkhan Pathan</td>
-								<td>Member</td>
-								<td>5E</td>
-							</tr>
-							<tr>
-								<td>Nilkamal Navin Dhodi</td>
-								<td>Member</td>
-								<td>5E</td>
-							</tr>
-							<tr>
-								<td>Nimla Surendra Nishad</td>
-								<td>Member</td>
-								<td>5E</td>
-							</tr>
-							<tr>
-								<td>Dinesh Gopinath Sankhe</td>
-								<td>Member</td>
-								<td>6F</td>
-							</tr>
-							<tr>
-								<td>Manisha Mandesh Gharat</td>
-								<td>Member</td>
-								<td>6F</td>
-							</tr>
-							<tr>
-								<td>Nishita Nitesh Gharat</td>
-								<td>Member</td>
-								<td>6F</td>
-							</tr>
+                <table class="image col-lg-5">
+					<tr>
+						<th><img src="{%static 'images/photo3.jpg'%}" style="width:1100px; padding-bottom:0.5em;"></th>
 
-						</table>
-					</div>
+					</tr>
+					<tr>
+                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch and Deputy-Sarpanch Taking Their Seats</h4></td>
+
+					</tr>
+				</table>
+
+				<table class="image col-lg-5">
+					<tr>
+						<th><img src="{%static 'images/photo1.jpg'%}" style="width:1100px; padding-bottom:0.5em; padding-top:45px; height:600px"></th>
+
+					</tr>
+					<tr>
+                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch has started new scheme of giving plant to grampanchayat workers on their birthday</h4></td>
+
+					</tr>
+				</table>
 
 
-				</div>
+                <table class="image col-lg-5">
+					<tr>
+						<th><img src="{%static 'images/photo2.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:45px; height:1000px"></th>
+                        <th><img src="{%static 'images/photo4.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:11px; height:1000px"></th>
+
+					</tr>
+					<tr>
+                        <td class="caption"><h4 style="font-family: Arial Black">Grampanchayat Celebrating Flag Hosting</h4></td>
+                        <td class="caption"><h4 style="font-family: Arial Black">Plantation</h4></td>
+
+					</tr>
+				</table>
 
 
-				 <!--Sidebar-->
-				<!--<div class="col-lg-4">
-					<div class="sidebar">
-						<img src="{%static 'images/img1.jpg'%}">
-
-
-						<div class="sidebar_categories sidebar_section">
-							<img src="{%static 'images/img2.jpg'%}">
-						</div>
-
-
-
-						<div class="sidebar_categories sidebar_section">
-							<img src="{%static 'images/img1.jpg'%}">
-						</div>
-
-
-
-						</div>
-					</div>-->
-				</div>
 			</div>
 		</div>
 	</div>
@@ -378,5 +259,6 @@ tr:nth-child(even) {
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{%static 'js/news.js'%}"></script>
+<script src="{%static 'js/services.js'%}"></script>
 </body>
 </html>

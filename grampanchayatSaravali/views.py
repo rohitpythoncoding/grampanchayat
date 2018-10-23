@@ -37,7 +37,7 @@ def schemes(request):
 
 
 def photoGallery(request):
-    return render(request, 'grampanchayatSaravali/index.html')
+    return render(request, 'grampanchayatSaravali/gallery.html')
 
 
 def faq(request):
