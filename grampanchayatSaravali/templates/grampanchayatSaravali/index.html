@@ -35,7 +35,7 @@ td {
 
     text-align: left;
     padding: 8px;
-    border: 2px solid black;
+    border: 2px solid #441c1c;
 }
 
 th {
@@ -44,9 +44,7 @@ th {
     padding: 8px;
     border: 2px solid black;
     color: #441c1c;
-
 }
-
 tr:nth-child(even) {
     background-color: #dddddd;
 }
@@ -131,7 +129,7 @@ tr:nth-child(even) {
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn">Members</div>
+											<div class="dropbtn" style="padding-left:15px;">Members</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
 											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
@@ -292,7 +290,7 @@ tr:nth-child(even) {
 				<div class="col-lg-7">
 					<div class="about_content">
 						<div class="section_title">
-							<h2>{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
+							<h2 style="font-family: Arial Black">{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
 						<div class="about_text">
 							<p style="text-align:justify">Saravali is a Census Town city in district of Thane, Maharashtra. The Saravali Census Town has population of 8,710 of which 5,008 are males while 3,702 are females as per report released by Census India 2011.
 
@@ -303,13 +301,221 @@ tr:nth-child(even) {
 
 					</div>
 				</div>
+				<div class="col-lg-7">
+					<div class="about_content">
+						<div class="section_title">
+							<h4 style="padding-top: 22px; font-family:Lucida Sans Unicode">Establishment of Saravali Grampanchayat: 1956</h4>
+							<h4 style="font-family:Lucida Sans Unicode">Seperation of Khairapada Grampanchayat: 1988-89</h4>
+							<h4 style="font-family:Lucida Sans Unicode">Grampanchayat of Khairapada merge into Saravali Grampanchayat: July 2013</h4>
+							<h4 style="font-family:Lucida Sans Unicode">Population before merging: 8710</h4>
+							<h4 style="font-family:Lucida Sans Unicode">Total Population according to report of 2013-14: 26485</h4>
+						</div>
+						<div class="section_title">
+							<h2 style="font-family: Arial Black">List of Sarpanch/Deputy-Sarpanch/Rural Development Officer:</h2>
+							<table style="margin-bottom:30px; margin-top:40px;">
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Timeperiod</th>
+							</tr>
+							<tr>
+								<td>Laxmi Janardan Chandane</td>
+								<td>Sarpanch</td>
+								<td>2018 to 2023</td>
+							</tr>
+							<tr>
+								<td>Smita Rupesh Raut</td>
+								<td>Deputy Sarpanch</td>
+								<td>2018 to 2023</td>
+							</tr>
+								<tr>
+								<td>Subhash Atmaram Kini</td>
+								<td>Rural Development Officer</td>
+								<td>-</td>
+							</tr>
+								<tr>
+								<td>Vaibhavi Vijay Raut</td>
+								<td>Sarpanch</td>
+								<td>2013 to 2018</td>
+							</tr>
+								<tr>
+								<td>Shital Santosh Govari</td>
+								<td>Deputy Sarpanch</td>
+								<td>2013 to 2014</td>
+							</tr>
+								<tr>
+								<td>Ashok Baliram Salunkhe</td>
+								<td>Deputy Sarpanch</td>
+								<td>2014 to 2016</td>
+							</tr>
+								<tr>
+								<td>Prajit Pandurang Gharat</td>
+								<td>Deputy Sarpanch</td>
+								<td>2016 to 2017</td>
+							</tr>
+								<tr>
+								<td>Suresh Rammanohar Sahani</td>
+								<td>Deputy Sarpanch</td>
+								<td>2017 to 2018</td>
+							</tr>
+								<tr>
+								<td>Subhash Atmaram Kini</td>
+								<td>Rural Development Officer</td>
+								<td>From 3 June 2015</td>
+							</tr>
+								<tr>
+								<td>Kamalakar Harishchandra Naik</td>
+								<td>Rural Development Officer</td>
+								<td>To 3 June 2015</td>
+							</tr>
+								<tr>
+								<td>Ganesh Mahadeo Thakur</td>
+								<td>Sarpanch</td>
+								<td>2008 to 2013</td>
+							</tr>
+							<tr>
+								<td>Chandrakant Haraji Macchi</td>
+								<td>Deputy Sarpanch</td>
+								<td>From 2008 to 2011</td>
+							</tr>
+								<tr>
+								<td>Panjabrao M Ghyare</td>
+								<td>Administrator</td>
+								<td>2007 to 2008</td>
+							</tr>
+							<tr>
+								<td>Shridhar Moreshwar Raut</td>
+								<td>Deputy Sarpanch</td>
+								<td>From 2007 to 2008</td>
+							</tr>
+								<tr>
+								<td>Arvind Tukaram Sankhe</td>
+								<td>Rural Development Officer</td>
+								<td>2006 to 2008</td>
+							</tr>
+								<tr>
+								<td>Kamalakar Harishchandra Naik</td>
+								<td>Rural Development Officer</td>
+								<td>From 2008</td>
+							</tr>
+								<tr>
+								<td>Ganesh Mahadeo Thakur</td>
+								<td>Sarpanch</td>
+								<td>1998 to 2003</td>
+							</tr>
+							<tr>
+								<td>Chandrakant Haraji Macchi</td>
+								<td>Deputy Sarpanch</td>
+								<td>1998 to 2003</td>
+							</tr>
+								<tr>
+								<td>Ganesh Mahadeo Thakur</td>
+								<td>Sarpanch</td>
+								<td>1993 to 1998</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Deputy Sarpanch</td>
+								<td>1993 to 1998</td>
+							</tr>
+								<tr>
+								<td>Ashok Shivaji Bhoye</td>
+								<td>Rural Development Officer</td>
+								<td>1993</td>
+							</tr>
+								<tr>
+								<td>D N Patil</td>
+								<td>Administrator</td>
+								<td>1988 to 1993</td>
+							</tr>
+								<tr>
+								<td>Ashok V Kini</td>
+								<td>Rural Development Officer</td>
+								<td>1988 to 1993</td>
+							</tr>
+								<tr>
+								<td>Atul Posala Dhodi</td>
+								<td>Sarpanch</td>
+								<td>1983 to 1988</td>
+							</tr>
+							<tr>
+								<td>Bhagwan Hotya Dhodi</td>
+								<td>Deputy Sarpanch</td>
+								<td>1983 to 1988</td>
+							</tr>
+								<tr>
+								<td>Chandrakant Atmaram Joshi</td>
+								<td>Sarpanch</td>
+								<td>1978 to 1983</td>
+							</tr>
+							<tr>
+								<td>Tulsidas Dhodi</td>
+								<td>Deputy Sarpanch</td>
+								<td>1978 to 1983</td>
+							</tr>
+								<tr>
+								<td>Deviprasad Baijjnath Trivedi</td>
+								<td>Sarpanch</td>
+								<td>1973 to 1978</td>
+							</tr>
+							<tr>
+								<td>Narayan Budhya Dhodi</td>
+								<td>Deputy Sarpanch</td>
+								<td>1973 to 1978</td>
+							</tr>
+								<tr>
+								<td>Bhaskar Parashuram Gharat</td>
+								<td>Sarpanch</td>
+								<td>1968 to 1973</td>
+							</tr>
+							<tr>
+								<td>Moreshwar Ganu Raut</td>
+								<td>Deputy Sarpanch</td>
+								<td>1968 to 1973</td>
+							</tr>
+
+							</table>
+
+						</div>
+						<div class="about_text">
+
+						</div>
+
+					</div>
+				</div>
+
+
 
 				<!-- About Image -->
-				<div class="col-lg-5">
-					<div class="about_image"><img src="{%static 'images/deputysarpanch.jpg'%}"  alt='missing' style="height: 290px; width: 555px; padding-left: 265px;"></div>
-					<div class="about_image"><img src="{%static 'images/sarpanch.jpg'%}" style="height: 290px; padding-right: 245px;"></div>
+				<!--<div class="col-lg-5">
 
+					<div class="about_image"><img src="{%static 'images/sarpanch.jpg'%}"></div>
+
+
+				</div>-->
+				<div  class="col-lg-5">
+					<div>
+						<img src="{%static 'images/sarpanch.jpg'%}" style="padding-bottom: 10px;">
+						<div style="font-family: Arial Black">Sarpanch- Laxmi Janardan Chandane</div>
+					</div>
+					<div>
+						<img src="{%static 'images/deputysarpanch.jpg'%}" style="height:590px; padding-top: 45px; padding-bottom: 10px;">
+						<div style="font-family: Arial Black">Deputy Sarpanch- Smita Rupesh Raut</div>
+					</div>
 				</div>
+				<!--<table class="image col-lg-5">
+					<tr>
+						<th><img src="{%static 'images/sarpanch.jpg'%}" ></th>
+						<th><img src="{%static 'images/deputysarpanch.jpg'%}"></th>
+					</tr>
+					<tr>
+						<td class="caption">caption text</td>
+						<td class="caption">caption text</td>
+					</tr>
+				</table>-->
+
+
+
 
 			</div>
 		</div>

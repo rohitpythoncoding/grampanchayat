@@ -23,7 +23,7 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid #9c7676;
 }
 
 td {
@@ -37,7 +37,7 @@ th {
 
     text-align: left;
     padding: 8px;
-    border: 2px solid black;
+    border: 2px solid #9c7676;
     color: #441c1c;
 }
 tr:nth-child(even) {
@@ -123,7 +123,7 @@ tr:nth-child(even) {
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn">Members</div>
+											<div class="dropbtn" style="padding-left:15px;">Members</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
 											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
@@ -223,7 +223,7 @@ tr:nth-child(even) {
 				<div class="col-lg-8">
 
 					<div>
-						<h3>Elected Members of Saravali Grampanchayat :</h3>
+						<h4 style="font-family: Arial Black">Elected Members of Saravali Grampanchayat :</h4>
 						<table style="margin-bottom:30px; margin-top:40px;">
 							<tr>
 								<th>Elected Candidates</th>
@@ -329,7 +329,7 @@ tr:nth-child(even) {
 
 
 				 <!--Sidebar-->
-				<div class="col-lg-4">
+				<!--<div class="col-lg-4">
 					<div class="sidebar">
 						<img src="{%static 'images/img1.jpg'%}">
 
@@ -347,7 +347,7 @@ tr:nth-child(even) {
 
 
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>
