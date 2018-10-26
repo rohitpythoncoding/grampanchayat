@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Development Plan</title>
+<title>Schemes</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
@@ -16,7 +16,26 @@
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
-	<style>
+<style type="text/css">
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .dropbtn {
 
@@ -49,7 +68,8 @@
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-	</style>
+
+</style>
 </head>
 <body>
 
@@ -199,7 +219,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Development Plan</div>
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
 
 						</div>
 					</div>
@@ -213,63 +233,72 @@
 	<div class="services">
 		<div class="container">
 
-			<div class="row services_row">
-
-				<!-- Service -->
-				<div class="col-lg-4 col-md-6 service_col">
-					<a href="/static/pdf/viksArakhada201819.pdf">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2018-2019</div>
-							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2018-19 </p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- Service -->
-				<div class="col-lg-4 col-md-6 service_col">
-					<a href="/static/pdf/vikasArakhada201718.pdf">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2017-2018</div>
-							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2017-18 </p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-				<!-- Service -->
-				<div class="col-lg-4 col-md-6 service_col">
-					<a href="/static/pdf/vikasArakhada201617.pdf">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2016-2017</div>
-							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2016-17 </p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-
+			<br>
+            <h2 style="text-align: center;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">Term Loan Scheme</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">Eligibility</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						<b>Point to be written</b>.
+					</li>
+					<li>Age between 18 to 50.</li>
+					<li>Applicant should not have money due in any of the bank or corporation.</li>
+					<li>Applicant should have annual income less than Rs. 98000 whereas Applicant from Urban area
+						should have annual income less than Rs. 120000.</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">Benifits</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>Loan on project of less than Rs. 300000 (Three lakh) with 6 % per annum</li>
+                </span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">Documents Required</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+          <li>Income Certificate</li>
+          <li>Caste Certificate, Copy of Ration card, Passport size Photograph</li>
+					<li>Rent receipt of porject place, agreement, 7/12 utara</li>
+					<li>Academeic Qualification / Birth Certificate</li>
+					<li>Two guarantor certificate</li>
+          <li>No Objection certificate for starting business from local swaraj sanstha</li>
+					<li>Required proof / licence to start a Technical business</li>
+				</span>
+			</ul>
+            <br>
 			</div>
-		</div>
 	</div>
 
 	<!-- Footer -->
 
 	<footer class="footer">
-
 		<div class="copyright">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
-							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
-
+							<div class="cr">
+								Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric
+								Technologies, Boisar
+							</div>
 						</div>
 					</div>
 				</div>

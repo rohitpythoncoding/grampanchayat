@@ -49,11 +49,12 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+
 .dropbtn {
 
 
     font-size: 16px;
-    background-color: #FFFFFF;
+    background-color: #afb4bd;
 }
 
 .dropdown {
@@ -64,8 +65,8 @@ tr:nth-child(even) {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
+    background-color: #afb4bd;
+    min-width: 250px;
 
     z-index: 1;
 }
@@ -77,11 +78,9 @@ tr:nth-child(even) {
     display: block;
 }
 
-
+.dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-
-
 </style>
 </head>
 <body>
@@ -99,7 +98,7 @@ tr:nth-child(even) {
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 
-							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ;">SARAVALI  GRAMPANCHAYAT</div>
+							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ; right:100px">SARAVALI  GRAMPANCHAYAT</div>
 
 							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
 						</div>
@@ -144,13 +143,34 @@ tr:nth-child(even) {
 											</div>
 										</div>
 									</li>
-
-
 									<li>
-										<a href="{% url 'schemes' %}">
-											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
-										</a>
+										<div class="dropdown">
+											<div class="dropbtn" style="padding-left:15px;">Schemes</div>
+											<div class="dropdown-content">
+												<a href="{% url 'scm1' %}">
+											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm2' %}">
+											{% if request.session.lang == "en" %}Pradhan Mantri Jeevan Jyoti Bima Yojana {% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'scm3' %}">
+											{% if request.session.lang == "en" %}Mazi Kanya Bhagyashree Yojna {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm4' %}">
+											{% if request.session.lang == "en" %}Janani Suraksha Yojana{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm5' %}">
+											{% if request.session.lang == "en" %}Bal Sangopan Yojana{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm6' %}">
+											{% if request.session.lang == "en" %}Term Loan Scheme{% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
 									</li>
+
+
 									<li>
 										<a href="{% url 'developmentPlan' %}">
 											{% if request.session.lang == "en" %}Development Plan{% else %}विकास आराखडा {% endif %}

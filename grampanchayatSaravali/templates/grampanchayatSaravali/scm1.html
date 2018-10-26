@@ -40,7 +40,7 @@
 
 
     font-size: 16px;
-    background-color: #FFFFFF;
+    background-color: #afb4bd;
 }
 
 .dropdown {
@@ -51,8 +51,8 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff;
-    min-width: 160px;
+    background-color: #afb4bd;
+    min-width: 250px;
 
     z-index: 1;
 }
@@ -64,7 +64,7 @@
     display: block;
 }
 
-
+.dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
@@ -85,7 +85,7 @@
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 
-							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ;">SARAVALI  GRAMPANCHAYAT</div>
+							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ; right:100px">SARAVALI  GRAMPANCHAYAT</div>
 
 							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
 						</div>
@@ -130,13 +130,34 @@
 											</div>
 										</div>
 									</li>
-
-
 									<li>
-										<a href="{% url 'schemes' %}">
-											{% if request.session.lang == "en" %}Schemes {% else %}योजना  {% endif %}
-										</a>
+										<div class="dropdown">
+											<div class="dropbtn" style="padding-left:15px;">Schemes</div>
+											<div class="dropdown-content">
+												<a href="{% url 'scm1' %}">
+											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm2' %}">
+											{% if request.session.lang == "en" %}Pradhan Mantri Jeevan Jyoti Bima Yojana {% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'scm3' %}">
+											{% if request.session.lang == "en" %}Mazi Kanya Bhagyashree Yojna {% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm4' %}">
+											{% if request.session.lang == "en" %}Janani Suraksha Yojana{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm5' %}">
+											{% if request.session.lang == "en" %}Bal Sangopan Yojana{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'scm6' %}">
+											{% if request.session.lang == "en" %}Term Loan Scheme{% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
 									</li>
+
+
 									<li>
 										<a href="{% url 'developmentPlan' %}">
 											{% if request.session.lang == "en" %}Development Plan{% else %}विकास आराखडा {% endif %}
@@ -210,9 +231,10 @@
 
 	<div class="services">
 		<div class="container">
+            <br>
             <h2 style="text-align: center; height: 75px;">
 				<span style="color: #000000;">
-					<strong style="background-color:powderblue; font-family:Garamond">Sanjay Gandhi Niradhar Yojana</strong>
+					<strong style="font-family:Garamond">Sanjay Gandhi Niradhar Yojana</strong>
 				</span>
 			</h2>
 			<p>
@@ -295,289 +317,7 @@
 				</span>
 			</ul>
             <br>
-            <h2 style="text-align: center; height: 75px; padding-top: 15px;">
-				<span style="color: #000000;">
-					<strong style="background-color:powderblue;font-family:Garamond">Pradhan Mantri Jeevan Jyoti Bima Yojana</strong>
-				</span>
-			</h2>
-			<p>
-				<span style="color: #000000;">
-					PMJJBY is a renewal term insurance policy that, provides a yearly life insurance coverage of
-                    Rs. 2,00,000 in case of the demise of the insured person, at the most affordable premium rate
-                    of Rs. 330 per annum. In order to help you know more about the policy, we have discussed some of
-                    the key features and benefits offered by the policy.
-				</span>
-			</p>
-			<h3>
-				<br>
-				<span style="color: #000000;">Eligibility</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>
-						Any person aged between 18- 50 years.
-					</li>
-					<li>
-						Requires saving bank account in any bank participating for this scheme.
-					</li>
-					<li>
-						Premium amount is Rs. 330 per annum.
-					</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Benifits</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>The total amount that can be claimed under the policy is INR 2 lakh only</li>
-					<li>
-						Death caused by any reason your family we will get policy amount.
-					</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Documents Required</span>
-			</h3>
-			<ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Copy of bank account to which policy is enrolled</li>
-					<li>Copy of adhaar card</li>
-				</span>
-			</ul>
-            <br>
-            <h2 style="text-align: center; height: 75px; padding-top: 15px;">
-				<span style="color: #000000;">
-					<strong style="background-color:powderblue;font-family:Garamond">Mazi Kanya Bhagyashree Yojna</strong>
-				</span>
-			</h2>
-			<p>
-				<span style="color: #000000;">
-					This scheme belongs to Maharashtra State Government. This Scheme was launched to Increase
-                    Girl Child Birth rate, Level Up the Girl Education, Stop Sex Determination & Health in the State.
-				</span>
-			</p>
-			<h3>
-				<br>
-				<span style="color: #000000;">Eligibility</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>
-						Girl born on 1st of August and onwards can benefit this scheme.
-					</li>
-					<li>
-						Mother with one or two girl child can benefit this scheme.
-					</li>
-					<li>
-						Mother with third child cannot benefit this scheme.
-					</li>
-					<li>
-						Beneficiary must be resident of Maharashtra to take advantage of this scheme.
-					</li>
-					<li>
-						Women in Child homes can also get benefited.
-					</li>
-					<li>
-						The family income with less than Rs 7.5 lakh will benefit from this scheme
-					</li>
-                    <li>
-						Mother/Father should undergo family planning operation.
-					</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Benifits</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Amount of Rs. 50000 for one girl child / Rs. 25000 for two girl child.</li>
-					<li>
-						<b>Point to be written.</b>
-					</li>
-				    <li>
-						<b>Point to be written.</b>
-					</li>
-                    <li>
-						Rs. 100000 (one lakh) will be deposited on bank account once a girl is 18 years old.
-					</li>
-                    <li>
-						GrandMother and GrandMother of Family with one girl child will get a gold coin.
-					</li>
 
-                </span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Documents Required</span>
-			</h3>
-			<ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Proof of operation after one or two girl.</li>
-					<li>Copy of Ration card</li>
-					<li>Copy of Adhaar card</li>
-					<li>Copy of Bank account's passbook</li>
-					<li>Birth certificate of child</li>
-				</span>
-			</ul>
-            <br>
-            <h2 style="text-align: center;  height: 75px; padding-top: 15px;">
-				<span style="color: #000000;">
-					<strong style="background-color:powderblue;font-family:Garamond">Janani Suraksha Yojana</strong>
-				</span>
-			</h2>
-			<p>
-				<span style="color: #000000;">
-					JananiSurakshaYojana (JSY) is a safe motherhood intervention under the National Health Mission.
-                    It is being implemented with the objective of reducing maternal and neonatal mortality by promoting
-                    institutional delivery among poor pregnant women.
-				</span>
-			</p>
-			<h3>
-				<br>
-				<span style="color: #000000;">Eligibility</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>
-						All pregnant women under Below Poverty Line can avail this scheme.
-					</li>
-					<li>
-						All pregnant women of Scheduled Castes and Scheduled Tribes.
-					</li>
-					<li>
-						Age of women while delivery should be 19.
-					</li>
-					<li>
-						This scheme is benefited till second child.
-					</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Benifits</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Benefit of Rs. 600 if admitted in hospital.</li>
-					<li>Benefit of Rs. 1500 for cesarean delivery.</li>
-                </span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Documents Required</span>
-			</h3>
-			<ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Copy of Bank account</li>
-                    <li>Hospital admission card.</li>
-					<li>Copy of Adhaar card</li>
-					<li>Birth certificate of Beneficiary woman</li>
-                    <li>Residence Certificate</li>
-				</span>
-			</ul>
-            <br>
-            <h2 style="text-align: center;  height: 75px; padding-top: 15px;">
-				<span style="color: #000000;">
-					<strong style="background-color:powderblue;font-family:Garamond">Bal Sangopan Yojana</strong>
-				</span>
-			</h2>
-			<p>
-				<span style="color: #000000;">
-					.
-				</span>
-			</p>
-			<h3>
-				<br>
-				<span style="color: #000000;">Eligibility</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>
-						<b>Point to be written</b>.
-					</li>
-					<li>
-						Child labourer not appearing for school.
-					</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Benifits</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Benefit of Rs. 425 per month.</li>
-                </span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Documents Required</span>
-			</h3>
-			<ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Copy of Ration card</li>
-					<li>Copy of Adhaar card</li>
-					<li>Photograph of beneficiary with Parents</li>
-                    <li>Birth Certificate / Bonafide Certificate of beneficiary.</li>
-					<li>Death Certificate if parents are dead</li>
-                    <li>Income Certificate</li>
-                    <li>Bank account Passbook</li>
-				</span>
-			</ul>
-			<br>
-            <h2 style="text-align: center;">
-				<span style="color: #000000;">
-					<strong>Term Loan Scheme</strong>
-				</span>
-			</h2>
-			<p>
-				<span style="color: #000000;">
-					.
-				</span>
-			</p>
-			<h3>
-				<br>
-				<span style="color: #000000;">Eligibility</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>
-						<b>Point to be written</b>.
-					</li>
-					<li>Age between 18 to 50.</li>
-					<li>Applicant should not have money due in any of the bank or corporation.</li>
-					<li>Applicant should have annual income less than Rs. 98000 whereas Applicant from Urban area
-						should have annual income less than Rs. 120000.</li>
-				</span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Benifits</span>
-			</h3>
-            <ul style="list-style-type: square;">
-				<span style="color: #000000;">
-					<li>Loan on project of less than Rs. 300000 (Three lakh) with 6 % per annum</li>
-                </span>
-			</ul>
-			<h3>
-				<br>
-				<span style="color: #000000;">Documents Required</span>
-			</h3>
-			<ul style="list-style-type: square;">
-				<span style="color: #000000;">
-          <li>Income Certificate</li>
-          <li>Caste Certificate, Copy of Ration card, Passport size Photograph</li>
-					<li>Rent receipt of porject place, agreement, 7/12 utara</li>
-					<li>Academeic Qualification / Birth Certificate</li>
-					<li>Two guarantor certificate</li>
-          <li>No Objection certificate for starting business from local swaraj sanstha</li>
-					<li>Required proof / licence to start a Technical business</li>
-				</span>
-			</ul>
 			</div>
 	</div>
 

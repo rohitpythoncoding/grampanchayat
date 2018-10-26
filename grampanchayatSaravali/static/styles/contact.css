@@ -43,8 +43,8 @@ body
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	font-weight: 500;
-	background: #FFFFFF;
-	color: #696969;
+	background: #dbe2ef;
+	color: #0c0000;
 }
 div
 {
@@ -357,7 +357,7 @@ section
 .header_container
 {
 	width: 100%;
-	background: #FFFFFF;
+	background: #afb4bd;
 }
 .header_content
 {

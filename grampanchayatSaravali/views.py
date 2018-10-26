@@ -32,10 +32,6 @@ def electedMember(request):
     return render(request, 'grampanchayatSaravali/electedMember.html')
 
 
-def schemes(request):
-    return render(request, 'grampanchayatSaravali/schemes.html')
-
-
 def photoGallery(request):
     return render(request, 'grampanchayatSaravali/gallery.html')
 
@@ -52,3 +48,22 @@ def other(request):
 
 def committees(request):
     return render(request, 'grampanchayatSaravali/committees.html')
+
+
+def scm1(request):
+    return render(request, 'grampanchayatSaravali/scm1.html')
+
+def scm2(request):
+    return render(request, 'grampanchayatSaravali/scm2.html')
+
+def scm3(request):
+    return render(request, 'grampanchayatSaravali/scm3.html')
+
+def scm4(request):
+    return render(request, 'grampanchayatSaravali/scm4.html')
+
+def scm5(request):
+    return render(request, 'grampanchayatSaravali/scm5.html')
+
+def scm6(request):
+    return render(request, 'grampanchayatSaravali/scm6.html')
