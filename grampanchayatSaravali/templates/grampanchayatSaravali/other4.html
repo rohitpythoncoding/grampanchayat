@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Photo Gallery</title>
+<title>Other</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
@@ -16,7 +16,31 @@
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
-	<style>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+}
+
+td {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+th {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    color: #441c1c;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 
 .dropbtn {
 
@@ -49,7 +73,7 @@
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-	</style>
+</style>
 </head>
 <body style="background-image:url({%static 'images/gravel.png'%});">
 
@@ -213,18 +237,16 @@
 		</div>
 
 	</header>
-
-
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/gallery.jpg'%}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/others.jpg'%}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Photo Gallery</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Other</div>
 
 						</div>
 					</div>
@@ -233,53 +255,275 @@
 		</div>
 	</div>
 
-	<!-- Services -->
+	<!-- News -->
 
-	<div class="services">
+	<div class="news">
 		<div class="container">
+			<div class="row">
 
-			<div class="row services_row">
-				<h3>Different Events organised/Celebrated By Saravali Grampanchayat:</h3><br><br><br>
-                <table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo3.jpg'%}" style="width:1100px; padding-bottom:0.5em;"></th>
+				<!-- News Posts -->
+				<div class="col-lg-8">
 
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch and Deputy-Sarpanch Taking Their Seats</h4></td>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">School Information :</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>Sl No.</th>
+								<th>School</th>
+								<th>Address</th>
+								<th>Class</th>
+							<tr>
+								<td>1.</td>
+								<td>Saravali Marathi School</td>
+								<td>Saravali</td>
+								<td>First to Seventh</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Macchipada Marathi School</td>
+								<td>Macchipada</td>
+								<td>First to Fourth</td>
+							</tr>
+							<tr>
+								<td>3.</td>
+								<td>Dhodipada Marathi School</td>
+								<td>Dhodipada</td>
+								<td>First to Fourth</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Saravali Center - Saravali Tal. Dist. Plaghar</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>Sl No.</th>
+								<th>Teacher's Name</th>
+								<th>Post</th>
+								<th>Mobile No.</th>
+								<th>Standard</th>
+								<th>Boys</th>
+								<th>Girls</th>
+								<th>Total</th>
+							<tr>
+								<td>1.</td>
+								<td>Usha Anilkumar Shinde</td>
+								<td>Head Teacher</td>
+								<td>9637868795</td>
+								<td>1st</td>
+								<td>08</td>
+								<td>07</td>
+								<td>14</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>2nd</td>
+								<td>07</td>
+								<td>04</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Dilip Shantaram Pimpale</td>
+								<td>Assistant Teacher</td>
+								<td>9922296601</td>
+								<td>3rd</td>
+								<td>04</td>
+								<td>07</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>4th</td>
+								<td>01</td>
+								<td>05</td>
+								<td>06</td>
+							</tr>
+							<tr>
+								<tr>
+									<td>3.</td>
+									<td>Snehal Suhas Raut</td>
+									<td>Assistant Teacher</td>
+									<td>8446898352</td>
+									<td>5th</td>
+									<td>03</td>
+									<td>08</td>
+									<td>11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>6th</td>
+									<td>07</td>
+									<td>05</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>7th</td>
+									<td>06</td>
+									<td>05</td>
+									<td>11</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>Total</td>
+									<td>36</td>
+									<td>41</td>
+									<td>77</td>
+								</tr>
 
-					</tr>
-				</table>
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Macchipada Center -
+							Saravali Tal. Dist. Plaghar</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>Sl No.</th>
+								<th>Teacher's Name</th>
+								<th>Post</th>
+								<th>Mobile No.</th>
+								<th>Standard</th>
+								<th>Boys</th>
+								<th>Girls</th>
+								<th>Total</th>
+							<tr>
+								<td>1.</td>
+								<td>Manohar Sitaram Sankhe</td>
+								<td>Principal</td>
+								<td>7559419269</td>
+								<td>1st</td>
+								<td>04</td>
+								<td>07</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>2nd</td>
+								<td>02</td>
+								<td>07</td>
+								<td>09</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Rajendra Sakharam Sankhe</td>
+								<td>Assistant Teacher</td>
+								<td>7798047525</td>
+								<td>3rd</td>
+								<td>00</td>
+								<td>08</td>
+								<td>08</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>4th</td>
+								<td>04</td>
+								<td>06</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>Total</td>
+								<td>10</td>
+								<td>28</td>
+								<td>38</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Dhodipada Tal.
+							Dist. Plaghar</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>Sl No.</th>
+								<th>Teacher's Name</th>
+								<th>Post</th>
+								<th>Mobile No.</th>
+								<th>Standard</th>
+								<th>Boys</th>
+								<th>Girls</th>
+								<th>Total</th>
+							<tr>
+								<td>1.</td>
+								<td>Swati Bhushan Patil</td>
+								<td>Principal</td>
+								<td>9049202149</td>
+								<td>1st</td>
+								<td>23</td>
+								<td>22</td>
+								<td>45</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Chitra P. Pimple</td>
+								<td>Teacher</td>
+								<td></td>
+								<td>2nd</td>
+								<td>28</td>
+								<td>21</td>
+								<td>49</td>
+							</tr>
+							<tr>
+								<td>3.</td>
+								<td>Nutan J. Vade</td>
+								<td>Teacher</td>
+								<td></td>
+								<td>3rd</td>
+								<td>14</td>
+								<td>20</td>
+								<td>34</td>
+							</tr>
+							<tr>
+								<td>4.</td>
+								<td>Mina S. Mahadik</td>
+								<td>Teacher</td>
+								<td></td>
+								<td>4th</td>
+								<td>21</td>
+								<td>19</td>
+								<td>40</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>Total</td>
+								<td>86</td>
+								<td>82</td>
+								<td>168</td>
+							</tr>
+						</table>
+					</div>
 
-				<table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo1.jpg'%}" style="width:1100px; padding-bottom:0.5em; padding-top:45px; height:600px"></th>
-
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch has started new scheme of giving plant to grampanchayat workers on their birthday</h4></td>
-
-					</tr>
-				</table>
-
-
-                <table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo2.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:45px; height:1000px"></th>
-                        <th><img src="{%static 'images/photo4.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:11px; height:1000px"></th>
-
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Grampanchayat Celebrating Flag Hosting</h4></td>
-                        <td class="caption"><h4 style="font-family: Arial Black">Plantation</h4></td>
-
-					</tr>
-				</table>
-
-
+				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<!-- Footer -->
 
@@ -291,7 +535,6 @@
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
 							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
-
 						</div>
 					</div>
 				</div>
@@ -306,6 +549,5 @@
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{%static 'js/news.js'%}"></script>
-<script src="{%static 'js/services.js'%}"></script>
 </body>
 </html>

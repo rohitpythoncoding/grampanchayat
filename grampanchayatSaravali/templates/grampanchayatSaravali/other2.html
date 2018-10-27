@@ -75,7 +75,7 @@ tr:nth-child(even) {
 .dropdown:hover .dropdown-content {display: block;}
 </style>
 </head>
-<body>
+<body style="background-image:url({%static 'images/gravel.png'%});">
 
 <div class="super_container">
 
@@ -174,9 +174,34 @@ tr:nth-child(even) {
 										</a>
 									</li>
 									<li>
-										<a href="{% url 'other' %}">
-											{% if request.session.lang == "en" %}Other {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
-										</a>
+										<div class="dropdown">
+											<div class="dropbtn" style="padding-left:15px;">Other</div>
+											<div class="dropdown-content">
+												<a href="{% url 'other1' %}">
+											{% if request.session.lang == "en" %}Bachat Gat{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other2' %}">
+											{% if request.session.lang == "en" %}Anganwadi{% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'other3' %}">
+											{% if request.session.lang == "en" %}Hospitals{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other4' %}">
+											{% if request.session.lang == "en" %}Schools{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other5' %}">
+											{% if request.session.lang == "en" %}TantaMukti Committee{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other6' %}">
+											{% if request.session.lang == "en" %}Factories{% else %}कामगार {% endif %}
+												</a>
+												</a>
+												<a href="{% url 'other7' %}">
+											{% if request.session.lang == "en" %}Water Timings{% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
 									</li>
 									<li>
 										<a href="{% url 'map' %}">
@@ -238,81 +263,7 @@ tr:nth-child(even) {
 
 				<!-- News Posts -->
 				<div class="col-lg-8">
-					<div>
-                        <h3 style="font-family: Arial Black">Bachat Gat Information :</h3>
-						<table style="margin-top:40px;">
-							<tr>
-								<th>Bachat Gat Name</th>
-								<th>Head</th>
-								<th>Anganwadi  and Village Name</th>
-							<tr>
-								<td>Prajakta Bachat Gat</td>
-								<td>Harikala Keshavraj Thakur</td>
-								<td>Sanjaynagar</td>
-							</tr>
-							<tr>
-								<td>Bhumi Bachat Gat</td>
-								<td>Kanta Somnath Lingam</td>
-								<td>Bhaiyyapada Siddharthnagar</td>
-							</tr>
-							<tr>
-								<td>Aditi Bachat Gat</td>
-								<td>Minakshi Dinesh Nehate</td>
-								<td>Shukla Compound</td>
-							</tr>
-							<tr>
-								<td>Maitri Bachat Gat</td>
-								<td>Kunda Dagadu Jadhav</td>
-								<td>Bhagwannagar</td>
-							</tr>
-							<tr>
-								<td>Maher Bachat Gat</td>
-								<td>Kasabai Shinde</td>
-								<td>Dhodipada</td>
-							</tr>
-							<tr>
-								<td>Aadarsh Bachat Gat</td>
-								<td>Shaila Rajesh Sankhe</td>
-								<td>Awadhnagar</td>
-							</tr>
-							<tr>
-								<td>Renuka Bachat Gat</td>
-								<td>Rekha Dilip Sapkal</td>
-								<td>Saravali and Valmikinagar</td>
-							</tr>
-							<tr>
-								<td>Safal Bachat Gat</td>
-								<td>Reshma Macchi</td>
-								<td>Macchipada</td>
 
-							</tr>
-							<tr>
-								<td>Swami Samarth Bachat Gat</td>
-								<td>Priyanka Praful Gharat</td>
-								<td>Saravali</td>
-							</tr>
-							<tr>
-								<td>Radha Krishna Bachat Gat</td>
-								<td>Rohini Meghan Patil</td>
-								<td>Saravali</td>
-							</tr>
-							<tr>
-								<td>Sudarshan Mahila Bachat Gat</td>
-								<td>Manasi Manoj Gharat</td>
-								<td>Saravali</td>
-							</tr>
-							<tr>
-								<td>Shrawani Mahila Bachat Gat</td>
-								<td>Jayanti Santosh Mahanto</td>
-								<td>Sanjaynagar</td>
-							</tr>
-							<tr>
-								<td>Upasana Mahila Bachat Gat</td>
-								<td>Shanta Rajaram Solkar</td>
-								<td>Sanjaynagar</td>
-							</tr>
-						</table>
-					</div>
           			<div>
 						<h3 style="font-family: Arial Black; padding-top:46px;">Anganwadi Information :</h3>
 							<table style="margin-top:40px;">
@@ -460,383 +411,11 @@ tr:nth-child(even) {
 						</table>
 					</div>
 
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">Hospital Information :</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>Hospital Name</th>
-								<th>Address</th>
-							<tr>
-								<td>1.</td>
-								<td>Vatsalya Maternity Hospital</td>
-								<td>Shrof Trade Center</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Sai Sakshi Maternity Hospital</td>
-								<td>Saidham Saravali</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>TMRCT Thunga Hospital</td>
-								<td>M.I.D.C Tarapur</td>
-							</tr>
-							<tr>
-								<td>4.</td>
-								<td>Sanjeevani Hospital</td>
-								<td>Mahaveer Chamber</td>
-							</tr>
-							<tr>
-								<td>5.</td>
-								<td>Sai Leela Hospital</td>
-								<td>Oswal Empire Saravali</td>
-							</tr>
-							<tr>
-								<td>6.</td>
-								<td>Redplus Multi Speciality Hospital</td>
-								<td>Sanjaynagar</td>
-							</tr>
-						</table>
-					</div>
-
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">School Information :</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>School</th>
-								<th>Address</th>
-								<th>Class</th>
-							<tr>
-								<td>1.</td>
-								<td>Saravali Marathi School</td>
-								<td>Saravali</td>
-								<td>First to Seventh</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Macchipada Marathi School</td>
-								<td>Macchipada</td>
-								<td>First to Fourth</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>Dhodipada Marathi School</td>
-								<td>Dhodipada</td>
-								<td>First to Fourth</td>
-							</tr>
-						</table>
-					</div>
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Saravali Center - Saravali Tal. Dist. Plaghar</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>Teacher's Name</th>
-								<th>Post</th>
-								<th>Mobile No.</th>
-								<th>Standard</th>
-								<th>Boys</th>
-								<th>Girls</th>
-								<th>Total</th>
-							<tr>
-								<td>1.</td>
-								<td>Usha Anilkumar Shinde</td>
-								<td>Head Teacher</td>
-								<td>9637868795</td>
-								<td>1st</td>
-								<td>08</td>
-								<td>07</td>
-								<td>14</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>2nd</td>
-								<td>07</td>
-								<td>04</td>
-								<td>11</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Dilip Shantaram Pimpale</td>
-								<td>Assistant Teacher</td>
-								<td>9922296601</td>
-								<td>3rd</td>
-								<td>04</td>
-								<td>07</td>
-								<td>11</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>4th</td>
-								<td>01</td>
-								<td>05</td>
-								<td>06</td>
-							</tr>
-							<tr>
-								<tr>
-									<td>3.</td>
-									<td>Snehal Suhas Raut</td>
-									<td>Assistant Teacher</td>
-									<td>8446898352</td>
-									<td>5th</td>
-									<td>03</td>
-									<td>08</td>
-									<td>11</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>6th</td>
-									<td>07</td>
-									<td>05</td>
-									<td>12</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>7th</td>
-									<td>06</td>
-									<td>05</td>
-									<td>11</td>
-								</tr>
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td>Total</td>
-									<td>36</td>
-									<td>41</td>
-									<td>77</td>
-								</tr>
-
-						</table>
-					</div>
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Macchipada Center -
-							Saravali Tal. Dist. Plaghar</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>Teacher's Name</th>
-								<th>Post</th>
-								<th>Mobile No.</th>
-								<th>Standard</th>
-								<th>Boys</th>
-								<th>Girls</th>
-								<th>Total</th>
-							<tr>
-								<td>1.</td>
-								<td>Manohar Sitaram Sankhe</td>
-								<td>Principal</td>
-								<td>7559419269</td>
-								<td>1st</td>
-								<td>04</td>
-								<td>07</td>
-								<td>11</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>2nd</td>
-								<td>02</td>
-								<td>07</td>
-								<td>09</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Rajendra Sakharam Sankhe</td>
-								<td>Assistant Teacher</td>
-								<td>7798047525</td>
-								<td>3rd</td>
-								<td>00</td>
-								<td>08</td>
-								<td>08</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>4th</td>
-								<td>04</td>
-								<td>06</td>
-								<td>10</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>Total</td>
-								<td>10</td>
-								<td>28</td>
-								<td>38</td>
-							</tr>
-						</table>
-					</div>
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">Z.P. Marathi School Dhodipada Tal.
-							Dist. Plaghar</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>Teacher's Name</th>
-								<th>Post</th>
-								<th>Mobile No.</th>
-								<th>Standard</th>
-								<th>Boys</th>
-								<th>Girls</th>
-								<th>Total</th>
-							<tr>
-								<td>1.</td>
-								<td>Swati Bhushan Patil</td>
-								<td>Principal</td>
-								<td>9049202149</td>
-								<td>1st</td>
-								<td>23</td>
-								<td>22</td>
-								<td>45</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Chitra P. Pimple</td>
-								<td>Teacher</td>
-								<td></td>
-								<td>2nd</td>
-								<td>28</td>
-								<td>21</td>
-								<td>49</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>Nutan J. Vade</td>
-								<td>Teacher</td>
-								<td></td>
-								<td>3rd</td>
-								<td>14</td>
-								<td>20</td>
-								<td>34</td>
-							</tr>
-							<tr>
-								<td>4.</td>
-								<td>Mina S. Mahadik</td>
-								<td>Teacher</td>
-								<td></td>
-								<td>4th</td>
-								<td>21</td>
-								<td>19</td>
-								<td>40</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td>Total</td>
-								<td>86</td>
-								<td>82</td>
-								<td>168</td>
-							</tr>
-						</table>
-					</div>
-					<div>
-						<h3 style="font-family: Arial Black; padding-top:46px;">Tanta Mukti Committee</h3>
-							<table style="margin-top:40px;">
-							<tr>
-								<th>Sl No.</th>
-								<th>Chariman</th>
-								<th>Vice Chariman</th>
-								<th>Period</th>
-							<tr>
-								<td>1.</td>
-								<td>Pandurang Rauji Gharat</td>
-								<td>Swapnil Jandardhan Gharat</td>
-								<td>2012-2013</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>Dinesh Banjrang Pawar</td>
-								<td>Sudarshan Adhikrao Rasaal</td>
-								<td>2013-2014</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>Meghan Kishor Patil</td>
-								<td>Kailas Devram Choudhary</td>
-								<td>2014-2015</td>
-							</tr>
-							<tr>
-								<td>4.</td>
-								<td>Prabhakar Ramchandra Raul</td>
-								<td>Rajendra Shivaji Dhangar</td>
-								<td>2015-2016</td>
-							</tr>
-							<tr>
-								<td>5.</td>
-								<td>Manasi Prabhakar Raul</td>
-								<td>
-									Nitesh Shivram Gharat<br>
-									Dhiresh Prakash Gharat
-								</td>
-								<td>2016-2017</td>
-							</tr>
-							<tr>
-								<td>6.</td>
-								<td>Manasi Prabhakar Raul</td>
-								<td>
-									Nitesh Shivram Gharat<br>
-									Dhiresh Prakash Gharat
-								</td>
-								<td>2017-2018</td>
-							</tr>
-						</table>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="services">
-		<h3 style="padding-left:160px; font-family: Arial Black">Factories under Saravali : </h3>
-		<div class="container">
 
-
-
-			<div class="row services_row">
-
-				<!-- Service -->
-
-				<div class="col-lg-4 col-md-6 service_col">
-					<a href="/static/pdf/factories.pdf">
-						<div class="service text-center trans_200">
-							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Factories under Saravali Grampanchayat</div>
-							<div class="service_text">
-								<p>Factories under Saravali Grampanchayat</p>
-							</div>
-						</div>
-					</a>
-				</div>
-
-
-
-			</div>
-		</div>
-	</div>
 
 	<!-- Footer -->
 

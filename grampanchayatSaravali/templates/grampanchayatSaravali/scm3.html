@@ -71,7 +71,7 @@
 
 </style>
 </head>
-<body>
+<body style="background-image:url({%static 'images/gravel.png'%});">
 
 <div class="super_container">
 
@@ -170,9 +170,34 @@
 										</a>
 									</li>
 									<li>
-										<a href="{% url 'other' %}">
-											{% if request.session.lang == "en" %}Other {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
-										</a>
+										<div class="dropdown">
+											<div class="dropbtn" style="padding-left:15px;">Other</div>
+											<div class="dropdown-content">
+												<a href="{% url 'other1' %}">
+											{% if request.session.lang == "en" %}Bachat Gat{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other2' %}">
+											{% if request.session.lang == "en" %}Anganwadi{% else %}कामगार {% endif %}
+												</a>
+
+												<a href="{% url 'other3' %}">
+											{% if request.session.lang == "en" %}Hospitals{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other4' %}">
+											{% if request.session.lang == "en" %}Schools{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other5' %}">
+											{% if request.session.lang == "en" %}TantaMukti Committee{% else %}कामगार {% endif %}
+												</a>
+												<a href="{% url 'other6' %}">
+											{% if request.session.lang == "en" %}Factories{% else %}कामगार {% endif %}
+												</a>
+												</a>
+												<a href="{% url 'other7' %}">
+											{% if request.session.lang == "en" %}Water Timings{% else %}कामगार {% endif %}
+												</a>
+											</div>
+										</div>
 									</li>
 									<li>
 										<a href="{% url 'map' %}">

@@ -43,8 +43,6 @@ def faq(request):
 def developmentPlan(request):
     return render(request, 'grampanchayatSaravali/vikasArakhada.html')
 
-def other(request):
-    return render(request, 'grampanchayatSaravali/other.html')
 
 def committees(request):
     return render(request, 'grampanchayatSaravali/committees.html')
@@ -67,3 +65,26 @@ def scm5(request):
 
 def scm6(request):
     return render(request, 'grampanchayatSaravali/scm6.html')
+
+
+def other1(request):
+    return render(request, 'grampanchayatSaravali/other1.html')
+
+def other2(request):
+    return render(request, 'grampanchayatSaravali/other2.html')
+
+def other3(request):
+    return render(request, 'grampanchayatSaravali/other3.html')
+
+def other4(request):
+    return render(request, 'grampanchayatSaravali/other4.html')
+
+def other5(request):
+    return render(request, 'grampanchayatSaravali/other5.html')
+
+def other6(request):
+    return render(request, 'grampanchayatSaravali/other6.html')
+
+
+def other7(request):
+    return render(request, 'grampanchayatSaravali/other7.html')

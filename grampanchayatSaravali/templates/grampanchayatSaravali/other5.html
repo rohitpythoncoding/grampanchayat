@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Photo Gallery</title>
+<title>Other</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
@@ -16,7 +16,31 @@
 <link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
 <link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
-	<style>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black;
+}
+
+td {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+}
+
+th {
+
+    text-align: left;
+    padding: 8px;
+    border: 2px solid black;
+    color: #441c1c;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 
 .dropbtn {
 
@@ -49,7 +73,7 @@
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
-	</style>
+</style>
 </head>
 <body style="background-image:url({%static 'images/gravel.png'%});">
 
@@ -213,18 +237,16 @@
 		</div>
 
 	</header>
-
-
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/gallery.jpg'%}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/others.jpg'%}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Photo Gallery</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Other</div>
 
 						</div>
 					</div>
@@ -233,50 +255,68 @@
 		</div>
 	</div>
 
-	<!-- Services -->
+	<!-- News -->
 
-	<div class="services">
+	<div class="news">
 		<div class="container">
+			<div class="row">
 
-			<div class="row services_row">
-				<h3>Different Events organised/Celebrated By Saravali Grampanchayat:</h3><br><br><br>
-                <table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo3.jpg'%}" style="width:1100px; padding-bottom:0.5em;"></th>
+				<!-- News Posts -->
+				<div class="col-lg-8">
 
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch and Deputy-Sarpanch Taking Their Seats</h4></td>
-
-					</tr>
-				</table>
-
-				<table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo1.jpg'%}" style="width:1100px; padding-bottom:0.5em; padding-top:45px; height:600px"></th>
-
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Sarpanch has started new scheme of giving plant to grampanchayat workers on their birthday</h4></td>
-
-					</tr>
-				</table>
-
-
-                <table class="image col-lg-5">
-					<tr>
-						<th><img src="{%static 'images/photo2.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:45px; height:1000px"></th>
-                        <th><img src="{%static 'images/photo4.jpg'%}" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:11px; height:1000px"></th>
-
-					</tr>
-					<tr>
-                        <td class="caption"><h4 style="font-family: Arial Black">Grampanchayat Celebrating Flag Hosting</h4></td>
-                        <td class="caption"><h4 style="font-family: Arial Black">Plantation</h4></td>
-
-					</tr>
-				</table>
-
-
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">Tanta Mukti Committee</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>Sl No.</th>
+								<th>Chariman</th>
+								<th>Vice Chariman</th>
+								<th>Period</th>
+							<tr>
+								<td>1.</td>
+								<td>Pandurang Rauji Gharat</td>
+								<td>Swapnil Jandardhan Gharat</td>
+								<td>2012-2013</td>
+							</tr>
+							<tr>
+								<td>2.</td>
+								<td>Dinesh Banjrang Pawar</td>
+								<td>Sudarshan Adhikrao Rasaal</td>
+								<td>2013-2014</td>
+							</tr>
+							<tr>
+								<td>3.</td>
+								<td>Meghan Kishor Patil</td>
+								<td>Kailas Devram Choudhary</td>
+								<td>2014-2015</td>
+							</tr>
+							<tr>
+								<td>4.</td>
+								<td>Prabhakar Ramchandra Raul</td>
+								<td>Rajendra Shivaji Dhangar</td>
+								<td>2015-2016</td>
+							</tr>
+							<tr>
+								<td>5.</td>
+								<td>Manasi Prabhakar Raul</td>
+								<td>
+									Nitesh Shivram Gharat<br>
+									Dhiresh Prakash Gharat
+								</td>
+								<td>2016-2017</td>
+							</tr>
+							<tr>
+								<td>6.</td>
+								<td>Manasi Prabhakar Raul</td>
+								<td>
+									Nitesh Shivram Gharat<br>
+									Dhiresh Prakash Gharat
+								</td>
+								<td>2017-2018</td>
+							</tr>
+						</table>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -291,7 +331,6 @@
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
 							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
-
 						</div>
 					</div>
 				</div>
@@ -306,6 +345,5 @@
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
 <script src="{%static 'js/news.js'%}"></script>
-<script src="{%static 'js/services.js'%}"></script>
 </body>
 </html>
