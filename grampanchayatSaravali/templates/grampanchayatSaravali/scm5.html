@@ -71,7 +71,7 @@
 
 </style>
 </head>
-<body style="background-image:url({%static 'images/gravel.png'%});">
+<body style="background-image:url({%static 'images/skulls.png'%});">
 
 <div class="super_container">
 
@@ -115,7 +115,7 @@
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Members</div>
+											<div class="dropbtn" style="height: 40px; padding-left:15px;">Members</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
 											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
@@ -132,7 +132,7 @@
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Schemes</div>
+											<div class="dropbtn" style="height: 40px; padding-left:15px;">Schemes</div>
 											<div class="dropdown-content">
 												<a href="{% url 'scm1' %}">
 											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}कामगार {% endif %}
@@ -170,7 +170,7 @@
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Other</div>
+											<div class="dropbtn" style="height: 40px; padding-left:15px;">Other</div>
 											<div class="dropdown-content">
 												<a href="{% url 'other1' %}">
 											{% if request.session.lang == "en" %}Bachat Gat{% else %}कामगार {% endif %}

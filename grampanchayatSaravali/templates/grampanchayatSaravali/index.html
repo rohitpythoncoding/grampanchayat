@@ -83,7 +83,7 @@ tr:nth-child(even) {
 .dropdown:hover .dropdown-content {display: block;}
 </style>
 </head>
-<body style="background-image:url({%static 'images/gravel.png'%});">
+<body style="background-image:url({%static 'images/skulls.png'%});">
 
 <div class="super_container">
 
@@ -115,7 +115,7 @@ tr:nth-child(even) {
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
-								<ul style="height: 55px;">
+								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
 											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
@@ -128,7 +128,7 @@ tr:nth-child(even) {
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Members</div>
+											<div class="dropbtn" style="padding-left:15px; height: 40px;">Members</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
 											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
@@ -145,7 +145,7 @@ tr:nth-child(even) {
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Schemes</div>
+											<div class="dropbtn" style="padding-left:15px; height: 40px;">Schemes</div>
 											<div class="dropdown-content">
 												<a href="{% url 'scm1' %}">
 											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}कामगार {% endif %}
@@ -183,7 +183,7 @@ tr:nth-child(even) {
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px;">Other</div>
+											<div class="dropbtn" style="padding-left:15px; height: 40px;">Other</div>
 											<div class="dropdown-content">
 												<a href="{% url 'other1' %}">
 											{% if request.session.lang == "en" %}Bachat Gat{% else %}कामगार {% endif %}

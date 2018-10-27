@@ -51,20 +51,30 @@ def committees(request):
 def scm1(request):
     return render(request, 'grampanchayatSaravali/scm1.html')
 
+
 def scm2(request):
     return render(request, 'grampanchayatSaravali/scm2.html')
+
 
 def scm3(request):
     return render(request, 'grampanchayatSaravali/scm3.html')
 
+
 def scm4(request):
     return render(request, 'grampanchayatSaravali/scm4.html')
+
 
 def scm5(request):
     return render(request, 'grampanchayatSaravali/scm5.html')
 
+
 def scm6(request):
     return render(request, 'grampanchayatSaravali/scm6.html')
+
+
+def about(request):
+    return render(request, 'grampanchayatSaravali/about.html')
+
 
 
 def other1(request):
