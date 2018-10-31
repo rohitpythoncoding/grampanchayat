@@ -100,7 +100,7 @@ tr:nth-child(even) {
 
 							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ; right:100px">SARAVALI  GRAMPANCHAYAT</div>
 
-							<div class="emergencies  d-flex flex-row align-items-center justify-content-start ml-auto" style="padding-top: 25px; height:102px;"><div style="color: #FF0000;">{% if request.session.lang == "en" %}For Emergencies{% else %}आणीबाणी करिता{% endif %}: +02525607080</div></div>
+
 						</div>
 
 					</div>
@@ -109,7 +109,7 @@ tr:nth-child(even) {
 		</div>
 
 		<!-- Header Content -->
-		<div class="header_container" style="background-image:url({%static 'images/back.jpg'%}); height: 65px;">
+		<div class="header_container" style="height: 65px;">
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -127,7 +127,7 @@ tr:nth-child(even) {
 										</a>
 									</li>
 									<li>
-										<div class="dropdown">
+										<div class="dropdown dropbtn">
 											<div class="dropbtn" style="padding-left:15px; height: 40px;">Members</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">

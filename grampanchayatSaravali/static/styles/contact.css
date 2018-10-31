@@ -219,6 +219,7 @@ section
 {
 	display: inline-block;
 	height: 51px;
+	width: 90px;
 	background: #283290;
 }
 .button::after
@@ -673,7 +674,7 @@ section
 }
 .home_title span
 {
-	color: #20d34a;
+	color: #e80417;
 }
 .breadcrumbs
 {
