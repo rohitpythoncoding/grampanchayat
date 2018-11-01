@@ -48,6 +48,7 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 	</style>
+<script charset="utf-8" src="https://ucarecdn.com/libs/widget/3.6.1/uploadcare.full.min.js"></script>
 </head>
 <body style="background-image:url({%static 'images/skulls.png'%});">
 
@@ -262,34 +263,20 @@
 							</div>
 							<div class="input_container"><input name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="Mobile Number" required="required"></div>
 							<div class="input_container"><input name="Subject" type="text" class="contact_input" placeholder="Subject" required="required"></div>
+							<div><input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only /></div>
 							<div class="input_container"><textarea name="Message" class="contact_input contact_text_area" placeholder="Message" required="required"></textarea></div>
 							<button type="submit" class="button contact_button">Send</a></button>
 						</form>
 					</div>
 				</div>
-				<!--div>
-					<form action="https://formspree.io/rohitbs113@gmail.com" method="POST">
-
-	<label>Name</label>
-	<input type="text" name="name" />
-	<label>Subject</label>
-	<input type="text" name="subject" />
-	<label>Phone Number</label>
-	<input type="text" name="phone" />
-	<label>Message</label>
-	<textarea name="message"></textarea>
-
-	<input type="submit" name="send" value="Send Message" />
-</form>
-				</div>-->
 			</div>
 
-					</div>
-
-				</div>
-			</div>
 		</div>
+
 	</div>
+</div>
+
+
 
 	<!-- Footer -->
 
