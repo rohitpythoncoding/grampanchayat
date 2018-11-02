@@ -3,98 +3,259 @@ from django.shortcuts import render
 
 def welcome(request):
     request.session['lang'] = 'en'
-    return render(request, 'grampanchayatSaravali/index.html')
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/index.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
 
 def home(request):
-    # if request.session['name'] == 'Superman':
-    #     print(request.session['name'], 'is awesome!!!!!!!')
-    return render(request, 'grampanchayatSaravali/index.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
+    return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
 def workers(request):
-    return render(request, 'grampanchayatSaravali/workers.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/workers.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/workers.html', {"language": language})
 
 
 def certificates(request):
-    return render(request, 'grampanchayatSaravali/certificates.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/certificates.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/certificates.html', {"language": language})
 
 
 def map(request):
-    return render(request, 'grampanchayatSaravali/index.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
+    return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
-def services(request):
-    return render(request, 'grampanchayatSaravali/index.html')
 
 
 def electedMember(request):
-    return render(request, 'grampanchayatSaravali/electedMember.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/electedMember.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/electedMember.html', {"language": language})
 
 
 def photoGallery(request):
-    return render(request, 'grampanchayatSaravali/gallery.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/gallery.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/gallery.html', {"language": language})
 
 
 def faq(request):
-    return render(request, 'grampanchayatSaravali/contact.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/contact.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/contact.html', {"language": language})
 
 
 def developmentPlan(request):
-    return render(request, 'grampanchayatSaravali/vikasArakhada.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/vikasArakhada.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/vikasArakhada.html', {"language": language})
 
 
 def committees(request):
-    return render(request, 'grampanchayatSaravali/committees.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/committees.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/committees.html', {"language": language})
 
 
 def scm1(request):
-    return render(request, 'grampanchayatSaravali/scm1.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm1.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm1.html', {"language": language})
 
 
 def scm2(request):
-    return render(request, 'grampanchayatSaravali/scm2.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm2.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm2.html', {"language": language})
 
 
 def scm3(request):
-    return render(request, 'grampanchayatSaravali/scm3.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm3.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm3.html', {"language": language})
 
 
 def scm4(request):
-    return render(request, 'grampanchayatSaravali/scm4.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm4.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm4.html', {"language": language})
 
 
 def scm5(request):
-    return render(request, 'grampanchayatSaravali/scm5.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm5.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm5.html', {"language": language})
 
 
 def scm6(request):
-    return render(request, 'grampanchayatSaravali/scm6.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/scm6.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/scm6.html', {"language": language})
 
 
 def about(request):
-    return render(request, 'grampanchayatSaravali/about.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/about.html', {"language": language})
 
+    return render(request, 'grampanchayatSaravali/about.html', {"language": language})
 
 
 def other1(request):
-    return render(request, 'grampanchayatSaravali/other1.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other1.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other1.html', {"language": language})
+
 
 def other2(request):
-    return render(request, 'grampanchayatSaravali/other2.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other2.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other2.html', {"language": language})
 
 def other3(request):
-    return render(request, 'grampanchayatSaravali/other3.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other3.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other3.html', {"language": language})
 
 def other4(request):
-    return render(request, 'grampanchayatSaravali/other4.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other4.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other4.html', {"language": language})
 
 def other5(request):
-    return render(request, 'grampanchayatSaravali/other5.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other5.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other5.html', {"language": language})
 
 def other6(request):
-    return render(request, 'grampanchayatSaravali/other6.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other6.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other6.html', {"language": language})
 
 
 def other7(request):
-    return render(request, 'grampanchayatSaravali/other7.html')
+    request.session['lang'] = 'en'
+    language = 'en'
+    if request.method == 'POST':
+        request.session['lang'] = request.POST.get('selector')
+        language = request.POST.get('selector')
+        return render(request, 'grampanchayatSaravali/other7.html', {"language": language})
+
+    return render(request, 'grampanchayatSaravali/other7.html', {"language": language})

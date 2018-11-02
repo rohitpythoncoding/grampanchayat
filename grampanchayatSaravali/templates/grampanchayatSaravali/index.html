@@ -83,8 +83,9 @@ tr:nth-child(even) {
 .dropdown:hover .dropdown-content {display: block;}
 </style>
 </head>
-<body style="background-image:url({%static 'images/skulls.png'%});">
-
+</body style="background-image:url({%static 'images/skulls.png'%});">
+<form name="home" action="/" method="POST">
+{% csrf_token %}
 <div class="super_container">
 
 	<!-- Header -->
@@ -118,7 +119,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
+											{% if language == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -220,6 +221,18 @@ tr:nth-child(even) {
 										<a href="{% url 'faq' %}">
 											{% if request.session.lang == "en" %}FAQ {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
 										</a>
+									</li>
+									<li>
+										{% if request.session.lang  == "en" %}
+											<select name="selector" onchange="this.form.submit()">
+												<option value="en" selected>English</option>
+												<option value="marathi">Marathi</option>
+											</select>
+										{% else %}
+											<select name="selector" onchange="this.form.submit()">
+												<option value="en">English</option>
+												<option value="marathi" selected>Marathi</option>
+										  	</select>{% endif %}
 									</li>
 
 								</ul>
@@ -615,6 +628,6 @@ tr:nth-child(even) {
 <script src="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js'%}"></script>
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-
+</form>
 </body>
 </html>

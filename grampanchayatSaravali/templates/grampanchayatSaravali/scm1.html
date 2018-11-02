@@ -71,6 +71,8 @@
 </style>
 </head>
 <body style="background-image:url({%static 'images/skulls.png'%});">
+<form name="home" action="# method="POST">
+{% csrf_token %}
 
 <div class="super_container">
 
@@ -207,6 +209,18 @@
 										<a href="{% url 'faq' %}">
 											{% if request.session.lang == "en" %}FAQ {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
 										</a>
+									</li>
+									<li>
+										{% if request.session.lang  == "en" %}
+											<select name="selector" onchange="this.form.submit()">
+												<option value="en" selected>English</option>
+												<option value="marathi">Marathi</option>
+											</select>
+										{% else %}
+											<select name="selector" onchange="this.form.submit()">
+												<option value="en">English</option>
+												<option value="marathi" selected>Marathi</option>
+										  	</select>{% endif %}
 									</li>
 
 								</ul>
@@ -375,6 +389,6 @@
 <script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
 <script src="{%static 'plugins/easing/easing.js'%}"></script>
 <script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
-
+</form>
 </body>
 </html>

@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "aws_region": "ap-south-1",
+        "django_settings": "grampanchayatProject.settings",
+        "profile_name": "default",
+        "project_name": "grampanchayat",
+        "runtime": "python3.6",
+        "s3_bucket": "grampanchayat"
+    }
+}
