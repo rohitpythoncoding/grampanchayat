@@ -356,11 +356,13 @@ tr:nth-child(even) {
 						<div class="section_title">
 							<h2 style="font-family: Arial Black">{% if request.session.lang == "en" %}About Saravali! {% else %}गावाची माहिती ! {% endif %}</h2></div>
 						<div class="about_text">
-							<p style="text-align:justify">Saravali is a Census Town city in district of Thane, Maharashtra. The Saravali Census Town has population of 8,710 of which 5,008 are males while 3,702 are females as per report released by Census India 2011.
+							<p style="text-align:justify">{% if request.session.lang == "en" %}Saravali is a Census Town city in district of Thane, Maharashtra. The Saravali Census Town has population of 8,710 of which 5,008 are males while 3,702 are females as per report released by Census India 2011.
 
 								Population of Children with age of 0-6 is 1124 which is 12.90 % of total population of Saravali (CT). In Saravali Census Town, Female Sex Ratio is of 739 against state average of 929. Moreover Child Sex Ratio in Saravali is around 834 compared to Maharashtra state average of 894. Literacy rate of Saravali city is 92.79 % higher than state average of 82.34 %. In Saravali, Male literacy is around 94.84 % while female literacy rate is 89.97 %.
 
-								Saravali Census Town has total administration over 2,209 houses to which it supplies basic amenities like water and sewerage. It is also authorize to build roads within Saravali Census Town limits and impose taxes on properties coming under its jurisdiction. </p>
+								Saravali Census Town has total administration over 2,209 houses to which it supplies basic amenities like water and sewerage. It is also authorize to build roads within Saravali Census Town limits and impose taxes on properties coming under its jurisdiction.
+								{% else %}
+								सरावली हे पालघर जिल्ह्यात वसलेले एक गाव आहे. सेन्सुस रिपोर्ट २०११ नुसार सरावली गावाची लोकसंख्या ८७१० आहे ज्यामध्ये ५००८ पुरुष आणि ३७०२ महिला आहेत. ० - ६ वयोगटातील मुलांची संख्या ११२४ आहे जी एकूण लोकसंख्येच्या १२.९०% आहे. गावाची महिला लिंग प्रमाण ७३९ आहे. महाराष्ट्र राज्याचा महिला लिंग प्रमाण ९२९ आहे. सरावली गावात बाल लिंग प्रमाण ८३४ आहे जिथे महाराष्ट्र चे बाल लिंग प्रमाण ८९४ आहे. गावाची साक्षरता प्रमाण ९२.७९ आहे जी महाराष्ट्राच्या साक्षरता (८२.३४%) प्रमाना पेक्षा जास्त आहे. पुरुष साक्षरता प्रमाण ९४.७४% तर महिला साक्षरता प्रमाण ८९.९७% आहे. सरावली गावात एकूण २२०९ घरे आहेत. ह्या सर्व घरांना मूलभूत सुविधा पुरवल्या जातात. गावात सर्विकडे चांगल्या रस्त्यांची सुविधा आहे. {% endif %}</p>
 						</div>
 
 					</div>
@@ -368,174 +370,174 @@ tr:nth-child(even) {
 				<div class="col-lg-7">
 					<div class="about_content">
 						<div class="section_title">
-							<h4 style="padding-top: 22px; font-family:Lucida Sans Unicode">Establishment of Saravali Grampanchayat: 1956</h4>
-							<h4 style="font-family:Lucida Sans Unicode">Seperation of Khairapada Grampanchayat: 1988-89</h4>
-							<h4 style="font-family:Lucida Sans Unicode">Grampanchayat of Khairapada merge into Saravali Grampanchayat: July 2013</h4>
-							<h4 style="font-family:Lucida Sans Unicode">Population before merging: 8710</h4>
-							<h4 style="font-family:Lucida Sans Unicode">Total Population according to report of 2013-14: 26485</h4>
+							<h4 style="padding-top: 22px; font-family:Lucida Sans Unicode">{% if request.session.lang == "en" %}Establishment of Saravali Grampanchayat: 1956{% else %}सरावली ग्रामपंचायतीची  स्थापना : १९५६{% endif %}</h4>
+							<h4 style="font-family:Lucida Sans Unicode">{% if request.session.lang == "en" %}Seperation of Khairapada Grampanchayat: 1988-89{% else %}खैरेपडा ग्रामपंचायत वेगळी झाली : १९८८-८९{% endif %}</h4>
+							<h4 style="font-family:Lucida Sans Unicode">{% if request.session.lang == "en" %}Grampanchayat of Khairapada merge into Saravali Grampanchayat: July 2013{% else %}ग्रामपंचायत खैरेपाडा सरवली ग्रामपंचायतीत विलीन : २०१३ {% endif %}</h4>
+							<h4 style="font-family:Lucida Sans Unicode">{% if request.session.lang == "en" %}Population before merging: 8710 {% else %}विलिनीकरण च्या आधीची लोकसंख्या : ८७१० {% endif %}</h4>
+							<h4 style="font-family:Lucida Sans Unicode">{% if request.session.lang == "en" %}Total Population according to report of 2013-14: 26485{% else %}२०१३-१४ चा रिपोर्ट नुसार एकूण लोकसंख्या : २६४८५ {% endif %}</h4>
 						</div>
 						<div class="section_title">
-							<h2 style="font-family: Arial Black">List of Sarpanch/Deputy-Sarpanch/Rural Development Officer:</h2>
+							<h2 style="font-family: Arial Black">{% if request.session.lang == "en" %}List of Sarpanch/Deputy-Sarpanch/Rural Development Officer{% else %}गावाच्या इतिहासातील सरपंच/उप सरपंच/ग्रामसेवक{% endif %}</h2>
 							<table style="margin-bottom:30px; margin-top:40px;">
 							<tr>
-								<th>Name</th>
-								<th>Position</th>
-								<th>Timeperiod</th>
+								<th>{% if request.session.lang == "en" %}Name{% else %}नाव{% endif %}</th>
+								<th>{% if request.session.lang == "en" %}Position{% else %}पद{% endif %}</th>
+								<th>{% if request.session.lang == "en" %}Timeperiod{% else %}कालावधी{% endif %}</th>
 							</tr>
 							<tr>
-								<td>Laxmi Janardan Chandane</td>
-								<td>Sarpanch</td>
-								<td>2018 to 2023</td>
+								<td>{% if request.session.lang == "en" %}Laxmi Janardan Chandane{% else %}लक्ष्मी जनार्दन चांदणे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2018 to 2023{% else %}२०१८ ते २०२३{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Smita Rupesh Raut</td>
-								<td>Deputy Sarpanch</td>
-								<td>2018 to 2023</td>
+								<td>{% if request.session.lang == "en" %}Smita Rupesh Raut{% else %}स्मिता रुपेश राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2018 to 2023{% else %}२०१८ ते २०२३{% endif %}</td>
 							</tr>
 								<tr>
-								<td>Subhash Atmaram Kini</td>
-								<td>Rural Development Officer</td>
+								<td>{% if request.session.lang == "en" %}Subhash Atmaram Kini{% else %}सुभाष आत्माराम किनी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
 								<td>-</td>
 							</tr>
 								<tr>
-								<td>Vaibhavi Vijay Raut</td>
-								<td>Sarpanch</td>
-								<td>2013 to 2018</td>
+								<td>{% if request.session.lang == "en" %}Vaibhavi Vijay Raut{% else %}वैभवी विजय राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2013 to 2018{% else %}२०१३ ते २०१८{% endif %}</td>
 							</tr>
 								<tr>
-								<td>Shital Santosh Govari</td>
-								<td>Deputy Sarpanch</td>
-								<td>2013 to 2014</td>
+								<td>{% if request.session.lang == "en" %}Shital Santosh Govari{% else %}शीतल संतोष गोवारी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2013 to 2014{% else %}२०१३ ते २०१४ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ashok Baliram Salunkhe</td>
-								<td>Deputy Sarpanch</td>
-								<td>2014 to 2016</td>
+								<td>{% if request.session.lang == "en" %}Ashok Baliram Salunkhe{% else %}अशोक बळीराम साळुंखे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2014 to 2016{% else %}२०१४ ते २०१६{% endif %}</td>
 							</tr>
 								<tr>
-								<td>Prajit Pandurang Gharat</td>
-								<td>Deputy Sarpanch</td>
-								<td>2016 to 2017</td>
+								<td>{% if request.session.lang == "en" %}Prajit Pandurang Gharat{% else %}प्रजित पांडुरंग घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2016 to 2017{% else %}२०१६ ते २०१७ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Suresh Rammanohar Sahani</td>
-								<td>Deputy Sarpanch</td>
-								<td>2017 to 2018</td>
+								<td>{% if request.session.lang == "en" %}Suresh Rammanohar Sahani{% else %}सुरेश राममनोहर सहानी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2017 to 2018{% else %}२०१७ ते २०१८{% endif %}</td>
 							</tr>
 								<tr>
-								<td>Subhash Atmaram Kini</td>
-								<td>Rural Development Officer</td>
-								<td>From 3 June 2015</td>
+								<td>{% if request.session.lang == "en" %}Subhash Atmaram Kini{% else %}सुभाष आत्माराम किनी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}From 3 June 2015{% else %}३ जून पासुन {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Kamalakar Harishchandra Naik</td>
-								<td>Rural Development Officer</td>
-								<td>To 3 June 2015</td>
+								<td>{% if request.session.lang == "en" %}Kamalakar Harishchandra Naik{% else %}कमलाकर हरिश्चंद्र नाईक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}To 3 June 2015{% else %}३ जून पर्यंत {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ganesh Mahadeo Thakur</td>
-								<td>Sarpanch</td>
-								<td>2008 to 2013</td>
+								<td>{% if request.session.lang == "en" %}Ganesh Mahadeo Thakur{% else %}गणेश महादेव ठाकूर{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2008 to 2013{% else %}२००८ ते २०१३{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Chandrakant Haraji Macchi</td>
-								<td>Deputy Sarpanch</td>
-								<td>From 2008 to 2011</td>
+								<td>{% if request.session.lang == "en" %}Chandrakant Haraji Macchi{% else %}चंद्रकांत हरजी माच्ची{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2008 to 2011{% else %}२००८ ते २०११ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Panjabrao M Ghyare</td>
-								<td>Administrator</td>
-								<td>2007 to 2008</td>
+								<td>{% if request.session.lang == "en" %}Panjabrao M Ghyare{% else %}पंजाबराव म घ्यारे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Administrator{% else %}प्रशासक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2007 to 2008{% else %}२००७ ते २००८ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Shridhar Moreshwar Raut</td>
-								<td>Deputy Sarpanch</td>
-								<td>From 2007 to 2008</td>
+								<td>{% if request.session.lang == "en" %}Shridhar Moreshwar Raut{% else %}श्रीधर मोरेश्वर राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2007 to 2008{% else %}२००७ ते २००८ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Arvind Tukaram Sankhe</td>
-								<td>Rural Development Officer</td>
-								<td>2006 to 2008</td>
+								<td>{% if request.session.lang == "en" %}Arvind Tukaram Sankhe{% else %}अरविंद तुकाराम संखे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2006 to 2008{% else %}२००६ ते २००८ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Kamalakar Harishchandra Naik</td>
-								<td>Rural Development Officer</td>
-								<td>From 2008</td>
+								<td>{% if request.session.lang == "en" %}Kamalakar Harishchandra Naik{% else %}कमलाकर हरिश्चंद्र नाईक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}From 2008{% else %}२००८ पासुन {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ganesh Mahadeo Thakur</td>
-								<td>Sarpanch</td>
-								<td>1998 to 2003</td>
+								<td>{% if request.session.lang == "en" %}Ganesh Mahadeo Thakur{% else %}गणेश महादेव ठाकूर{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1998 to 2003{% else %}१९९८ ते २००३ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Chandrakant Haraji Macchi</td>
-								<td>Deputy Sarpanch</td>
-								<td>1998 to 2003</td>
+								<td>{% if request.session.lang == "en" %}Chandrakant Haraji Macchi{% else %}चंद्रकांत हरजी माच्ची{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1998 to 2003{% else %}१९९८ ते २००३ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ganesh Mahadeo Thakur</td>
-								<td>Sarpanch</td>
-								<td>1993 to 1998</td>
+								<td>{% if request.session.lang == "en" %}Ganesh Mahadeo Thakur{% else %}गणेश महादेव ठाकूर{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1993 to 1998{% else %}१९९३ ते १९९८ {% endif %}</td>
 							</tr>
 							<tr>
 								<td></td>
-								<td>Deputy Sarpanch</td>
-								<td>1993 to 1998</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1993 to 1998{% else %}१९९३ ते १९९८ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ashok Shivaji Bhoye</td>
-								<td>Rural Development Officer</td>
-								<td>1993</td>
+								<td>{% if request.session.lang == "en" %}Ashok Shivaji Bhoye{% else %}अशोक शिवाजी भोये{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1993 {% else %}१९९३{% endif %}</td>
 							</tr>
 								<tr>
-								<td>D N Patil</td>
-								<td>Administrator</td>
-								<td>1988 to 1993</td>
+								<td>{% if request.session.lang == "en" %}D N Patil{% else %}द न पाटिल{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Administrator{% else %}प्रशासक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1988 to 1993{% else %}१९८८ ते १९९३ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Ashok V Kini</td>
-								<td>Rural Development Officer</td>
-								<td>1988 to 1993</td>
+								<td>{% if request.session.lang == "en" %}Ashok V Kini{% else %}अशोक क किणी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1988 to 1993{% else %}१९८८ ते १९९३ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Atul Posala Dhodi</td>
-								<td>Sarpanch</td>
-								<td>1983 to 1988</td>
+								<td>{% if request.session.lang == "en" %}Atul Posala Dhodi{% else %}अतुल पोसला धोडी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1983 to 1988{% else %}१९८३ ते १९८८ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Bhagwan Hotya Dhodi</td>
-								<td>Deputy Sarpanch</td>
-								<td>1983 to 1988</td>
+								<td>{% if request.session.lang == "en" %}Bhagwan Hotya Dhodi{% else %}भगवान होत्या धोडी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1983 to 1988{% else %}१९८३ ते १९८८ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Chandrakant Atmaram Joshi</td>
-								<td>Sarpanch</td>
-								<td>1978 to 1983</td>
+								<td>{% if request.session.lang == "en" %}Chandrakant Atmaram Joshi{% else %}चंद्रकांत आत्माराम जोशी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1978 to 1983{% else %}१९७८ ते १९८३ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Tulsidas Dhodi</td>
-								<td>Deputy Sarpanch</td>
-								<td>1978 to 1983</td>
+								<td>{% if request.session.lang == "en" %}Tulsidas Dhodi{% else %}तुलसीदास धोडी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1978 to 1983{% else %}१९७८ ते १९८३ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Deviprasad Baijjnath Trivedi</td>
-								<td>Sarpanch</td>
-								<td>1973 to 1978</td>
+								<td>{% if request.session.lang == "en" %}Deviprasad Baijjnath Trivedi{% else %}देवीप्रसाद बैजनाथ त्रिवेदी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1973 to 1978{% else %}१९७३ ते १९७८ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Narayan Budhya Dhodi</td>
-								<td>Deputy Sarpanch</td>
-								<td>1973 to 1978</td>
+								<td>{% if request.session.lang == "en" %}Narayan Budhya Dhodi{% else %}नारायण बुध्या धोडी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1973 to 1978{% else %}१९७३ ते १९७८ {% endif %}</td>
 							</tr>
 								<tr>
-								<td>Bhaskar Parashuram Gharat</td>
-								<td>Sarpanch</td>
-								<td>1968 to 1973</td>
+								<td>{% if request.session.lang == "en" %}Bhaskar Parashuram Gharat{% else %}भास्कर परशुराम घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1968 to 1973{% else %}१९६८ ते १९७३ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Moreshwar Ganu Raut</td>
-								<td>Deputy Sarpanch</td>
-								<td>1968 to 1973</td>
+								<td>{% if request.session.lang == "en" %}Moreshwar Ganu Raut{% else %}मोरेश्वर गणू घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1968 to 1973{% else %}१९६८ ते १९७३ {% endif %}</td>
 							</tr>
 
 							</table>
@@ -560,11 +562,11 @@ tr:nth-child(even) {
 				<div  class="col-lg-5">
 					<div>
 						<img src="{%static 'images/sarpanch.jpg'%}" style="padding-bottom: 10px;">
-						<div style="font-family: Arial Black">Sarpanch- Laxmi Janardan Chandane</div>
+						<div style="font-family: Arial Black">{% if request.session.lang == "en" %}Sarpanch- Laxmi Janardan Chandane{% else %}सरपंच- लक्ष्मी जनार्दन चांदणे{% endif %}</div>
 					</div>
 					<div>
 						<img src="{%static 'images/deputysarpanch.jpg'%}" style="height:590px; padding-top: 45px; padding-bottom: 10px;">
-						<div style="font-family: Arial Black">Deputy Sarpanch- Smita Rupesh Raut</div>
+						<div style="font-family: Arial Black">{% if request.session.lang == "en" %}Deputy Sarpanch- Smita Rupesh Raut{% else %}उप सरपंच- स्मिता रुपेश राऊत{% endif %}</div>
 					</div>
 				</div>
 				<!--<table class="image col-lg-5">
@@ -579,8 +581,6 @@ tr:nth-child(even) {
 				</table>-->
 
 
-
-
 			</div>
 		</div>
 	</div>
@@ -589,11 +589,6 @@ tr:nth-child(even) {
 			<div class="row">
 
 				<!-- News Posts -->
-
-
-
-				</div>
-
 
 			</div>
 		</div>
