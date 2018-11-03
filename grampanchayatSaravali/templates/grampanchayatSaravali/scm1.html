@@ -71,7 +71,7 @@
 </style>
 </head>
 <body style="background-image:url({%static 'images/skulls.png'%});">
-<form name="home" action="# method="POST">
+<form name="home" action="#" method="POST">
 {% csrf_token %}
 
 <div class="super_container">
@@ -87,7 +87,7 @@
 					<div class="col">
 						<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
 
-							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ; right:100px">SARAVALI  GRAMPANCHAYAT</div>
+							<div class="top_bar_item" style="color:#FFFFFF; height: 15px; width: 600px; margin-left: 1px; font-size:200%; font-family: Bookman; text-shadow: 2px 2px 2px ; right:100px">{% if language == "en" %}SARAVALI GRAMPANCHAYAT{% else %}सरावली ग्रामपंचायत{% endif %}</div>
 
 
 						</div>
@@ -104,10 +104,10 @@
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<nav class="main_nav ml-auto">
-								<ul style="height: 55px;">
+								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
+											{% if language == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -116,44 +116,44 @@
 										</a>
 									</li>
 									<li>
-										<div class="dropdown">
-											<div class="dropbtn" style="height: 40px; padding-left:15px;">Members</div>
+										<div class="dropdown dropbtn">
+											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Members {% else %}सदस्य {% endif %}</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
-											{% if request.session.lang == "en" %}Elected Members {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
 												</a>
 												<a href="{% url 'workers' %}">
 											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
 												</a>
 
 												<a href="{% url 'committees' %}">
-											{% if request.session.lang == "en" %}Committees {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Committees {% else %}समिती {% endif %}
 												</a>
 											</div>
 										</div>
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="height: 40px; padding-left:15px;">Schemes</div>
+											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}schemes {% else %}योजना {% endif %}</div>
 											<div class="dropdown-content">
 												<a href="{% url 'scm1' %}">
-											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}संजय गांधी निराधार योजना {% endif %}
 												</a>
 												<a href="{% url 'scm2' %}">
-											{% if request.session.lang == "en" %}Pradhan Mantri Jeevan Jyoti Bima Yojana {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Pradhan Mantri Jeevan Jyoti Bima Yojana {% else %}प्रधानमंत्री जीवन ज्योती बिमा योजना {% endif %}
 												</a>
 
 												<a href="{% url 'scm3' %}">
-											{% if request.session.lang == "en" %}Mazi Kanya Bhagyashree Yojna {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Mazi Kanya Bhagyashree Yojna {% else %}माझी कन्या भाग्यश्री योजना {% endif %}
 												</a>
 												<a href="{% url 'scm4' %}">
-											{% if request.session.lang == "en" %}Janani Suraksha Yojana{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Janani Suraksha Yojana{% else %}जननी सुरक्षा योजना {% endif %}
 												</a>
 												<a href="{% url 'scm5' %}">
-											{% if request.session.lang == "en" %}Bal Sangopan Yojana{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Bal Sangopan Yojana{% else %}बाल संगोपन योजना {% endif %}
 												</a>
 												<a href="{% url 'scm6' %}">
-											{% if request.session.lang == "en" %}Term Loan Scheme{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Term Loan Scheme{% else %}मुदती कर्ज योजना {% endif %}
 												</a>
 											</div>
 										</div>
@@ -172,30 +172,30 @@
 									</li>
 									<li>
 										<div class="dropdown">
-											<div class="dropbtn" style="height: 40px; padding-left:15px;">Other</div>
+											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Other{% else %}इतर {% endif %}</div>
 											<div class="dropdown-content">
 												<a href="{% url 'other1' %}">
-											{% if request.session.lang == "en" %}Bachat Gat{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Bachat Gat{% else %}बचत गट {% endif %}
 												</a>
 												<a href="{% url 'other2' %}">
-											{% if request.session.lang == "en" %}Anganwadi{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Anganwadi{% else %}अंगणवाडी {% endif %}
 												</a>
 
 												<a href="{% url 'other3' %}">
-											{% if request.session.lang == "en" %}Hospitals{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Hospitals{% else %}हॉस्पिटल {% endif %}
 												</a>
 												<a href="{% url 'other4' %}">
-											{% if request.session.lang == "en" %}Schools{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Schools{% else %}शाळा {% endif %}
 												</a>
 												<a href="{% url 'other5' %}">
-											{% if request.session.lang == "en" %}TantaMukti Committee{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}TantaMukti Committee{% else %}तंटामुक्ती समिती {% endif %}
 												</a>
 												<a href="{% url 'other6' %}">
-											{% if request.session.lang == "en" %}Factories{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Factories{% else %}कारखाने {% endif %}
 												</a>
 												</a>
 												<a href="{% url 'other7' %}">
-											{% if request.session.lang == "en" %}Water Timings{% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Water Timings{% else %}पाण्याची वेळ {% endif %}
 												</a>
 											</div>
 										</div>
@@ -207,19 +207,19 @@
 									</li>
 									<li>
 										<a href="{% url 'faq' %}">
-											{% if request.session.lang == "en" %}FAQ {% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}
+											{% if request.session.lang == "en" %}FAQ {% else %}प्रश्न आणी तक्रारी{% endif %}
 										</a>
 									</li>
 									<li>
 										{% if request.session.lang  == "en" %}
 											<select name="selector" onchange="this.form.submit()">
 												<option value="en" selected>English</option>
-												<option value="marathi">Marathi</option>
+												<option value="marathi">मराठी</option>
 											</select>
 										{% else %}
 											<select name="selector" onchange="this.form.submit()">
 												<option value="en">English</option>
-												<option value="marathi" selected>Marathi</option>
+												<option value="marathi" selected>मराठी</option>
 										  	</select>{% endif %}
 									</li>
 
@@ -231,7 +231,6 @@
 				</div>
 			</div>
 		</div>
-
 
 		<div class="logo_container_outer">
 			<div class="container">
