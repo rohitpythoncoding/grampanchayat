@@ -106,7 +106,7 @@
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
