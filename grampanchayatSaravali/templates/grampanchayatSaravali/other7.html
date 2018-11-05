@@ -280,7 +280,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Water Timings</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang  == "en" %} Water Timings{% else %} पाण्याची वेळ {% endif %}</div>
 
 						</div>
 					</div>
@@ -297,6 +297,7 @@ tr:nth-child(even) {
 
 				<!-- News Posts -->
 				<div>
+					{% if request.session.lang  == "en" %}
                     <h3 style="padding-left:8px; font-family: Arial Black;">Mulgaon</h3>
                     <div class="column1">
 
@@ -354,12 +355,75 @@ tr:nth-child(even) {
                         <p>7.30 to 11 Saidham, Shadawal park, Shivnagar, Ramaparvatinagar, Nirmala park, Trivedinagar, Dwarakeshwarnagar</p>
                         <p>11 to morning 6 Fill the tank</p>
                     </div>
+					{% else %}
+
+					<h3 style="padding-left:8px; font-family: Arial Black;">मुळगाव</h3>
+                    <div class="column1">
+
+                        <p>सकाळी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>६ ते ७ सुरेश जोशी ते रामचंद्र घरत गल्ली</p>
+                        <p>७ ते ८ सुरेश जोशी ते संतोष घरत</p>
+                        <p>८ ते ९.३० पूर्वेकडील भाग व भोईर आळी</p>
+                    </div>
+                    <div class="column1">
+
+                        <p>सकाळी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>९.३० ते १२ टाकी भरणे.</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>दुपारी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>१२ ते २ अष्टविनायक नगर ते वाल्मिकी नगर</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>दुपारी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>२ ते ३ टाकी भरणे.</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>दुपारी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>३ ते ४ काशिनाथ घरत ते विलास घरत पेंढारी रोड.</p>
+                        <p>४ ते ५ टेप आळी ते फुडगी पाडा</p>
+                        <p>५ ते ७.३० आदिवासी पाडा</p>
+                    </div>
+                    <div class="column1">
+
+                        <p>रात्री - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>७.३० ते ११ साई धाम, शादावल पार्क, शिवनगर, रमापर्वती नगर, निर्मला पार्क, त्रिवेदी नगर, द्वारकेश नगर</p>
+                        <p>१ ते सकाळी ६ टाकी भरणे.</p>
+                    </div>
+					{% endif %}
+
 
 				</div>
+
 
                 <br>
 
                 <div>
+					{% if request.session.lang  == "en" %}
                     <h3 style="padding-left:8px; font-family: Arial Black;">Tembhode</h3>
                     <div class="column1">
 
@@ -435,10 +499,87 @@ tr:nth-child(even) {
                         <p>Night - </p>
                     </div>
                     <div class="column2">
-
-
-                        <p>9 to morning 6 Fill the tank</p>
+						<p>9 to morning 6 Fill the tank</p>
                     </div>
+					{% else %}
+					<h3 style="padding-left:8px; font-family: Arial Black;">तेंभोडे पाडा</h3>
+                    <div class="column1">
+
+                        <p>सकाळी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>६.३० ते ७.३० विश्वास घरत ते किशोर पटेल</p>
+                        <p>७.३० ते ८.३० बाबुराव घरत ते धनसुख भाई पटेल</p>
+
+                    </div>
+                    <br>
+                    <h3 style="padding-left:8px; font-family: Arial Black;">ओसपाडा</h3>
+                    <div class="column1">
+
+                        <p>सकाळी - </p>
+                    </div>
+                    <div class="column2">
+                        <p>७.३० ते ८.३० रमेश राऊत ते नागपूर वाला</p>
+                        <p>८.३० ते ९.३० दिलीप पाटील ते जगदीश घरत गल्ली</p>
+
+                    </div>
+                    <br>
+                    <h3 style="padding-left:8px; font-family: Arial Black;">माच्चिपाडा</h3>
+                    <div class="column1">
+
+                        <p>सकाळी - </p>
+                    </div>
+                    <div class="column2">
+                        <p>९.३० ते १०.३० अंबिका नगर</p>
+                        <p>१०.३० ते ११.३० माच्चिपाडा</p>
+                        <p>११.३० ते १२.३० नवीन माच्चिपाडा</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>दुपारी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>१२.३० ते ३ टाकी भरणे.</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>दुपारी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>३ ते ४ शांतीवन, वास्तुनिर्मिती, पिंगळे बिल्डिंग</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>संध्याकाळी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>४ ते ६ भैरव कॉम्प्लेक्स व दीप एज्युकेशन</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>संध्याकाळी - </p>
+                    </div>
+                    <div class="column2">
+
+                        <p>६ ते ९ अमृत रेसिडेन्सी व स्वस्तिक इंटरप्रीसेस</p>
+
+                    </div>
+                    <div class="column1">
+
+                        <p>रात्री - </p>
+                    </div>
+                    <div class="column2">
+						<p>९ ते सकाळी ६ टाकी भरणे.</p>
+                    </div>
+					{% endif %}
 				</div>
 			</div>
 		</div>
