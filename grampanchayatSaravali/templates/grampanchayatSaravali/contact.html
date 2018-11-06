@@ -87,7 +87,7 @@
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -235,7 +235,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> FAQ/Queries</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span> {% if request.session.lang == "en" %}FAQ/Queries{% else %}प्रश्न आणि तक्रारी {% endif %}</div>
 
 						</div>
 					</div>
@@ -252,14 +252,14 @@
 
 				<!-- Contact Info -->
 				<div class="col-lg-6">
-					<div class="section_title"><h2>Ask Your Questions</h2></div>
+					<div class="section_title"><h2>{% if request.session.lang == "en" %}Ask Your Questions{% else %}तुमचे प्रश्न आणि तक्रारी सांगा{% endif %}</h2></div>
 					<div class="contact_text">
-						<p>Please ask any question regarding our Saravali grampanchayat!</p>
+						<p>{% if request.session.lang == "en" %}Please ask any question regarding our Saravali grampanchayat!{% else %}कृपया आपल्या सरावली ग्रामपंचायती विषयी कोणतेही प्रश्न विचारा!{% endif %}</p>
 					</div>
 					<ul class="contact_about_list">
 						<li><div class="contact_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>02525 6735390</span></li>
 						<li><div class="contact_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>grampanchayat@gmail.com</span></li>
-						<li><div class="contact_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div><span>Boisar-Palghar Road, Saravali</span></li>
+						<li><div class="contact_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div><span>{% if request.session.lang == "en" %}Boisar-Palghar Road, Saravali{% else %}बोईसर- पालघर रोड{% endif %}</span></li>
 					</ul>
 				</div>
 
@@ -269,17 +269,36 @@
 						<form action="https://formspree.io/rohitbs113@gmail.com" method="POST" id="contact_form" class="contact_form">
 							<div class="row">
 								<div class="col-md-6 input_col" style="padding-left: 30px;padding-right: 0px;">
-									<div class="input_container input_name"><input name="Name" type="text" class="contact_input" placeholder="Name" required="required"></div>
+									<div class="input_container input_name">
+										{% if request.session.lang == "en" %}<input name="Name" type="text" class="contact_input" placeholder="Name" required="required">
+									{% else %}<input name="Name" type="text" class="contact_input" placeholder="नाव" required="required">{% endif %}
+									</div>
 								</div>
 								<div class="col-md-6 input_col">
+									{% if request.session.lang == "en" %}
 									<div class="input_container"><input name="Email" type="email" class="contact_input" placeholder="E-mail" required="required"></div>
+									{% else %}<div class="input_container"><input name="Email" type="email" class="contact_input" placeholder="ईमेल" required="required">{% endif %}
+								</div>
 								</div>
 							</div>
-							<div class="input_container"><input style="margin-top:33px; margin-bottom:33px" name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="Mobile Number" required="required"></div>
+							{% if request.session.lang == "en" %}
+							<div class="input_container"><input style="margin-top:33px; margin-bottom:33px" name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="Mobile Number" required="required">
+						    {% else %}<div class="input_container"><input style="margin-top:33px; margin-bottom:33px" name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="मोबाईल नंबर" required="required">{% endif %}
+							</div>
+								{% if request.session.lang == "en" %}
 							<div class="input_container"><input style=" margin-bottom:33px" name="Subject" type="text" class="contact_input" placeholder="Subject" required="required"></div>
-							<div><input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only /></div>
+								{% else %}<div class="input_container"><input style=" margin-bottom:33px" name="Subject" type="text" class="contact_input" placeholder="विषय" required="required">
+								{% endif %}</div>
+							<div>{% if request.session.lang == "en" %}
+								<input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only />
+								{% else %}<input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only />
+								{% endif %}
+							</div>
+								{% if request.session.lang == "en" %}
 							<div class="input_container"><textarea style="margin-top:33px; margin-bottom:33px" name="Message" class="contact_input contact_text_area" placeholder="Message" required="required"></textarea></div>
-							<button type="submit" class="button contact_button">Send</a></button>
+								{% else %}<div class="input_container"><textarea style="margin-top:33px; margin-bottom:33px" name="Message" class="contact_input contact_text_area" placeholder="मेसेज" required="required"></textarea>
+							{% endif %}</div>
+							<button type="submit" class="button contact_button">{% if request.session.lang == "en" %}Send{% else %}पाठवा{% endif %}</a></button>
 						</form>
 					</div>
 				</div>

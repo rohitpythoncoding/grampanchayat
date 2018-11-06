@@ -119,7 +119,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -132,10 +132,10 @@ tr:nth-child(even) {
 											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Members {% else %}सदस्य {% endif %}</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
-											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
+											{% if language == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
 												</a>
 												<a href="{% url 'workers' %}">
-											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
+											{% if language == "en" %}Workers {% else %}कामगार {% endif %}
 												</a>
 
 												<a href="{% url 'committees' %}">
@@ -427,12 +427,12 @@ tr:nth-child(even) {
 								<tr>
 								<td>{% if request.session.lang == "en" %}Subhash Atmaram Kini{% else %}सुभाष आत्माराम किनी{% endif %}</td>
 								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
-								<td>{% if request.session.lang == "en" %}From 3 June 2015{% else %}३ जून पासुन {% endif %}</td>
+								<td>{% if request.session.lang == "en" %}From 3 June 2015{% else %}३ जून २०१५ पासुन {% endif %}</td>
 							</tr>
 								<tr>
 								<td>{% if request.session.lang == "en" %}Kamalakar Harishchandra Naik{% else %}कमलाकर हरिश्चंद्र नाईक{% endif %}</td>
 								<td>{% if request.session.lang == "en" %}Rural Development Officer{% else %}ग्रामसेवक{% endif %}</td>
-								<td>{% if request.session.lang == "en" %}To 3 June 2015{% else %}३ जून पर्यंत {% endif %}</td>
+								<td>{% if request.session.lang == "en" %}To 3 June 2015{% else %}३ जून २०१५ पर्यंत {% endif %}</td>
 							</tr>
 								<tr>
 								<td>{% if request.session.lang == "en" %}Ganesh Mahadeo Thakur{% else %}गणेश महादेव ठाकूर{% endif %}</td>

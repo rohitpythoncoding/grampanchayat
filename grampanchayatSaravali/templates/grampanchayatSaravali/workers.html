@@ -111,7 +111,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -259,7 +259,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Workers</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang == "en" %}Saravali Grampanchayat {% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang == "en" %} Workers{% else %} कामगार{% endif %}</div>
 
 						</div>
 					</div>
@@ -278,6 +278,7 @@ tr:nth-child(even) {
 				<div class="col-lg-8">
 
 					<div>
+						{% if request.session.lang == "en" %}
                         <h4 style="font-family: Arial Black">Workers in Saravali Grampanchayat </h4>
 						<table style="margin-bottom:30px; margin-top:40px;">
 							<tr>
@@ -572,6 +573,303 @@ tr:nth-child(even) {
 							</tr>
 						</table>
 					</div>
+					{% else %}
+					<h4 style="font-family: Arial Black">सरावली ग्रामपंचायतीचे कामगार</h4>
+						<table style="margin-bottom:30px; margin-top:40px;">
+							<tr>
+								<th>सदस्य</th>
+								<th>पद</th>
+
+							<tr>
+								<td>गोपीनाथ आत्माराम मितना</td>
+								<td>वरिष्ठ लिपिक</td>
+
+							</tr>
+							<tr>
+							    <td>बबन अनंत घरत</td>
+								<td>लिपिक</td>
+
+							</tr>
+							<tr>
+							    <td>मनोज दामोदर राऊत</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>दक्षा विष्णु खाडिलकर</td>
+								<td>लिपिक</td>
+
+							</tr>
+							<tr>
+							    <td>गणेश कृष्ण पाटिल</td>
+								<td>लिपिक</td>
+
+							</tr>
+							<tr>
+							    <td>संतोष कमलकर वयाडा</td>
+								<td>शिपाई</td>
+
+							</tr>
+							<tr>
+							    <td>दीपक रमेश धोडि</td>
+								<td>पाणीपुरवठा वसूली</td>
+
+							</tr>
+							<tr>
+							    <td>किशोर अरविंद गुज्जर</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>सीमा सुनील घुडे</td>
+								<td>पाणीपुरवठा वसूली लिपिक</td>
+
+							</tr>
+							<tr>
+							    <td>चंदू धर्मा वालशी</td>
+								<td>फिटर</td>
+
+							</tr>
+							<tr>
+							    <td>दिनकर कृष्ण ठाकरे</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>दिनेश यशवंत धोडि</td>
+								<td>वसूली कारकुन</td>
+
+							</tr>
+							<tr>
+							    <td>उदय सदानंद माळी</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>संजय विठ्ठल वावरे</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>मारुती दादू चौघुले</td>
+								<td>वॉलमान</td>
+
+							</tr>
+                            <tr>
+							    <td>गणेश दिलीप सुतार</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>राजेश रावजी भेकरे</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>बळीराम सोमा पिलेना</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>सीताराम बाबू पारधी</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>महेंद्र रिष्या वेलपाडा</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>नवश्या कल्या पिलेना</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>जगदीश राजा टोकरे</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>सुनील निलेश हडळ</td>
+								<td>शिपाई</td>
+
+							</tr>
+							<tr>
+							    <td>जयेश रघुनाथ ईभाड</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>विलास प्रताप लीलका</td>
+								<td>शिपाई</td>
+
+							</tr>
+							<tr>
+							    <td>साक्षी सचिन घरत</td>
+								<td>संगणक ऑपरेटर</td>
+
+							</tr>
+							<tr>
+							    <td>अजय मोरेश्वर राऊत</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>राजेश मुरलीधर सरदार</td>
+								<td>पाणीपुरवठा वसूली</td>
+
+							</tr>
+							<tr>
+							    <td>संकेत संतोष राऊत</td>
+								<td>घरपट्टी वसुली</td>
+
+							</tr>
+							<tr>
+							    <td>हितेश रवींद्र परब</td>
+								<td>पाणीपुरवठा वसूली</td>
+
+							</tr>
+							<tr>
+							    <td>सदाशिव शंकर ठाणेकर</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>अर्जुन शुभकरण पांडे</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>सुनील रावते</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>अशोक दामू पवार</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>उमेश राऊत</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>अनिल सखाराम ववरे</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>दशरथ गणपत टोकरे</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>श्याम साहेब सोनवणे</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>प्रकाश मधू लोहार</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>प्रकाश कल्या खताली</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>जीवन शांताराम कोल्हेकर</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>दिनेश बाला दौडा</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>राजू माधव भोईर</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>सुनील दत्तात्रय राऊत</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>गणेश जगू मेरे</td>
+								<td>चालक</td>
+
+							</tr>
+							<tr>
+							    <td>रंजन सुरेश धोडि</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>नागेश सुनील वावरें</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>रमेश विष्णु गोवारी</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+							<tr>
+							    <td>दिनेश सुरेश मेरे</td>
+								<td>आरोग्य विभाग</td>
+
+							</tr>
+
+							<tr>
+							    <td>देवेंद्र रिषा वेलपडा</td>
+								<td>पाणीपुरवठा हेल्पर</td>
+
+							</tr>
+							<tr>
+							    <td>हिमेश उदय राऊत</td>
+								<td>संगणक ऑपरेटर</td>
+
+							</tr>
+							<tr>
+							    <td>भाई विठ्ठल ठाकरे</td>
+								<td>घरपट्टी वसुली</td>
+
+							</tr>
+							<tr>
+							    <td>रुकेश यशवंत घरत</td>
+								<td>घरपट्टी वसुली</td>
+
+							</tr>
+							<tr>
+							    <td>महेश विजय परब</td>
+								<td>घरपट्टी वसुली</td>
+
+							</tr>
+							<tr>
+							    <td>संतोष नामदेव राउत</td>
+								<td>घरपट्टी वसुली</td>
+
+							</tr>
+							<tr>
+							    <td>प्रभाकर लक्ष्मण पाटील</td>
+								<td>इलेक्टीशियन</td>
+
+							</tr>
+							<tr>
+							    <td>मंजु गणपत लाडे</td>
+								<td>कार्यालय सफाई</td>
+
+							</tr>
+						</table>
+					{% endif %}
+					</div>
+
 
 				</div>
 

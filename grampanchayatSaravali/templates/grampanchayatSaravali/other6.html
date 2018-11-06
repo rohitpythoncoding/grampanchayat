@@ -112,7 +112,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -259,7 +259,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Factories</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang  == "en" %} Factories{% else %}कारखाने {% endif %}</div>
 
 						</div>
 					</div>
@@ -272,7 +272,7 @@ tr:nth-child(even) {
 
 	<div class="services">
         <br><br><br>
-		<h3 style="padding-left:48px; font-family: Arial Black">Factories under Saravali Grampanchayat </h3>
+		<h3 style="padding-left:48px; font-family: Arial Black">{% if request.session.lang  == "en" %}Factories under Saravali Grampanchayat{% else %}सन २०१८-१९ पर्यंत आकारणी झालेली कारखान्यांची माहिती{% endif %} </h3>
 		<div class="container">
 
 
@@ -285,9 +285,9 @@ tr:nth-child(even) {
 					<a href="/static/pdf/factories.pdf">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{%static 'images/service_6.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Factories under Saravali Grampanchayat</div>
+							<div class="service_title trans_200">{% if request.session.lang  == "en" %}Factories under Saravali Grampanchayat{% else %}सरावली गावांतर्गत येणारे कारखाने {% endif %}</div>
 							<div class="service_text">
-								<p>Factories under Saravali Grampanchayat</p>
+								<p>{% if request.session.lang  == "en" %}Factories under Saravali Grampanchayat{% else %}सरावली गावांतर्गत येणारे कारखाने {% endif %}</p>
 							</div>
 						</div>
 					</a>

@@ -205,7 +205,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -355,7 +355,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Committees</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Committees{% else %} समिती{% endif %}</div>
 
 						</div>
 					</div>
@@ -375,7 +375,7 @@ tr:nth-child(even) {
 			</div>
 		</div>
 	</div>
-	<div class="pricingdiv" >
+	<div class="pricingdiv" >{% if language == "en" %}
 		<ul class="theplan" >
 			<li class="title"><b>Health and Sanitary Committee</b></li>
 			<li>Laxmi Janardan Chandane</li>
@@ -404,9 +404,43 @@ tr:nth-child(even) {
 			<li>Vijay Bhaskar Raut</li>
 			<li>Kanchan Suresh Sahani</li>
 			<li>Smita Rupesh Raut</li>
-			<li style="margin-top:10px; margin-left:0px; margin-right:60px;">Manisha Mandesh Gharat</li>
+			<li style=" margin-top:10px; margin-left:0px; margin-right:60px;">Manisha Mandesh Gharat</li>
 		</ul>
 	</div>
+	{% else %}
+	<ul class="theplan" >
+			<li class="title"><b>स्वच्छता आणि आरोग्य समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>दिनेश गोपीनाथ संखे</li>
+			<li>अशोक बळीराम साळुंखे</li>
+			<li>विजय भास्कर राऊत</li>
+			<li>हिम्मत इशक्खान पठाण</li>
+			<li>प्रफुल वामन घरत</li>
+			<li style="padding-right:44px; margin-top:10px; margin-left:0px; margin-right:60px;">मुकेश जयवंत घरत</li>
+		</ul>
+		<ul class="theplan" style="margin-right:50px; margin-left:50px">
+			<li class="title"><b>बांधकाम समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>दिनेश गोपीनाथ संखे</li>
+			<li>अशोक बळीराम साळुंखे</li>
+			<li>विजय भास्कर राऊत</li>
+			<li>हिम्मत इशक्खान पठाण</li>
+			<li>प्रफुल वामन घरत</li>
+			<li style="height:50px; margin-left:0px; margin-right:100px;">सचिन विलास पाटिल</li>
+		</ul>
+		<ul class="theplan">
+			<li class="title"><b>पाणीपुरवठा समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>दिनेश गोपीनाथ संखे</li>
+			<li>अशोक बळीराम साळुंखे</li>
+			<li>विजय भास्कर राऊत</li>
+			<li>कांचन सुरेश सहानी</li>
+			<li>स्मिता रुपेश राऊत</li>
+			<li style="padding-right:44px; margin-top:10px; margin-left:0px; margin-right:60px;">मनीषा मंदेश घरत</li>
+		</ul>
+	</div>
+	{% endif %}
+	{% if language == "en" %}
 
 	<div class="pricingdiv" style="margin-top:25px; margin-bottom:25px">
 		<ul class="theplan">
@@ -439,6 +473,39 @@ tr:nth-child(even) {
 			<li style="margin-right:100px;">Praful Vaman Gharat</li>
 		</ul>
 	</div>
+	{% else %}
+	<div class="pricingdiv" style="margin-top:25px; margin-bottom:25px">
+		<ul class="theplan">
+			<li class="title"><b>महिला आणि बालकल्याण विकास समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>मनीषा मंदेश घरत</li>
+			<li>नीशीता नितेश घरत</li>
+			<li>दीपा दत्तात्रय राऊत</li>
+			<li>विजय भास्कर राऊत</li>
+			<li style="padding-right:44px; margin-top:10px; margin-left:0px; margin-right:60px;">नीमला सुरेंद्र निषाद</li>
+		</ul>
+		<ul class="theplan" style="margin-right:50px; margin-left:50px">
+			<li class="title"><b>शिक्षण समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>स्मिता रुपेश राऊत</li>
+			<li>नीलकमल नवीन धोडी</li>
+			<li>विजय भास्कर राऊत</li>
+			<li>प्रेमा भूपेंद्र माच्ची</li>
+			<li>प्रफुल वामन घरत</li>
+			<li style="padding-right:44px; margin-top:10px; margin-right:70px;">सचिन विलास पाटिल</li>
+		</ul>
+		<ul class="theplan">
+			<li class="title"><b>आदिवासी विकास समिती</b></li>
+			<li>लक्ष्मी जनार्दन चांदणे</li>
+			<li>मिलिंद महादेव यादव</li>
+			<li>विजय भास्कर राऊत</li>
+			<li>उर्मिला गणेश ठाकूर</li>
+			<li>नीलकमल नवीन धोडी</li>
+			<li>सचिन विलास पाटिल</li>
+			<li style="margin-right:130px;">प्रफुल वामन घरत</li>
+		</ul>
+	</div>
+	{% endif %}
 
 	<!-- Footer -->
 

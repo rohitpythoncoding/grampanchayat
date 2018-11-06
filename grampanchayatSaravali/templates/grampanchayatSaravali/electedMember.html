@@ -114,7 +114,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -262,7 +262,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Elected Members</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang == "en" %}Saravali Grampanchayat {% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang == "en" %} Elected Member{% else %} निवडूण आलेले सदस्य{% endif %}</div>
 
 						</div>
 					</div>
@@ -281,102 +281,102 @@ tr:nth-child(even) {
 				<div class="col-lg-8">
 
 					<div>
-						<h4 style="font-family: Arial Black">Elected Members of Saravali Grampanchayat </h4>
+						<h4 style="font-family: Arial Black">{% if request.session.lang  == "en" %}Elected Members of Saravali Grampanchayat{% else %}सरावली ग्रामपंचायतीचे निवडूण आलेले सदस्य {% endif %}</h4>
 						<table style="margin-bottom:30px; margin-top:40px;">
 							<tr>
-								<th>Elected Candidates</th>
-								<th>Position</th>
-								<th>Ward</th>
+								<th>{% if request.session.lang == "en" %}Elected Candidates{% else %} निवडूण आलेले सदस्य  {% endif %}</th>
+								<th>{% if request.session.lang == "en" %}Position{% else %}पद{% endif %}</th>
+								<th>{% if request.session.lang == "en" %}Ward{% else %}वॉर्ड{% endif %}</th>
 							</tr>
 							<tr>
-								<td>Laxmi Janardan Chandane</td>
-								<td>Sarpanch</td>
-								<td>Sarpanch</td>
+								<td>{% if request.session.lang == "en" %}Laxmi Janardan Chandane{% else %}लक्ष्मी जनार्दन चांदणे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Sarpanch{% else %}सरपंच{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Smita Rupesh Raut</td>
-								<td>Deputy Sarpanch</td>
-								<td>4D</td>
+								<td>{% if request.session.lang == "en" %}Smita Rupesh Raut{% else %}स्मिता रुपेश राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Deputy Sarpanch{% else %}उप सरपंच{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}4D{% else %}४ड{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Praful Vaman Gharat</td>
-								<td>Member</td>
-								<td>1A</td>
+								<td>{% if request.session.lang == "en" %}Praful Vaman Gharat{% else %}प्रफुल वामन घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1A{% else %}१अ{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Prema BhupendraMachhi</td>
-								<td>Member</td>
-								<td>1A</td>
+								<td>{% if request.session.lang == "en" %}Prema Bhupendra Machhi{% else %}पप्रेमा भूपेंद्र माच्ची{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}1A{% else %}१अ{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Milind Mahadev Yadav</td>
-								<td>Member</td>
-								<td>2B</td>
+								<td>{% if request.session.lang == "en" %}Milind Mahadev Yadav{% else %}मिलिंद महादेव यादव{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2B{% else %}२ब{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Mukesh Jaywant Gharat</td>
-								<td>Member</td>
-								<td>2B</td>
+								<td>{% if request.session.lang == "en" %}Mukesh Jaywant Gharat{% else %}मुकेश जयवंत घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2B{% else %}२ब{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Urmila Ganesh Thakur</td>
-								<td>Member</td>
-								<td>2B</td>
+								<td>{% if request.session.lang == "en" %}Urmila Ganesh Thakur{% else %}उर्मिला गणेश ठाकूर{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}2B{% else %}२ब{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Vijay Bhaskar Raut</td>
-								<td>Member</td>
-								<td>3C</td>
+								<td>{% if request.session.lang == "en" %}Vijay Bhaskar Raut{% else %}विजय भास्कर राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}3C{% else %}३क{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Dipa Dattatray Raut</td>
-								<td>Member</td>
-								<td>3C</td>
+								<td>{% if request.session.lang == "en" %}Dipa Dattatray Raut{% else %}दीपा दत्तात्रय राऊत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}3C{% else %}३क{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Kanchan Suresh Sahani</td>
-								<td>Member</td>
-								<td>3C</td>
+								<td>{% if request.session.lang == "en" %}Kanchan Suresh Sahani{% else %}कांचन सुरेश सहानी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}3C{% else %}३क{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Sachin Vilas Patil</td>
-								<td>Member</td>
-								<td>4D</td>
+								<td>{% if request.session.lang == "en" %}Sachin Vilas Patil{% else %}सचिन विलास पाटिल{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}4D{% else %} ४ड{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Ashok Baliram Salunke</td>
-								<td>Member
-								<td>4D</td>
+								<td>{% if request.session.lang == "en" %}Ashok Baliram Salunke{% else %}अशोक बळीराम साळुंखे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}4D{% else %} ४ड{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Himmat Ishakkhan Pathan</td>
-								<td>Member</td>
-								<td>5E</td>
+								<td>{% if request.session.lang == "en" %}Himmat Ishakkhan Pathan{% else %}हिम्मत इशक्खान पठाण{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}5E{% else %}५इ{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Nilkamal Navin Dhodi</td>
-								<td>Member</td>
-								<td>5E</td>
+								<td>{% if request.session.lang == "en" %}Nilkamal Navin Dhodi{% else %}नीलकमल नवीन धोडी{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}5E{% else %}५इ{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Nimla Surendra Nishad</td>
-								<td>Member</td>
-								<td>5E</td>
+								<td>{% if request.session.lang == "en" %}Nimla Surendra Nishad{% else %}नीमला सुरेंद्र निषाद{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}5E{% else %}५इ{% endif %}</td>
 							</tr>
 							<tr>
-								<td>Dinesh Gopinath Sankhe</td>
-								<td>Member</td>
-								<td>6F</td>
+								<td>{% if request.session.lang == "en" %}Dinesh Gopinath Sankhe{% else %}दिनेश गोपीनाथ संखे{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}6F{% else %} 6फ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Manisha Mandesh Gharat</td>
-								<td>Member</td>
-								<td>6F</td>
+								<td>{% if request.session.lang == "en" %}Manisha Mandesh Gharat{% else %}मनीषा मंदेश घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}6F{% else %} 6फ {% endif %}</td>
 							</tr>
 							<tr>
-								<td>Nishita Nitesh Gharat</td>
-								<td>Member</td>
-								<td>6F</td>
+								<td>{% if request.session.lang == "en" %}Nishita Nitesh Gharat{% else %}नीशीता नितेश घरत{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}Member{% else %}सदस्य{% endif %}</td>
+								<td>{% if request.session.lang == "en" %}6F{% else %} 6फ {% endif %}</td>
 							</tr>
 
 						</table>

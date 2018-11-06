@@ -88,7 +88,7 @@
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -237,7 +237,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Development Plan</div>
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Development Plan{% else %} विकास आराखडा{% endif %}</div>
 
 						</div>
 					</div>
@@ -258,9 +258,9 @@
 					<a href="/static/pdf/viksArakhada201819.pdf">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2018-2019</div>
+							<div class="service_title trans_200">{% if language == "en" %}Panchayat Activity Plan Report 2018-2019{% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१८-२०१९{% endif %}</div>
 							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2018-19 </p>
+								<p>{% if language == "en" %}Development Plan of Saravali Grampanchayat for year 2018-19{% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१८-२०१९{% endif %} </p>
 							</div>
 						</div>
 					</a>
@@ -271,9 +271,9 @@
 					<a href="/static/pdf/vikasArakhada201718.pdf">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2017-2018</div>
+							<div class="service_title trans_200">{% if language == "en" %}Panchayat Activity Plan Report 2017-2018{% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१७-२०१८{% endif %}</div>
 							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2017-18 </p>
+								<p>{% if language == "en" %}Development Plan of Saravali Grampanchayat for year 2017-18 {% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१७-२०१८{% endif %}</p>
 							</div>
 						</div>
 					</a>
@@ -284,9 +284,9 @@
 					<a href="/static/pdf/vikasArakhada201617.pdf">
 						<div class="service text-center trans_200">
 							<div class="service_icon"><img class="svg" src="{%static 'images/service_1.svg'%}" alt=""></div>
-							<div class="service_title trans_200">Panchayat Activity Plan Report 2016-2017</div>
+							<div class="service_title trans_200">{% if language == "en" %}Panchayat Activity Plan Report 2016-2017{% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१६-२०१७{% endif %}</div>
 							<div class="service_text">
-								<p>Development Plan of Saravali Grampanchayat for year 2016-17 </p>
+								<p>{% if language == "en" %}Development Plan of Saravali Grampanchayat for year 2016-17 {% else %}वार्षिक ग्रामपंचायत विकास आराखडा २०१६-२०१७{% endif %}</p>
 							</div>
 						</div>
 					</a>

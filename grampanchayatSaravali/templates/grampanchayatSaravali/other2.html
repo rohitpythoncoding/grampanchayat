@@ -112,7 +112,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -259,7 +259,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Anganwadi</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Anganwadi{% else %}अंगणवाडी{% endif %}</div>
 
 						</div>
 					</div>
@@ -278,6 +278,7 @@ tr:nth-child(even) {
 				<div class="col-lg-8">
 
           			<div>
+						{% if language == "en" %}
 						<h3 style="font-family: Arial Black; padding-top:46px;">Anganwadi Information </h3>
 							<table style="margin-top:40px;">
 								<tr>
@@ -422,6 +423,152 @@ tr:nth-child(even) {
 									<td>Akshata Terase</td>
 								</tr>
 						</table>
+						{% else %}
+						<h3 style="font-family: Arial Black; padding-top:46px;">अंगणवाडी माहिती </h3>
+							<table style="margin-top:40px;">
+								<tr>
+									<th>अंगणवाडी</th>
+									<th colspan="3" width="20%">मुलांची संख्या</th>
+									<th>शौचालय उपलब्ध आहे का?</th>
+									<th>मुतारी व्यवस्था आहे का?</th>
+									<th>पाण्याची व्यवस्था आहे का?</th>
+									<th width="15%">स्वतःची इमारत आहे का?</th>
+									<th>वीज पुरवठा आहे का?</th>
+									<th width="30%">अंगणवाडी सदस्य</th>
+									<th width="30%">मदतनीस</th>
+                				</tr>
+								<tr>
+	  							<td></td>
+	  							<td>० - ३</td>
+	  							<td>३ - ६</td>
+									<td>एकुण</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+	  							<td>वाल्मिकी नगर</td>
+	  							<td>२७</td>
+	  							<td>२४</td>
+									<td>५१</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>वैशाली विकास घरत</td>
+									<td>अर्चना द्यानेश्र्वर भोर</td>
+								</tr>
+								<tr>
+	  							<td>माच्चिपाडा</td>
+	  							<td>३०</td>
+	  							<td>१८</td>
+									<td>४८</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>समाज मंदिर</td>
+									<td>आहे</td>
+									<td>सुषमा संदेश घरत</td>
+									<td>रेश्मा माच्ची</td>
+								</tr>
+								<tr>
+	  							<td>मुळगाव</td>
+	  							<td>१२२</td>
+	  							<td>९१</td>
+									<td>२१३</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>समाज मंदिर</td>
+									<td>नाही</td>
+									<td>सोनाली संखे</td>
+									<td>चंद्रावती मंडल</td>
+								</tr>
+								<tr>
+	  							<td>शुक्ला कंपाऊंड</td>
+	  							<td>९३</td>
+	  							<td>११६</td>
+									<td>२०९</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>शिवसेना कार्यालय</td>
+									<td>नाही</td>
+									<td>चंदा मुकेश पटेल</td>
+									<td>पारू सोलकर</td>
+								</tr>
+								<tr>
+	  							<td>संजय नगर</td>
+	  							<td>१००</td>
+	  							<td>७७</td>
+									<td>१७७</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>जिल्हा परिषद स्कूल</td>
+									<td>नाही</td>
+									<td>कल्पना मधुकर पाटिल</td>
+									<td>कविता महेश भजनवाले</td>
+								</tr>
+								<tr>
+	  							<td>धोडीपाडा</td>
+	  							<td>१२२</td>
+	  							<td>९२</td>
+									<td>२१४</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>सुषमा प्र पाटिल</td>
+									<td>वनिता पापडे</td>
+								</tr>
+								<tr>
+	  							<td>सिद्धार्थनगर</td>
+	  							<td>९७</td>
+	  							<td>१०५</td>
+									<td>२०२</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>शिवसेना कार्यालय</td>
+									<td>आहे</td>
+									<td>मिलन मधुकर संखे</td>
+									<td>अक्षता तेरसे</td>
+								</tr>
+								<tr>
+	  							<td>भगवान नगर</td>
+	  							<td>१४०</td>
+	  							<td>१५५</td>
+									<td>२९५</td>
+									<td>नाही</td>
+									<td>आहे</td>
+									<td>आहे</td>
+									<td>व्यायामशाळा</td>
+									<td>नाही</td>
+									<td>रोहिणी बजरंग पवार</td>
+									<td>बारकु लाडक्या शेळके</td>
+								</tr>
+								<tr>
+	  							<td>अवधनगर</td>
+	  							<td>१११</td>
+	  							<td>११६</td>
+									<td>२२७</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>नाही</td>
+									<td>ओट्यावर</td>
+									<td>नाही</td>
+									<td>राघिनी तेजपाल पाटील</td>
+									<td>अक्षता तेरसे</td>
+								</tr>
+						</table>
+						{% endif %}
 					</div>
 
 				</div>

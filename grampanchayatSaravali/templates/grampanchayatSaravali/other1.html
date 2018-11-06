@@ -112,7 +112,7 @@ tr:nth-child(even) {
 								<ul style="height: 55px; ">
 									<li>
 										<a href="{% url 'home' %}">
-											{% if language == "en" %}Home {% else %}होम {% endif %}
+											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
 									<li>
@@ -260,7 +260,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Bachat Gat</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Bachat Gat{% else %}बचत गट{% endif %}</div>
 
 						</div>
 					</div>
@@ -278,6 +278,7 @@ tr:nth-child(even) {
 				<!-- News Posts -->
 				<div class="col-lg-8">
 					<div>
+						{% if language == "en" %}
                         <h3 style="font-family: Arial Black">Bachat Gat Information </h3>
 						<table style="margin-top:40px;">
 							<tr>
@@ -351,6 +352,81 @@ tr:nth-child(even) {
 								<td>Sanjaynagar</td>
 							</tr>
 						</table>
+						{% else %}
+						<h3 style="font-family: Arial Black">बचत गट माहिती </h3>
+						<table style="margin-top:40px;">
+							<tr>
+								<th>बचत गट नाव</th>
+								<th>मुख्य</th>
+								<th>अंगणवाडी आणि गावं </th>
+							<tr>
+								<td>प्राजक्ता बचत गट</td>
+								<td>हरीकला केशवराज ठाकूर</td>
+								<td>संजयनगर</td>
+							</tr>
+							<tr>
+								<td>भूमी बचत गट</td>
+								<td>कांता सोमनाथ लींगम</td>
+								<td>भैयापाडा सिद्धार्थनगर</td>
+							</tr>
+							<tr>
+								<td>अदिती बचत गट</td>
+								<td>मीनाक्षी दिनेश नेहते</td>
+								<td>शुक्ला कंपाऊंड</td>
+							</tr>
+							<tr>
+								<td>मैत्री बचत गट</td>
+								<td>कुंदा दगडू जाधव</td>
+								<td>भगवान नगर</td>
+							</tr>
+							<tr>
+								<td>माहेर बचत गट</td>
+								<td>कासाबाई शिंदे</td>
+								<td>धोडीपाडा</td>
+							</tr>
+							<tr>
+								<td>आदर्श बचत गट</td>
+								<td>शैला राजेश संखे</td>
+								<td>अवधनगर</td>
+							</tr>
+							<tr>
+								<td>रेणुका बचत गट</td>
+								<td>रेखा दिलीप सपकाळ</td>
+								<td>सरावली आणि वाल्मिकी नगर</td>
+							</tr>
+							<tr>
+								<td>सफल बचत गट</td>
+								<td>रेश्मा माच्चि</td>
+								<td>माच्चीपाडा</td>
+
+							</tr>
+							<tr>
+								<td>स्वामी समर्थ बचत गट</td>
+								<td>प्रियांका प्रफुल घरत</td>
+								<td>सरावली</td>
+							</tr>
+							<tr>
+								<td>राधा कृष्णा बचत गट</td>
+								<td>रोहिणी मेघन पाटिल</td>
+								<td>सरावली</td>
+							</tr>
+							<tr>
+								<td>सुदर्शन महिला बचत गट</td>
+								<td>मानसी मनोज घरत</td>
+								<td>सरावली</td>
+							</tr>
+							<tr>
+								<td>श्रावणी महिला बचत गट</td>
+								<td>जयंती संतोष महांतो</td>
+								<td>संजय नगर</td>
+							</tr>
+							<tr>
+								<td>उपासना महिला बचत गट</td>
+								<td>शांता राजाराम सोलकर</td>
+								<td>संजय नगर</td>
+							</tr>
+						</table>
+						{% endif %}
 					</div>
 
 				</div>
