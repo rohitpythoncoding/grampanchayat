@@ -13,7 +13,6 @@ def welcome(request):
 
 
 def home(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -23,7 +22,6 @@ def home(request):
     return render(request, 'grampanchayatSaravali/index.html', {"language": language})
 
 def workers(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -34,7 +32,6 @@ def workers(request):
 
 
 def certificates(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -45,7 +42,6 @@ def certificates(request):
 
 
 def map(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -57,7 +53,6 @@ def map(request):
 
 
 def electedMember(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -68,7 +63,6 @@ def electedMember(request):
 
 
 def photoGallery(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -79,7 +73,6 @@ def photoGallery(request):
 
 
 def faq(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -90,7 +83,6 @@ def faq(request):
 
 
 def developmentPlan(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -101,7 +93,6 @@ def developmentPlan(request):
 
 
 def committees(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -112,7 +103,6 @@ def committees(request):
 
 
 def scm1(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -123,7 +113,6 @@ def scm1(request):
 
 
 def scm2(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -134,7 +123,6 @@ def scm2(request):
 
 
 def scm3(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -145,7 +133,6 @@ def scm3(request):
 
 
 def scm4(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -156,7 +143,6 @@ def scm4(request):
 
 
 def scm5(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -167,7 +153,6 @@ def scm5(request):
 
 
 def scm6(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -178,7 +163,6 @@ def scm6(request):
 
 
 def about(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -189,7 +173,6 @@ def about(request):
 
 
 def other1(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -200,7 +183,6 @@ def other1(request):
 
 
 def other2(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -210,7 +192,6 @@ def other2(request):
     return render(request, 'grampanchayatSaravali/other2.html', {"language": language})
 
 def other3(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -220,7 +201,6 @@ def other3(request):
     return render(request, 'grampanchayatSaravali/other3.html', {"language": language})
 
 def other4(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -230,7 +210,6 @@ def other4(request):
     return render(request, 'grampanchayatSaravali/other4.html', {"language": language})
 
 def other5(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -240,7 +219,6 @@ def other5(request):
     return render(request, 'grampanchayatSaravali/other5.html', {"language": language})
 
 def other6(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
@@ -251,7 +229,6 @@ def other6(request):
 
 
 def other7(request):
-    request.session['lang'] = 'en'
     language = 'en'
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
