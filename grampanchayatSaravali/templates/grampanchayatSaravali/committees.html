@@ -355,7 +355,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Committees{% else %} समिती{% endif %}</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang  == "en" %}Committees{% else %} समिती{% endif %}</div>
 
 						</div>
 					</div>
@@ -375,7 +375,7 @@ tr:nth-child(even) {
 			</div>
 		</div>
 	</div>
-	<div class="pricingdiv" >{% if language == "en" %}
+	<div class="pricingdiv" >{% if request.session.lang  == "en" %}
 		<ul class="theplan" >
 			<li class="title"><b>Health and Sanitary Committee</b></li>
 			<li>Laxmi Janardan Chandane</li>
@@ -440,7 +440,7 @@ tr:nth-child(even) {
 		</ul>
 	</div>
 	{% endif %}
-	{% if language == "en" %}
+	{% if request.session.lang  == "en" %}
 
 	<div class="pricingdiv" style="margin-top:25px; margin-bottom:25px">
 		<ul class="theplan">

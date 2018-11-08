@@ -260,7 +260,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if language == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if language == "en" %} Bachat Gat{% else %}बचत गट{% endif %}</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत {% endif %}</span>{% if request.session.lang  == "en" %}Bachat Gat{% else %}बचत गट{% endif %}</div>
 
 						</div>
 					</div>
@@ -278,7 +278,7 @@ tr:nth-child(even) {
 				<!-- News Posts -->
 				<div class="col-lg-8">
 					<div>
-						{% if language == "en" %}
+						{% if request.session.lang  == "en" %}
                         <h3 style="font-family: Arial Black">Bachat Gat Information </h3>
 						<table style="margin-top:40px;">
 							<tr>
