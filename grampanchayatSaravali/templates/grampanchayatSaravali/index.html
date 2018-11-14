@@ -132,10 +132,10 @@ tr:nth-child(even) {
 											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Members {% else %}सदस्य {% endif %}</div>
 											<div class="dropdown-content">
 												<a href="{% url 'electedMember' %}">
-											{% if language == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
+											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
 												</a>
 												<a href="{% url 'workers' %}">
-											{% if language == "en" %}Workers {% else %}कामगार {% endif %}
+											{% if request.session.lang == "en" %}Workers {% else %}कामगार {% endif %}
 												</a>
 
 												<a href="{% url 'committees' %}">
