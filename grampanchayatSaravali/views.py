@@ -46,9 +46,9 @@ def map(request):
     if request.method == 'POST':
         request.session['lang'] = request.POST.get('selector')
         language = request.POST.get('selector')
-        return render(request, 'grampanchayatSaravali/index.html', {"language": language})
+        return render(request, 'grampanchayatSaravali/maps.html', {"language": language})
 
-    return render(request, 'grampanchayatSaravali/index.html', {"language": language})
+    return render(request, 'grampanchayatSaravali/maps.html', {"language": language})
 
 
 
