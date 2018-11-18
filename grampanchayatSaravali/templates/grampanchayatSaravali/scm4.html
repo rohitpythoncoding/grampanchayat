@@ -256,7 +256,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
+                           <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}योजना{% endif %}</div>
 
 						</div>
 					</div>
@@ -266,6 +266,7 @@
 	</div>
 
 	<!-- Services -->
+	{% if request.session.lang == "en" %}
 
 	<div class="services">
 		<div class="container">
@@ -330,6 +331,69 @@
 
 			</div>
 	</div>
+	{% else %}
+	<div class="services">
+		<div class="container">
+
+            <br>
+            <h2 style="text-align: center;  height: 75px; padding-top: 15px;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">जननी सुरक्षा योजना </strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					जननी सुरक्षा योजना ही गर्भवती महिलेसाठी नॅशनल हेल्थ मिशन अंतर्गत राबवली जाणारी योजना आहे. या योजेअंतर्गत गरीब  गर्भवती महिलांना विविध सुविधा पुरवल्या जातात.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">पात्रता</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						दारिद्य्र रषेखालील सर्व गर्भवती महिला.
+					</li>
+					<li>
+						अनुसूचित जाती व अनुसूचित जमाती मधील सर्व गर्भवती महिला.
+					</li>
+					<li>
+						प्रसूतीच्या वेळेस महिलेचे वय १९ असावे.
+					</li>
+					<li>
+						२ अपत्य पर्यंत लाभ देण्यात येईल
+					</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">योजनेचा लाभ</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>हॉस्पिटल मध्ये प्रसूती झाल्यास रू. १५००/- लाभ.</li>
+					<li>सिजेरियन झाल्यास रू. १५००/- लाभ.</li>
+                </span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">आवश्यक कागदपत्रे</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>बँक खाते झेरॉक्स</li>
+                    <li>दवाखान्याचे प्रसूती कार्ड</li>
+					<li>आधार कार्ड झेरॉक्स</li>
+					<li>लाभार्थी महिलेचा जन्म दाखल्याचा पुरावा</li>
+                    <li>रहिवासी दाखला</li>
+				</span>
+			</ul>
+            <br>
+
+			</div>
+	</div>
+	{% endif %}
 
 	<!-- Footer -->
 
