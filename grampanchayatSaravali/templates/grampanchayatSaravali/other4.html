@@ -541,19 +541,60 @@ tr:nth-child(even) {
 	<!-- Footer -->
 
 	<footer class="footer">
-
-		<div class="copyright">
+		<div class="footer_container">
 			<div class="container">
 				<div class="row">
+
+					<!-- Footer - About -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_about">
+
+							<div class="footer_about_text">
+								<p>{% if request.session.lang == "en" %}Some Info About Village{% else %}गावा बद्दल काही माहिती{% endif %}</p>
+							</div>
+							<ul class="footer_about_list">
+								<li><div class="footer_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>+91 977 675 5432</span></li>
+								<li><div class="footer_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>office@template.com</span></li>
+								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div>
+									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Footer - Links -->
+					<div class="col-lg-4 footer_col">
+						<div class="footer_links footer_column" style="padding-top:40px;">
+							<div class="footer_title">{% if request.session.lang == "en" %}Useful Links{% else %}उपयुक्त लिंक्स{% endif %}</div>
+							<ul>
+								<li><a href="#">{% if request.session.lang == "en" %}Link1{% else %}इतिहास{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Link2{% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}</a></li>
+								<!--<li><a href="#">Apply for a Job</a></li>-->
+								<li><a href="#">{% if request.session.lang == "en" %}Link3{% else %}अटी व शर्ती{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Link4{% else %}आमच्या सदस्य{% endif %}</a></li>
+
+								<li><a href="#">{% if request.session.lang == "en" %}Link5{% else %}मोफत सेवा{% endif %}</a></li>
+
+							</ul>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+        <div class="copyright">
+			<div class="container">
+				<div class="row">
+
+
 					<div class="col">
 						<div class="copyright_content d-flex flex-lg-row flex-column align-items-lg-center justify-content-start">
 							<div class="cr">Copyright © 2018 Saravali GramPanchayat Site is designed and maintained by Neoteric Technologies, Boisar</div>
-							<div style="padding-left: 222px;"><a href="#" target="_blank">Link1</a>&nbsp;&nbsp;
-							<a href="#" target="_blank">Link2</a>&nbsp;&nbsp;
-							<a href="#" target="_blank">Link3</a>&nbsp;&nbsp;
-							<a href="#" target="_blank">Link4</a></div>
+
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
