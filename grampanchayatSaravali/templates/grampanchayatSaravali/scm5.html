@@ -256,7 +256,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}योजना{% endif %}</div>
 
 						</div>
 					</div>
@@ -267,6 +267,9 @@
 
 	<!-- Services -->
 
+
+
+	{% if request.session.lang  == "en" %}
 	<div class="services">
 		<div class="container">
 
@@ -323,6 +326,64 @@
 
 			</div>
 	</div>
+	{% else %}
+	<div class="services">
+		<div class="container">
+
+            <br>
+            <h2 style="text-align: center;  height: 75px; padding-top: 15px;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">बाल संगोपन योजना</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">पात्रता</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						आई किंवा वडील यापैकी एक पालक नसेल तर ० ते १८ वर्षे वयोगटातील अनाथ मुले, निराधार मुले, बेघर मुले.
+					</li>
+					<li>
+						शाळेत न जाणारे बालकामगार.
+					</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">योजनेचा लाभ</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>रु. ४२५/- मासिक अनुदान.</li>
+                </span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">आवश्यक कागदपत्रे</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>रेशन कार्ड झेरॉक्स</li>
+					<li>आधार कार्ड झेरॉक्स</li>
+					<li>लाभार्थीच्या पालकांसोबत फोटो</li>
+                    <li>eलाभार्थीच्या जन्म दाखला /शाळेचे बोनाफाईड</li>
+					<li>पालकांचा मृत्यू झाला असल्यास मृत्यु दाखला</li>
+                    <li>उत्पन्नाचा दाखला</li>
+                    <li>बँक पासबुक</li>
+				</span>
+			</ul>
+			<br>
+
+			</div>
+	</div>
+	{% endif %}
 
 	<!-- Footer -->
 
