@@ -259,7 +259,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schools</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Hospitals{% else %}शाळा{% endif %}</div>
 
 						</div>
 					</div>
@@ -276,6 +276,7 @@ tr:nth-child(even) {
 
 				<!-- News Posts -->
 				<div class="col-lg-8">
+					{% if request.session.lang  == "en" %}
 
 					<div>
 						<h3 style="font-family: Arial Black; padding-top:46px;">School Information </h3>
@@ -302,6 +303,24 @@ tr:nth-child(even) {
 								<td>Dhodipada Marathi School</td>
 								<td>Dhodipada</td>
 								<td>First to Fourth</td>
+							</tr>
+							<tr>
+								<td>4.</td>
+								<td>Prabbhodankar Thakare Vidyalaya</td>
+								<td>Awadhnagar</td>
+								<td>First to Tenth</td>
+							</tr>
+							<tr>
+								<td>5.</td>
+								<td>Tarapur Vidyamandir</td>
+								<td>Awadhnagar</td>
+								<td>First to Twelth</td>
+							</tr>
+							<tr>
+								<td>6.</td>
+								<td>Deep Education</td>
+								<td>Saravali</td>
+								<td>MBA</td>
 							</tr>
 						</table>
 					</div>
@@ -531,6 +550,281 @@ tr:nth-child(even) {
 							</tr>
 						</table>
 					</div>
+
+					{% else %}
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">शाळा माहिती </h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>शाळा</th>
+								<th>पत्ता</th>
+								<th>वर्ग</th>
+							<tr>
+								<td>१.</td>
+								<td>सरावली मराठी शाळा</td>
+								<td>सरावली</td>
+								<td>पहिली ते सातवी</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>माच्छीपाडा मराठी शाळा</td>
+								<td>माच्छीपाडा</td>
+								<td>पहिली ते चौथी</td>
+							</tr>
+							<tr>
+								<td>३.</td>
+								<td>धोडीपाडा मराठी शाळा</td>
+								<td>धोडीपाडा</td>
+								<td>पहिली ते चौथी</td>
+							</tr>
+							<tr>
+								<td>४.</td>
+								<td>प्रबोधनकार ठाकरे विद्यालय</td>
+								<td>अवधनगर</td>
+								<td>पहिली ते दहावी</td>
+							</tr>
+							<tr>
+								<td>५.</td>
+								<td>तारापूर विद्या मंदिर</td>
+								<td>अवधनगर</td>
+								<td>पहिली ते बारावी</td>
+							</tr>
+							<tr>
+								<td>६.</td>
+								<td>दीप एज्युकेशन</td>
+								<td>सरावली</td>
+								<td>एम. बी. ए.</td>
+							</tr>
+
+
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">शाळेचे नावं जि. प मराठी शाळा सरावली केंद्र - सरावली ता. जिल्हा. पालघर</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>शिक्षकाचे नावं</th>
+								<th>पद</th>
+								<th>मोबाईल नंबर</th>
+								<th>इयत्ता</th>
+								<th>मुले </th>
+								<th>मुली </th>
+								<th>एकूण</th>
+							<tr>
+								<td>१.</td>
+								<td>उषा अनिलकुमार शिंदे</td>
+								<td>प्रमुख शिक्षिका</td>
+								<td>९६३७८६८७९५</td>
+								<td>१ ली</td>
+								<td>०८</td>
+								<td>०७</td>
+								<td>१४</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>२ री</td>
+								<td>०७</td>
+								<td>०४</td>
+								<td>११</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>दिलीप शांताराम पिंपळे</td>
+								<td>उप शिक्षक</td>
+								<td>९९२२२९६६०१</td>
+								<td>३ री</td>
+								<td>०४</td>
+								<td>०७</td>
+								<td>११</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>४ थी</td>
+								<td>०१</td>
+								<td>०५</td>
+								<td>०६</td>
+							</tr>
+							<tr>
+								<tr>
+									<td>३.</td>
+									<td>स्नेहल सुहास राऊत</td>
+									<td>उप शिक्षिका</td>
+									<td>८४४६८९८३५२</td>
+									<td>५ वी</td>
+									<td>०३</td>
+									<td>०८</td>
+									<td>११</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>६ वी</td>
+									<td>०७</td>
+									<td>०५</td>
+									<td>१२</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>७ वी</td>
+									<td>०६</td>
+									<td>०५</td>
+									<td>११</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td>एकूण</td>
+									<td>३६</td>
+									<td>४१</td>
+									<td>७७</td>
+								</tr>
+
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">शाळेचे नावं जि. प मराठी शाळा माच्छीपाडा केंद्र - सरावली ता. जिल्हा. पालघर</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>शिक्षकाचे नावं</th>
+								<th>पद</th>
+								<th>मोबाईल नंबर</th>
+								<th>इयत्ता</th>
+								<th>मुले </th>
+								<th>मुली </th>
+								<th>एकूण</th>
+							<tr>
+								<td>१.</td>
+								<td>मनोहर सीताराम संखे</td>
+								<td>मुख्याध्यापक</td>
+								<td>७५५९४१९२६९</td>
+								<td>१ ली</td>
+								<td>०४</td>
+								<td>०७</td>
+								<td>११</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>२ री</td>
+								<td>०२</td>
+								<td>०७</td>
+								<td>०९</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>राजेंद्र सखाराम संखे</td>
+								<td>उप शिक्षक</td>
+								<td>७७९८०४७५२५</td>
+								<td>३ री</td>
+								<td>००</td>
+								<td>०८</td>
+								<td>०८</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>४ थी</td>
+								<td>०४</td>
+								<td>०६</td>
+								<td>१०</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>एकूण</td>
+								<td>१०</td>
+								<td>२८</td>
+								<td>३८</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">शाळेचे नावं जि. प मराठी शाळा धोडीपाडा केंद्र - सरावली ता. जिल्हा. पालघर</h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>शिक्षकाचे नावं</th>
+								<th>पद</th>
+								<th>मोबाईल नंबर</th>
+								<th>इयत्ता</th>
+								<th>मुले </th>
+								<th>मुली </th>
+								<th>एकूण</th>
+							<tr>
+								<td>१.</td>
+								<td>स्वाती भूषण पाटील</td>
+								<td>मुख्याध्यापक</td>
+								<td>९०४९२०२१४९</td>
+								<td>१ ली</td>
+								<td>२३</td>
+								<td>२२</td>
+								<td>४५</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>चित्रा प्र. पिंपळे</td>
+								<td>शिक्षिका</td>
+								<td></td>
+								<td>२ री</td>
+								<td>28</td>
+								<td>21</td>
+								<td>49</td>
+							</tr>
+							<tr>
+								<td>३.</td>
+								<td>नूतन जी. वडे</td>
+								<td>शिक्षिका</td>
+								<td></td>
+								<td>२८</td>
+								<td>१४</td>
+								<td>२०</td>
+								<td>३४</td>
+							</tr>
+							<tr>
+								<td>४.</td>
+								<td>मीना सू. महाडिक</td>
+								<td>शिक्षिका</td>
+								<td></td>
+								<td>४ थी</td>
+								<td>२१</td>
+								<td>१९</td>
+								<td>४०</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>एकूण</td>
+								<td>८६</td>
+								<td>८२</td>
+								<td>१६८</td>
+							</tr>
+						</table>
+					</div>
+					{% endif %}
 
 				</div>
 			</div>

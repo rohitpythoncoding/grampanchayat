@@ -264,7 +264,7 @@
 				</div>
 
 				<!-- Contact Form -->
-				<div class="col-lg-6 form_col">
+				<!--<div class="col-lg-6 form_col">
 					<div class="contact_form_container">
 						<form action="https://formspree.io/rohitbs113@gmail.com" method="POST" id="contact_form" class="contact_form">
 							<div class="row">
@@ -305,7 +305,100 @@
 								{%endif%}
 						</form>
 					</div>
+				</div>-->
+
+				{% if request.session.lang == "en" %}
+
+				<div class="col-lg-6 form_col">
+					<div class="contact_form_container">
+						<form action="https://formspree.io/rohitbs113@gmail.com" method="POST" id="contact_form" class="contact_form">
+							<div class="row">
+								<div class="col-md-6 input_col" style="padding-left: 30px;padding-right: 0px;">
+									<div class="input_container input_name">
+										<input name="Name" type="text" class="contact_input" placeholder="Name" required="required">
+									</div>
+								</div>
+								<div class="col-md-6 input_col">
+
+									<div class="input_container">
+										<input name="Email" type="email" class="contact_input" placeholder="E-mail" required="required">
+									</div>
+								</div>
+							</div>
+
+
+							<div class="input_container">
+								<input style="margin-top:33px; margin-bottom:33px" name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="Mobile Number" required="required">
+							</div>
+
+							<div class="input_container">
+								<input style=" margin-bottom:33px" name="Subject" type="text" class="contact_input" placeholder="Subject" required="required">
+							</div>
+
+							<div>
+								<input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only />
+
+							</div>
+
+							<div class="input_container">
+								<textarea style="margin-top:33px; margin-bottom:33px" name="Message" class="contact_input contact_text_area" placeholder="Message" required="required"></textarea>
+							</div>
+
+
+							<button type="submit" class="button contact_button">Send</button>
+
+						</form>
+					</div>
 				</div>
+
+
+				{% else %}
+
+
+				<div class="col-lg-6 form_col">
+					<div class="contact_form_container">
+						<form action="https://formspree.io/rohitbs113@gmail.com" method="POST" id="contact_form" class="contact_form">
+							<div class="row">
+								<div class="col-md-6 input_col" style="padding-left: 30px;padding-right: 0px;">
+									<div class="input_container input_name">
+										<input name="Name" type="text" class="contact_input" placeholder="नाव" required="required">
+									</div>
+								</div>
+								<div class="col-md-6 input_col">
+
+									<div class="input_container">
+										<input name="Email" type="email" class="contact_input" placeholder="ईमेल" required="required">
+									</div>
+								</div>
+							</div>
+
+
+							<div class="input_container">
+								<input style="margin-top:33px; margin-bottom:33px" name="MobileNo" type="tel" pattern="\d{10}" class="contact_input" placeholder="मोबाईल नंबर" required="required">
+							</div>
+
+							<div class="input_container">
+								<input style=" margin-bottom:33px" name="Subject" type="text" class="contact_input" placeholder="विषय" required="required">
+							</div>
+
+							<div>
+								<input type="hidden" role="uploadcare-uploader" name="content" data-public-key="f8b9cbbd49d94ef70c1b" data-images-only />
+
+							</div>
+
+							<div class="input_container">
+								<textarea style="margin-top:33px; margin-bottom:33px" name="Message" class="contact_input contact_text_area" placeholder="मेसेज" required="required"></textarea>
+							</div>
+
+
+							<button type="submit" class="button contact_button">Send</button>
+
+						</form>
+					</div>
+				</div>
+				{% endif %}
+
+
 			</div>
 
 		</div>

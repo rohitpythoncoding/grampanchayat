@@ -261,7 +261,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Tantamukti Committee</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}तंटामुक्ती समिती{% endif %}</div>
 
 						</div>
 					</div>
@@ -278,14 +278,15 @@ tr:nth-child(even) {
 
 				<!-- News Posts -->
 				<div class="col-lg-8">
+					{% if request.session.lang  == "en" %}
 
 					<div>
 						<h3 style="font-family: Arial Black; padding-top:46px;">Tanta Mukti Committee</h3>
 							<table style="margin-top:40px;">
 							<tr>
 								<th>Sl No.</th>
-								<th>Chariman</th>
-								<th>Vice Chariman</th>
+								<th>Chairman</th>
+								<th>Vice Chairman</th>
 								<th>Period</th>
 							<tr>
 								<td>1.</td>
@@ -331,6 +332,62 @@ tr:nth-child(even) {
 							</tr>
 						</table>
 					</div>
+
+					{% else %}
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">तंटामुक्ती समिती </h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>अध्यक्ष</th>
+								<th>उपाध्यक्ष</th>
+								<th>कालावधी</th>
+							<tr>
+								<td>१.</td>
+								<td>पांडुरंग रावजी घरत</td>
+								<td>स्वप्नील जनार्दन घरत</td>
+								<td>२०१२ - २०१३</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>दिनेश बजरंग पवार</td>
+								<td>सुरेश अधिकराव रसाळ</td>
+								<td>२०१३ - २०१४</td>
+							</tr>
+							<tr>
+								<td>३.</td>
+								<td>मेघन किशोर पाटील</td>
+								<td>कैलास देवराम चौधरी</td>
+								<td>२०१४ - २०१५</td>
+							</tr>
+							<tr>
+								<td>४.</td>
+								<td>प्रभाकर रामचंद्र राऊळ</td>
+								<td>राजेंद्र शिवाजी धनगर</td>
+								<td>२०१५ - २०१६</td>
+							</tr>
+							<tr>
+								<td>५.</td>
+								<td>मानसी प्रभाकर राऊळ</td>
+								<td>
+									नितेश शिवराम घरत<br>
+									धिरेश प्रकाश घरत
+								</td>
+								<td>२०१६ - २०१७</td>
+							</tr>
+							<tr>
+								<td>६.</td>
+								<td>अशोक बळीराम साळुंखे</td>
+								<td>
+									नितेश शिवराम घरत<br>
+									धिरेश प्रकाश घरत
+								</td>
+								<td>२०१७ - २०१८</td>
+							</tr>
+						</table>
+					</div>
+					{% endif %}
+
 				</div>
 			</div>
 		</div>

@@ -254,7 +254,7 @@ th {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Certificates</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span>{% if request.session.lang == "en" %}Certificates {% else %}दाखले {% endif %}</div>
 
 						</div>
 					</div>
@@ -271,6 +271,7 @@ th {
 
 				<!-- News Posts -->
 				<div class="col-lg-8">
+					{% if request.session.lang == "en" %}
 
 					<div>
 						<h4 style="font-family: Arial Black">According to Maharashtra Right to Public Service Act-2015, Documents needs to get certificates are as below</h4>
@@ -360,6 +361,98 @@ th {
 
 						</table>
 					</div>
+
+					{% else %}
+					<div>
+						<h4 style="font-family: Arial Black">महाराष्ट्र लोकसेवा हक्क अध्यादेश-2015 अंतर्गत दाखला/प्रमाणपत्र मिळण्याकरिता अर्जासोबत जोडायची कागदपत्रे</h4>
+						<table style="margin-bottom:30px; margin-top:40px;">
+							<tr>
+                                <th>सेवेचे नावं</th>
+                                <th>अर्जासोबत जोडायची कागदपत्रे</th>
+                            </tr>
+                            <tr>
+								<td rowspan="7"><b>रहिवाशी दाखला</b></td>
+                                <td><b>या पैकी कोणताही एक पुरावा सादर करावा</b></td>
+                            </tr>
+							<tr>
+                                <td>आधार कार्ड</td>
+                            </tr>
+                            <tr>
+                                <td>भाडे करार</td>
+                            </tr>
+                            <tr>
+                                <td>मतदान ओळखपत्र</td>
+                            </tr>
+                            <tr>
+                                <td>घरपट्टी</td>
+                            </tr>
+                            <tr>
+                                <td>वीज देयक</td>
+                            </tr>
+                            <tr>
+                                <td>रेशन कार्ड</td>
+                            </tr>
+                            <tr>
+								<td><b>जन्म नोंद दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+								<td><b>विवाह नोंदणी दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+								<td><b>मृत्यू नोंद दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+								<td><b>दारिद्र्य रेषेखालील असल्याचा दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+								<td><b>शौचालयाचा दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+								<td><b>विभक्त कुटुंब चा दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                            <tr>
+                                <td><b>विधवा असले बाबत चा दाखला</b></td>
+                                <td>पतीचा मृत्यू दाखला</td>
+                            </tr>
+                            <tr>
+								<td><b>निराधार असले बाबत चा दाखला</b></td>
+                                <td>कुटुंब प्रमुखाचा मृत्यू दाखला</td>
+                            </tr>
+                            <tr>
+								<td><b>ग्रामपंचायत येणे बाकी नसल्याचा दाखला</b></td>
+                                <td>आवशक्यता नाही</td>
+                            </tr>
+                             <tr>
+								 <td rowspan="6"><b>हयातीचा दाखला</b></td>
+								 <td><b>या पैकी कोणताही एक पुरावा सादर करावा</b></td>
+                            </tr>
+                            <tr>
+                                <td>पासपोर्ट</td>
+                            </tr>
+							<tr>
+                                <td>आधार कार्ड</td>
+                            </tr>
+                            <tr>
+                                <td>मतदान ओळखपत्र</td>
+                            </tr>
+                            <tr>
+                                <td>पॅनकार्ड</td>
+                            </tr>
+                            <tr>
+                                <td>वाहन चालवण्याचा परवाना</td>
+                            </tr>
+
+
+						</table>
+					</div>
+
+					{% endif %}
 				</div>
 
 			</div>

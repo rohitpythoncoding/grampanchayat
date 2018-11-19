@@ -257,7 +257,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
+                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}योजना{% endif %}</div>
 
 						</div>
 					</div>
@@ -271,6 +271,7 @@
 	<div class="services">
 		<div class="container">
             <br>
+			{% if request.session.lang  == "en" %}
             <h2 style="text-align: center; height: 75px; padding-top: 15px;">
 				<span style="color: #000000;">
 					<strong style="font-family:Garamond">Pradhan Mantri Jeevan Jyoti Bima Yojana</strong>
@@ -323,6 +324,58 @@
 					<li>Copy of adhaar card</li>
 				</span>
 			</ul>
+
+			{% else %}
+			<h2 style="text-align: center; height: 75px; padding-top: 15px;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">प्रधान मंत्री जीवन ज्योती बिमा योजना</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					प्रधान मंत्री जीवन ज्योती योजनेअंतर्गत जर कोणाचा मृत्यू झाला तर रू. २००००० चा जीवन विमा मिळतो तोही फक्त ३३० रू. च्या वार्षिक प्रीमियम मध्ये. काही विशेष फायदे पुढीप्रमाणे आहेत.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">पात्रता</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						वय १८ ते २५ वर्षे.
+					</li>
+					<li>
+						बँक खाते आवश्यक.
+					</li>
+					<li>
+						३३० रू. वार्षिक प्रीमियम.
+					</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">पात्रतेचा लाभ</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>२ लाख रुपयांचा जीवन विमा</li>
+					<li>
+						कोणत्याही कारणास्तव मृत्यू आल्यास तुमच्या कुटुंबीयांना विमा रक्कम मिळेल.
+					</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">आवश्यक कागदपत्रे</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>बँक खाते झेरॉक्स प्रत</li>
+					<li>आधारकार्ड झेरॉक्स प्रत</li>
+				</span>
+			</ul>
+			{% endif %}
             <br>
 
 			</div>

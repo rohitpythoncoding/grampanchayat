@@ -260,7 +260,7 @@ tr:nth-child(even) {
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Hospitals</div>
+							<div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Hospitals{% else %}हॉस्पिटल{% endif %}</div>
 
 						</div>
 					</div>
@@ -277,6 +277,7 @@ tr:nth-child(even) {
 
 				<!-- News Posts -->
 				<div class="col-lg-8">
+					{% if request.session.lang  == "en" %}
 
 					<div>
 						<h3 style="font-family: Arial Black; padding-top:46px;">Hospital Information </h3>
@@ -297,18 +298,18 @@ tr:nth-child(even) {
 							</tr>
 							<tr>
 								<td>3.</td>
-								<td>TMRCT Thunga Hospital</td>
+								<td>TMRCT Tunga Hospital</td>
 								<td>M.I.D.C Tarapur</td>
 							</tr>
 							<tr>
 								<td>4.</td>
 								<td>Sanjeevani Hospital</td>
-								<td>Mahaveer Chamber</td>
+								<td>Mahaveer Chember</td>
 							</tr>
 							<tr>
 								<td>5.</td>
 								<td>Sai Leela Hospital</td>
-								<td>Oswal Empire Saravali</td>
+								<td>Oswal Saravali</td>
 							</tr>
 							<tr>
 								<td>6.</td>
@@ -317,6 +318,50 @@ tr:nth-child(even) {
 							</tr>
 						</table>
 					</div>
+
+					{% else %}
+
+					<div>
+						<h3 style="font-family: Arial Black; padding-top:46px;">हॉस्पिटल महिती </h3>
+							<table style="margin-top:40px;">
+							<tr>
+								<th>अ. क्र.</th>
+								<th>हॉस्पिटल नावं</th>
+								<th>पत्ता</th>
+							<tr>
+								<td>१.</td>
+								<td>वात्सल्य मॅटरनीटी हॉस्पीटल</td>
+								<td>श्राॅफ ट्रेड सेंटर</td>
+							</tr>
+							<tr>
+								<td>२.</td>
+								<td>साईसाक्षी मॅटरनीटी हॉस्पीटल</td>
+								<td>साईधाम सरावली</td>
+							</tr>
+							<tr>
+								<td>३.</td>
+								<td>टी. एम. आर. सिटी तुंगा हॉस्पिटल</td>
+								<td>एम. आय. डी. सी तारापूर</td>
+							</tr>
+							<tr>
+								<td>४.</td>
+								<td>संजीवनी हॉस्पिटल</td>
+								<td>महावीर चेंबर</td>
+							</tr>
+							<tr>
+								<td>५.</td>
+								<td>साई लीला हॉस्पीटल</td>
+								<td>ओसवाल सरावली</td>
+							</tr>
+							<tr>
+								<td>६.</td>
+								<td>रेडप्लस मल्टीस्पेशालिटी हॉस्पिटल</td>
+								<td>संजयनगर</td>
+							</tr>
+						</table>
+					</div>
+					{% endif %}
+
 
 				</div>
 			</div>
