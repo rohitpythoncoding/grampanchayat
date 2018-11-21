@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Schemes</title>
+<title>
+	{% if request.session.lang == "en" %}
+        Schemes
+     {% else %}
+		योजना
+     {% endif %}
+</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'%}">
-<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/bootstrap.min.css">
+<link href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/news.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/news_responsive.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/services.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/services_responsive.css">
 <style type="text/css">
 * {
     box-sizing: border-box;
@@ -70,7 +76,7 @@
 
 </style>
 </head>
-<body style="background-image:url({%static 'images/skulls.png'%});">
+<body style="background-image:url('https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/skulls.png');">
 <form name="home" action="#" method="POST">
 {% csrf_token %}
 
@@ -236,7 +242,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container" style="height: 75px; width: 75px; background-image:url({%static 'images/logo.jpg'%});">
+						<div class="logo_container" style="height: 75px; width: 75px; background-image:url('https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/logo.jpg');">
 
 						</div>
 					</div>
@@ -250,13 +256,13 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/scm1.jpg'%}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/scm1.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
+                             <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}योजना{% endif %}</div>
 
 						</div>
 					</div>
@@ -266,7 +272,7 @@
 	</div>
 
 	<!-- Services -->
-
+	{% if request.session.lang  == "en" %}
 	<div class="services">
 		<div class="container">
             <br>
@@ -358,6 +364,89 @@
 
 			</div>
 	</div>
+	{% else %}
+
+	<div class="services">
+		<div class="container">
+            <br>
+            <h2 style="text-align: center; height: 75px;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">संजय गांधी निराधार योजना</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					शासनाच्या वतीने अनेक योजना चालविण्यात येत आहेत- त्यात संजय गांधी निराधार योजना आहे.
+राज्यातील निराधार, वृद्ध व्यक्ती. अंध, अपंग, शारीरिक, मानसिक आजाराने रोगग्रस्त व्यक्ती, विधवा, अत्याचारित महिला, वेश्या व्यवसायातून मुक्त केलेल्या महिला, घटस्फोटीत महिलांना अर्थसहाय्य देण्याच्या मूळ हेतूने संजय गांधी निराधार अनुदान योजना १९८० पासून राबविण्यात येत आहे.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">
+					पात्रता
+				</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						अपंगातील अस्थीव्यंग, अंध, मूकबधिर, मतिमंद, कर्णबधिर इ. प्रयार्गतील स्त्री व पुरुष, किव्वा
+					</li>
+					<li>
+						श्यायरोग, पक्षपात, कर्करोग, एड्स, कुष्ट रोग, सिकलसेल व सामाजिक आरोग्य विभागाने निष्छत केलेल्या दुर्धर आजारामुळे स्वतःचा चरितार्थ चालवू न शकणारे स्त्री व पुरुष किंवा
+					</li>
+					<li>
+						निराधार पुरुष/महिला/तृतीयपंथी, निराधार विधवा, घटस्फोट झालेला परंतु पोटगी न मिळालेला किव्वा योजनेखाली विहित केलेल्या उत्पन्न मर्यादेपेक्षा  कमी पोटगी मिळणाऱ्या महिला, देवदासी, अत्याचारित महिला व वैश्या व्यवसायातून मुक्त केलेल्या महिला किंवा
+					</li>
+					<li>
+						आत्महत्या केलेल्या शेतकरी कुटुंबाचे वार्षिक उत्पन्न या योजनेखालील विहित केलेल्या उत्पन्नापेक्षा कमी असल्यास ते कुटुंब
+					</li>
+					<li>
+						अनाथ मुले (१८ वर्षाखाली)
+					</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">
+					लाभाचे स्वरूप
+				</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>रू. ६००/- प्रती महिना	</li>
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">
+					आवश्यक कागदपत्रे
+				</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>रु. २१,०००/- उत्पन्नाचा दाखला</li>
+					<li>वयाचा दाखला</li>
+					<li>रेशन कार्ड झेरॉक्स</li>
+					<li>पती मयत असल्याचा दाखला</li>
+					<li>
+						अपंगत्व दाखला
+					</li>
+					<li>
+						रहिवासी दाखला, आधार कार्ड
+					</li>
+					<li>
+						अनाथ असल्याचा दाखला
+					</li>
+					<li>
+						कुठल्याही शासकीय योजनेचा लाभ न घेतल्याचे प्रमाणपत्र
+					</li>
+				</span>
+			</ul>
+            <br>
+
+			</div>
+	</div>
+	{% endif %}
 
 	<!-- Footer -->
 
@@ -374,9 +463,9 @@
 								<p>{% if request.session.lang == "en" %}Some Info About Village{% else %}गावा बद्दल काही माहिती{% endif %}</p>
 							</div>
 							<ul class="footer_about_list">
-								<li><div class="footer_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>+91 977 675 5432</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>office@template.com</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/phone-call.svg" alt=""></div><span>+91 977 675 5432</span></li>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/envelope.svg" alt=""></div><span>office@template.com</span></li>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/placeholder.svg" alt=""></div>
 									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
 								</li>
 							</ul>
@@ -422,11 +511,11 @@
 	</footer>
 </div>
 
-<script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
-<script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
-<script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
-<script src="{%static 'plugins/easing/easing.js'%}"></script>
-<script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/js/jquery-3.2.1.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/popper.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/easing/easing.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/parallax-js-master/parallax.min.js"></script>
 </form>
 </body>
 </html>

@@ -2,20 +2,26 @@
 <html lang="en">
 <head>
 	{%load staticfiles%}
-<title>Schemes</title>
+<title>
+	{% if request.session.lang == "en" %}
+        Schemes
+     {% else %}
+		योजना
+     {% endif %}
+</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Elected Member">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/bootstrap4/bootstrap.min.css'%}">
-<link href="{%static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'plugins/OwlCarousel2-2.2.1/animate.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/news.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/news_responsive.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/services.css'%}">
-<link rel="stylesheet" type="text/css" href="{%static 'styles/services_responsive.css'%}">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/bootstrap.min.css">
+<link href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/news.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/news_responsive.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/services.css">
+<link rel="stylesheet" type="text/css" href="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/services_responsive.css">
 <style type="text/css">
 * {
     box-sizing: border-box;
@@ -71,7 +77,7 @@
 
 </style>
 </head>
-<body style="background-image:url({%static 'images/skulls.png'%});">
+<body style="background-image:url('https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/skulls.png');">
 <form name="home" action="#" method="POST">
 {% csrf_token %}
 
@@ -238,7 +244,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="logo_container" style="height: 75px; width: 75px; background-image:url({%static 'images/logo.jpg'%});">
+						<div class="logo_container" style="height: 75px; width: 75px; background-image:url('https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/logo.jpg');">
 
 						</div>
 					</div>
@@ -252,13 +258,13 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="{%static 'images/scm3.jpg'%}" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/scm3.jpg" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-                            <div class="home_title" style="height: 70px;"><span style="font-family: georgia">Saravali Grampanchayat</span> Schemes</div>
+                             <div class="home_title" style="height: 70px;"><span style="font-family: georgia">{% if request.session.lang  == "en" %}Saravali Grampanchayat{% else %}सरावली ग्रामपंचायत{% endif %}</span> {% if request.session.lang  == "en" %} Schemes{% else %}योजना{% endif %}</div>
 
 						</div>
 					</div>
@@ -268,7 +274,7 @@
 	</div>
 
 	<!-- Services -->
-
+	{% if request.session.lang  == "en" %}
 	<div class="services">
 		<div class="container">
 
@@ -280,7 +286,9 @@
 			</h2>
 			<p>
 				<span style="color: #000000;">
-					This scheme belongs to Maharashtra State Government. This Scheme was launched to Increase
+
+					This scheme is belongs to Maharashtra State Government. Now the Maharashtra Government amendment the amount of fund, Now the Amendment fund for eligible candidates for this Yojana “Mazi Kanya Bhagyashree Yojna 2018” is 7 lacs rupees.
+					This Scheme was launched to Increase
                     Girl Child Birth rate, Level Up the Girl Education, Stop Sex Determination & Health in the State.
 				</span>
 			</p>
@@ -321,10 +329,10 @@
 				<span style="color: #000000;">
 					<li>Amount of Rs. 50000 for one girl child / Rs. 25000 for two girl child.</li>
 					<li>
-						<b>Point to be written.</b>
+						Once girl become of 6 years, 12 years, she will get interest on deposited amount.
 					</li>
 				    <li>
-						<b>Point to be written.</b>
+						Girl and her mother should have joint bank account with 1 lakh accident insurance.
 					</li>
                     <li>
 						Rs. 100000 (one lakh) will be deposited on bank account once a girl is 18 years old.
@@ -352,6 +360,91 @@
 
 			</div>
 	</div>
+	{% else %}
+
+	<div class="services">
+		<div class="container">
+
+            <br>
+            <h2 style="text-align: center; height: 75px; padding-top: 15px;">
+				<span style="color: #000000;">
+					<strong style="font-family:Garamond">माझी कन्या भाग्यश्री योजना</strong>
+				</span>
+			</h2>
+			<p>
+				<span style="color: #000000;">
+					महाराष्ट्र राज्यामध्ये मुलींचे शिक्षण, आरोग्य यामध्ये सुधारणा करणे, त्यांच्या उज्वल भविष्याकरिता आर्थिक तरतूद करणे, बालिका भृणहत्या रोखणे,  मुलींच्या जन्माबाबत समाजामध्ये सकारात्मक विचार आणणे, बालविवाह रोखणे आणि मुलां इतका मुलींचा जन्मदर वाढविणे या उद्देशाने राज्यात शासन निर्णय दिनांक 13 फेब्रुवारी 2014 अन्वये “सुकन्या” योजना सुरु करण्यात आली आहे. सुकन्या योजनेचे लाभ दिनांक 01 जानेिारी, 2014 पासून जन्मणाऱ्या मुलींकरिता अनुज्ञेय आहेत.
+					मुलींच्या जन्माबाबत समाजामध्ये सकारात्मक विचार आणे आणि मुलां इतका मुलींचा जन्मदर वाढविणे या उद्देशाने “बेटी बचाओ-बेटी पढाओ” या योजनेच्या धर्तीवरच मुलींचा जन्मदर वाढविणे, त्यांना शिक्षण देणे व बालविवाहास प्रतीबंध करण्यासाठी सध्या सुरु असलेली सुकन्या योजना विलीन करुन व त्याबाबतचा उपरोक्त संदर्भाधिन  शासन निर्णय अधिक्रमित करून “माझी कन्या भाग्यश्री” ही नवीन योजना राबविण्याची बाब शासनाच्या विचाराधीन होती त्यानुसार ही योजना संपूर्ण राज्यात सर्व गटातील दारिद्र्य रेषेखालील (BPL) कुटुंबात जन्मणाऱ्या तसेच दारिद्र्य रेषेच्यावरील (APL) पांढरे रेशनकार्ड धारक कुटुंबात जन्मणाऱ्या प्रत्येक मुलीसाठी "सुकन्या” योजनेचे लाभ कायम ठेऊन त्या व्यतिरिक्त मुलीचा जन्म झाल्यापासून मुलगी 18 वर्षे होईपर्यंत खाली दिल्याप्रमाणे अधिकचे लाभ देण्यासाठी या योजनेला शासनाने मंजुरी दिली आहे.
+				</span>
+			</p>
+			<h3>
+				<br>
+				<span style="color: #000000;">पात्रता</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>
+						१ ऑगस्ट २०१७ रोजी किंवा त्यानंतर जन्माला आलेल्या मुली.
+					</li>
+					<li>
+						मातेला एक किंवा दोन कन्या असल्यास योजनेचा लाभ मिळेल.
+					</li>
+					<li>
+						तिसरे अपत्य असल्यास या योजनेचा लाभ मिळणार नाही.
+					</li>
+					<li>
+						लाभार्थी महाराष्ट्र चे मूळ रहिवासी असणे आवश्यक.
+					</li>
+					<li>
+						बालगृहातील मुलींनाही हा लाभ देण्यात येईल.
+					</li>
+					<li>
+						१ लाख ते ७.५ लाखापर्यंत उत्पन्न असणारे पात्र.
+					</li>
+
+				</span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">लाभाचे स्वरूप</span>
+			</h3>
+            <ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>एक कन्या असल्यास ५०,००० रू. / दोन कन्या असल्यास २५,००० रू. ठेव.</li>
+					<li>
+						मुलगी ६ वर्ष, १२ वर्षाची झाल्यास ठेवी रकमेवर व्याज मिळेल आणि १८ वर्षे पूर्ण झाल्यावर मुद्दल व व्याज मिळेल.
+					</li>
+				    <li>
+						लाभार्थी मुलगी आणि तिची आई यांचे संयुक्त बचत खाते राष्ट्रीय बँकेत उघडून दोघींना १ लाख अपघात विमा.
+					</li>
+                    <li>
+						मुलीने वयाचे १८ वर्ष पूर्ण केल्यावर विम्याची रक्कम १ लाख बँकेत जमा.
+					</li>
+                    <li>
+						एक कन्या अपत्य असलेल्या कुटुंबातील भाग्यश्री च्या आजी आजोबांना सोन्याचे नाणे.
+					</li>
+
+                </span>
+			</ul>
+			<h3>
+				<br>
+				<span style="color: #000000;">आवश्यक कागदपत्रे</span>
+			</h3>
+			<ul style="list-style-type: square;">
+				<span style="color: #000000;">
+					<li>एक किंवा दोन कन्या अपत्यावर ऑपरेशन केलेच पुरावा</li>
+					<li>रेशकार्ड झेरॉक्स</li>
+					<li>आधार कार्ड झेरॉक्स</li>
+					<li>बँक खाते पासबुक</li>
+					<li>अपत्याचा जन्म दाखला</li>
+				</span>
+			</ul>
+            <br>
+
+			</div>
+	</div>
+
+	{% endif %}
 
 	<!-- Footer -->
 
@@ -368,9 +461,9 @@
 								<p>{% if request.session.lang == "en" %}Some Info About Village{% else %}गावा बद्दल काही माहिती{% endif %}</p>
 							</div>
 							<ul class="footer_about_list">
-								<li><div class="footer_about_icon"><img src="{%static 'images/phone-call.svg'%}" alt=""></div><span>+91 977 675 5432</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/envelope.svg'%}" alt=""></div><span>office@template.com</span></li>
-								<li><div class="footer_about_icon"><img src="{%static 'images/placeholder.svg'%}" alt=""></div>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/phone-call.svg" alt=""></div><span>+91 977 675 5432</span></li>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/envelope.svg" alt=""></div><span>office@template.com</span></li>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/placeholder.svg" alt=""></div>
 									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
 								</li>
 							</ul>
@@ -416,11 +509,11 @@
 	</footer>
 </div>
 
-<script src="{%static 'js/jquery-3.2.1.min.js'%}"></script>
-<script src="{%static 'styles/bootstrap4/popper.js'%}"></script>
-<script src="{%static 'styles/bootstrap4/bootstrap.min.js'%}"></script>
-<script src="{%static 'plugins/easing/easing.js'%}"></script>
-<script src="{%static 'plugins/parallax-js-master/parallax.min.js'%}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/js/jquery-3.2.1.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/popper.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/easing/easing.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/plugins/parallax-js-master/parallax.min.js"></script>
 </form>
 </body>
 </html>
