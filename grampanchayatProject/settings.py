@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print("**********************", BASE_DIR)
 
@@ -120,19 +121,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+#STATIC_URL = '/static/'
+# print("check dir=======",  os.path.dirname(__file__))
+#STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'grampanchayatSaravali/static')
+# test_path = os.path.join(os.path.dirname(BASE_DIR), 'grampanchayatSaravali')
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'grampanchayatSaravali/static')
-print("base: ", BASE_DIR)
-print("STATIC_ROOT: ", STATIC_ROOT)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#print("base: ", BASE_DIR)
+#print("STATIC_ROOT: ", STATIC_ROOT)
 
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(
-        os.path.dirname(__file__),
-        'static',
-    ),
-)
+# STATICFILES_DIRS = (
+#     # Put strings here, like "/home/html/static" or "C:/www/django/static".
+#     # Always use forward slashes, even on Windows.
+#     # Don't forget to use absolute paths, not relative paths.
+#     os.path.join(test_path, 'staticfiles'),
+# )
 
-print("STATICFILES_DIRS: ", os.path.dirname(__file__))
+
+
