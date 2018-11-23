@@ -127,7 +127,7 @@ USE_TZ = True
 # test_path = os.path.join(os.path.dirname(BASE_DIR), 'grampanchayatSaravali')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #print("base: ", BASE_DIR)
 #print("STATIC_ROOT: ", STATIC_ROOT)
 
@@ -138,5 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #     os.path.join(test_path, 'staticfiles'),
 # )
 
+# from django.core.management import call_command
+# call_command("migrate", interactive=False)
 
 
