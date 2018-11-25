@@ -84,7 +84,7 @@ tr:nth-child(even) {
 </style>
 </head>
 <body style="background-image:url('https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/skulls.png');">
-<form name="home" action="/dev/" method="POST">
+<form name="home" action="/" method="POST">
 {% csrf_token %}
 <div class="super_container">
 
@@ -593,7 +593,7 @@ tr:nth-child(even) {
 							</div>
 							<ul class="footer_about_list">
 								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/phone-call.svg" alt=""></div><span>+91 977 675 5432</span></li>
-								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/envelope.svg" alt=""></div><span>office@template.com</span></li>
+								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/envelope.svg" alt=""></div><span>saravaligrampanchayat2018@gmail.com</span></li>
 								<li><div class="footer_about_icon"><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/placeholder.svg" alt=""></div>
 									<span>{% if request.session.lang == "en" %}Address{% else %}पत्ता{% endif %}</span>
 								</li>
@@ -606,13 +606,11 @@ tr:nth-child(even) {
 						<div class="footer_links footer_column" style="padding-top:40px;">
 							<div class="footer_title">{% if request.session.lang == "en" %}Useful Links{% else %}उपयुक्त लिंक्स{% endif %}</div>
 							<ul>
-								<li><a href="#">{% if request.session.lang == "en" %}Link1{% else %}इतिहास{% endif %}</a></li>
-								<li><a href="#">{% if request.session.lang == "en" %}Link2{% else %}नेहमी विचारले जाणारे प्रश्न{% endif %}</a></li>
-								<!--<li><a href="#">Apply for a Job</a></li>-->
-								<li><a href="#">{% if request.session.lang == "en" %}Link3{% else %}अटी व शर्ती{% endif %}</a></li>
-								<li><a href="#">{% if request.session.lang == "en" %}Link4{% else %}आमच्या सदस्य{% endif %}</a></li>
-
-								<li><a href="#">{% if request.session.lang == "en" %}Link5{% else %}मोफत सेवा{% endif %}</a></li>
+								<li><a href="http://www.zppalghar.gov.in">{% if request.session.lang == "en" %}Zilha Parishad Palghar{% else %}पालघर जिल्हा परिषद{% endif %}</a></li>
+								<li><a href="http://www.palghar.gov.in">{% if request.session.lang == "en" %}Palghar Collector Office{% else %}पालघर कलेक्टर ऑफिस{% endif %}</a></li>
+								<li><a href="https://www.maharashtra.gov.in/1125/Home">{% if request.session.lang == "en" %}Maharashtra Government{% else %}महाराष्ट्र शासन{% endif %}</a></li>
+								<li><a href="https://rdd.maharashtra.gov.in/1001/%E0%A4%AE%E0%A5%81%E0%A4%96%E0%A5%8D%E0%A4%AF-%E0%A4%AA%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%A0">{% if request.session.lang == "en" %}Gramvikas Maharashtra{% else %}ग्रामविकास महाराष्ट्र{% endif %}</a></li>
+								<li><a href="#">{% if request.session.lang == "en" %}Saravali Shivsena{% else %}सरावली शिवसेना{% endif %}</a></li>
 
 							</ul>
 						</div>
