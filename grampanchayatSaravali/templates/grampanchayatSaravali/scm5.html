@@ -55,14 +55,7 @@
 
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f5f3f0;
-    min-width: 250px;
 
-    z-index: 1;
-}
 
 .dropdown-content a {
     color: black;
@@ -73,7 +66,7 @@
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+
 
 </style>
 </head>
@@ -104,27 +97,36 @@
 		</div>
 
 		<!-- Header Content -->
-		<div class="header_container" style="height: 65px;">
+		<div class="header_container">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<nav class="main_nav ml-auto">
-								<ul style="height: 55px; ">
-									<li>
-										<a href="{% url 'home' %}">
+						<div class="">
+
+								<nav class="main_nav navbar navbar-light navbar-expand-md bg-faded justify-content-left">
+								    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar">
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item">
+
+										<a class="nav-link" href="{% url 'home' %}">
 											{% if request.session.lang == "en" %}Home {% else %}होम {% endif %}
 										</a>
 									</li>
-									<li>
-										<a href="{% url 'certificates' %}">
+									 <li class="nav-item">
+										<a class="nav-link" href="{% url 'certificates' %}">
 											{% if request.session.lang == "en" %}Certificates {% else %}दाखले {% endif %}
 										</a>
 									</li>
-									<li>
-										<div class="dropdown dropbtn">
-											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Members {% else %}सदस्य {% endif %}</div>
-											<div class="dropdown-content">
+
+									 <li class="nav-item dropdown">
+										  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {% if request.session.lang == "en" %}Members {% else %}सदस्य {% endif %}
+        </a>
+
+										<div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown1">
 												<a href="{% url 'electedMember' %}">
 											{% if request.session.lang == "en" %}Elected Members {% else %}निवडून आलेले सदस्य {% endif %}
 												</a>
@@ -136,12 +138,11 @@
 											{% if request.session.lang == "en" %}Committees {% else %}समिती {% endif %}
 												</a>
 											</div>
-										</div>
+
 									</li>
-									<li>
-										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}schemes {% else %}योजना {% endif %}</div>
-											<div class="dropdown-content">
+									 <li class="nav-item dropdown">
+										  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% if request.session.lang == "en" %}schemes {% else %}योजना {% endif %}</a>
+											<div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown2">
 												<a href="{% url 'scm1' %}">
 											{% if request.session.lang == "en" %}Sanjay Gandhi Niradhar Yojna {% else %}संजय गांधी निराधार योजना {% endif %}
 												</a>
@@ -161,25 +162,24 @@
 												<a href="{% url 'scm6' %}">
 											{% if request.session.lang == "en" %}Term Loan Scheme{% else %}मुदती कर्ज योजना {% endif %}
 												</a>
-											</div>
+
 										</div>
 									</li>
 
 
-									<li>
-										<a href="{% url 'developmentPlan' %}">
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'developmentPlan' %}">
 											{% if request.session.lang == "en" %}Development Plan{% else %}विकास आराखडा {% endif %}
 										</a>
 									</li>
-									<li>
-										<a href="{% url 'photoGallery' %}">
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'photoGallery' %}">
 											{% if request.session.lang == "en" %}Photo Gallery {% else %}फोटो गॅलरी {% endif %}
 										</a>
 									</li>
-									<li>
-										<div class="dropdown">
-											<div class="dropbtn" style="padding-left:15px; height: 36px;">{% if request.session.lang == "en" %}Other{% else %}इतर {% endif %}</div>
-											<div class="dropdown-content">
+									 <li class="nav-item dropdown">
+										  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% if request.session.lang == "en" %}Other{% else %}इतर {% endif %}</a>
+										<div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown3">
 												<a href="{% url 'other1' %}">
 											{% if request.session.lang == "en" %}Bachat Gat{% else %}बचत गट {% endif %}
 												</a>
@@ -203,33 +203,38 @@
 												<a href="{% url 'other7' %}">
 											{% if request.session.lang == "en" %}Water Timings{% else %}पाण्याची वेळ {% endif %}
 												</a>
-											</div>
 										</div>
 									</li>
-									<li>
-										<a href="{% url 'map' %}">
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'map' %}">
 											{% if request.session.lang == "en" %}Map {% else %}नकाशा {% endif %}
 										</a>
 									</li>
-									<li>
-										<a href="{% url 'faq' %}">
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'faq' %}">
 											{% if request.session.lang == "en" %}FAQ {% else %}प्रश्न आणी तक्रारी{% endif %}
 										</a>
 									</li>
+
 									<li>
-										{% if request.session.lang  == "en" %}
-											<select name="selector" onchange="this.form.submit()">
+<div class="form-inline my-2 my-lg-0">
+	{% if request.session.lang  == "en" %}
+								  	<select class="form-control text-dark" name="selector" onchange="this.form.submit()">
 												<option value="en" selected>English</option>
 												<option value="marathi">मराठी</option>
 											</select>
-										{% else %}
-											<select name="selector" onchange="this.form.submit()">
+												{% else %}
+											<select  class="form-control text-dark" name="selector" onchange="this.form.submit()">
 												<option value="en">English</option>
 												<option value="marathi" selected>मराठी</option>
 										  	</select>{% endif %}
+										</div>
 									</li>
 
 								</ul>
+
+
+							</div>
 							</nav>
 							<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 						</div>
