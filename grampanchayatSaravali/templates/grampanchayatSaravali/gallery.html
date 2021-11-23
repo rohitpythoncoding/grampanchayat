@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{%load staticfiles%}
+	{% load static %}
 <title>
 	{% if request.session.lang == "en" %}
         Photo Gallery
@@ -381,6 +381,41 @@
 
 					</tr>
 				</table>
+
+				<table class="image col-lg-5">
+					<tr>
+						<th><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/dhodipuja_program1.jpg" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:45px; height:1000px"></th>
+                        <th><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/dhodipuja_program2.jpg" style="width:555px; padding-bottom:0.5em; padding-top:45px; padding-right:11px; height:1000px"></th>
+
+					</tr>
+					<tr>
+                        <td class="caption"><h5 style="font-family: Arial Black">{% if request.session.lang  == "en" %}Checking of arrangement of work on dharmvir Anand Dighe maidan at Dhodipuja{% else %}धोडीपूजा येतील धर्मवीर आनंद दिघे मैदान वर होणाऱ्या कार्यक्रमाची पाहणी केली.{% endif %}</h5></td>
+						<td class="caption"><h5 style="font-family: Arial Black">{% if request.session.lang  == "en" %}Checking of arrangement of work on dharmvir Anand Dighe maidan at Dhodipuja{% else %}धोडीपूजा येतील धर्मवीर आनंद दिघे मैदान वर होणाऱ्या कार्यक्रमाची पाहणी केली.{% endif %}</h5></td>
+                        
+
+					</tr>
+				</table>
+				<table class="image col-lg-5">
+					<tr>
+						<th><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/gramsabha1.jpg" style="width:1100px; padding-bottom:0.5em; padding-top:45px; height:600px"></th>
+
+					</tr>
+					<tr>
+                        <td class="caption"><h5 style="font-family: Arial Black">{% if request.session.lang  == "en" %}Gramsabha has been conducted successfully to discuss on development roadmap for financial year 2022-23.{% else %}सन २०२२-२३ या आर्थिक वर्षाचा विकास आराखडा तयार करण्यासाठी ग्रामसभा पार पडली.{% endif %}</h5></td>
+
+					</tr>
+				</table>
+				<table class="image col-lg-5">
+					<tr>
+						<th><img src="https://s3.ap-south-1.amazonaws.com/grampanchayat/static/images/gramsabha2.jpg" style="width:1100px; padding-bottom:0.5em; padding-top:45px; height:600px"></th>
+
+					</tr>
+					<tr>
+                        <td class="caption"><h5 style="font-family: Arial Black">{% if request.session.lang  == "en" %}Gramsabha has been conducted successfully to discuss on development roadmap for financial year 2022-23.{% else %}सन २०२२-२३ या आर्थिक वर्षाचा विकास आराखडा तयार करण्यासाठी ग्रामसभा पार पडली.{% endif %}</h5></td>
+
+					</tr>
+				</table>
+
 
 
 			</div>
